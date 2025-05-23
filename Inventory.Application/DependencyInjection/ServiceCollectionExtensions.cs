@@ -13,8 +13,9 @@ namespace Inventory.Application.DependencyInjection
     {
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
-            //services.AddScoped<IProductService, ProductService>();
+            
             services.AddScoped<IBatchService, BatchService>();
+            services.AddScoped<IProductService, ProductService>();
             return services;
         }
     }

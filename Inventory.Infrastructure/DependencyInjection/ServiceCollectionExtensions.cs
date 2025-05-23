@@ -14,6 +14,8 @@ namespace Inventory.Infrastructure.DependencyInjection
         public static IServiceCollection AddInfrastructureServices(this IServiceCollection services)
         {
             services.AddScoped<IBatchRepository, BatchRepository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
+
             return services;
         }
     }

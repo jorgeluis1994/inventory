@@ -1,0 +1,12 @@
+2025-05-23 17:20:33.593 -05:00 [INF] Now listening on: http://localhost:5042
+2025-05-23 17:20:33.935 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/swagger/index.html - null null
+2025-05-23 17:20:33.938 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-23 17:20:33.946 -05:00 [INF] Hosting environment: Development
+2025-05-23 17:20:33.949 -05:00 [INF] Content root path: C:\Users\jorge\source\repos\inventory\Inventory.API
+2025-05-23 17:20:34.257 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/swagger/index.html - 200 null text/html;charset=utf-8 335.5253ms
+2025-05-23 17:20:34.277 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-23 17:20:34.291 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 14.845ms
+2025-05-23 17:20:34.306 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/_vs/browserLink - null null
+2025-05-23 17:20:34.357 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/_vs/browserLink - 200 null text/javascript; charset=UTF-8 50.7141ms
+2025-05-23 17:20:34.436 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/swagger/v1/swagger.json - null null
+2025-05-23 17:20:34.452 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 16.1575ms

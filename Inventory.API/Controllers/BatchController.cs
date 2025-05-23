@@ -15,8 +15,8 @@ namespace Inventory.API.Controllers
         {
             _batchService = batchService;
         }
+        
         /// <summary>
-        /// 
 
         [HttpPost]
         public async Task<IActionResult> SaveBatch([FromBody] BatchDto batchDto)
