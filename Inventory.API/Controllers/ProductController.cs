@@ -13,12 +13,6 @@ namespace Inventory.API.Controllers
             _productService = productService;
         }
 
-        [HttpPost]
-        public async Task<IActionResult> CreateProduct([FromBody] ProductDto product)
-        {
-            var createProduct = await _productService.SaveProduct(product);
-
-        }
 
 
     }
