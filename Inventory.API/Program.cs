@@ -1,14 +1,20 @@
 using Inventory.Infrastructure.Data;
+using Inventory.Infrastructure.DependencyInjection;
+using Inventory.Application.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
-Log.Logger=new LoggerConfiguration()
-    .ReadFrom.Configuration(builder.Configuration)
-    .CreateLogger();
+builder.Services.AddInfrastructureServices();
+builder.Services.AddApplicationServices();
 
-builder.Host.UseSerilog();
+
+//Log.Logger=new LoggerConfiguration()
+//    .ReadFrom.Configuration(builder.Configuration)
+//    .CreateLogger();
+
+//builder.Host.UseSerilog();
 
 // Configura DbContext con SQL Server y la cadena de conexión
 builder.Services.AddDbContext<InventoryDbContext>(options =>
