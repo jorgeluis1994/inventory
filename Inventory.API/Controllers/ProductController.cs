@@ -39,6 +39,20 @@ namespace Inventory.API.Controllers
                 return Ok(await _productService.SaveProduct(productDto));
             }
         }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateProduct(int id, [FromBody] ProductDto productDto)
+        {
+            if (id != productDto.Id)
+                return BadRequest("El ID del producto no coincide con el de la URL.");
+
+            var updatedProduct = await _productService.UpdateProduct(productDto);
+
+            if (updatedProduct == null)
+                return NotFound();
+
+            return Ok(updatedProduct);
+        }
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteProduct(int id)
         {
@@ -49,7 +63,6 @@ namespace Inventory.API.Controllers
 
             return NoContent(); 
         }
-
 
     }
 }

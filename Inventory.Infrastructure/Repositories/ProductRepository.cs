@@ -32,12 +32,24 @@ namespace Inventory.Infrastructure.Repositories
             return await _context.Products.ToListAsync();
         }
 
+        public async Task<Product> GetProductsById(int idProduct)
+        {
+            return await _context.Products.FirstOrDefaultAsync(p => p.Id == idProduct);
+        }
+
         public async Task<Product> SaveProduct(Product product)
         {
-            await _context.Products.AddAsync(product); // Mejor práctica
+            await _context.Products.AddAsync(product); 
             await _context.SaveChangesAsync();
             return product;
 
+        }
+
+        public async Task<Product> UpdateProduct(Product product)
+        {
+            _context.Products.Update(product);
+            await _context.SaveChangesAsync();
+            return product;
         }
     }
 

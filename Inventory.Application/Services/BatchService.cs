@@ -10,39 +10,70 @@ using System.Threading.Tasks;
 
 namespace Inventory.Application.Services
 {
-    
+
     public class BatchService : IBatchService
     {
         private readonly IBatchRepository _batchRepository;
+
         public BatchService(IBatchRepository batchRepository)
         {
             _batchRepository = batchRepository;
         }
-        public async Task<BatchDto> SaveBatch(BatchDto batch)
+
+        private Batch MapToEntity(BatchDto dto)
         {
-            // Mapeamos el DTO a entidad (modelo)
-            var modelBatch = new Batch
+            return new Batch
             {
-                Id = batch.Id,
-                ProductId = batch.ProductId,
-                BatchNumber = batch.BatchNumber,
-                EntryDate = batch.EntryDate,
-                Quantity = batch.Quantity
-            };
-
-            // Guardamos usando el repositorio (esperamos la tarea async)
-            var savedBatch = await _batchRepository.SaveBatch(modelBatch);
-
-            // Mapeamos de vuelta a DTO para retornar
-            return new BatchDto
-            {
-                Id = savedBatch.Id,
-                ProductId = savedBatch.ProductId,
-                BatchNumber = savedBatch.BatchNumber,
-                EntryDate = savedBatch.EntryDate,
-                Quantity = savedBatch.Quantity
+                Id = dto.Id,
+                ProductId = dto.ProductId,
+                BatchNumber = dto.BatchNumber,
+                EntryDate = dto.EntryDate,
+                Quantity = dto.Quantity
             };
         }
 
+        private BatchDto MapToDto(Batch entity)
+        {
+            return new BatchDto
+            {
+                Id = entity.Id,
+                ProductId = entity.ProductId,
+                BatchNumber = entity.BatchNumber,
+                EntryDate = entity.EntryDate,
+                Quantity = entity.Quantity
+            };
+        }
+
+        public async Task<BatchDto> SaveBatchAsync(BatchDto batchDto)
+        {
+            var batch = MapToEntity(batchDto);
+            var savedBatch = await _batchRepository.SaveBatch(batch);
+            return MapToDto(savedBatch);
+        }
+
+        public async Task<List<BatchDto>> GetAllBatchesAsync()
+        {
+            var batches = await _batchRepository.GetAllAsync();
+            return batches.Select(MapToDto).ToList();
+        }
+
+        public async Task<BatchDto?> GetBatchByIdAsync(int id)
+        {
+            var batch = await _batchRepository.GetByIdAsync(id);
+            if (batch == null) return null;
+            return MapToDto(batch);
+        }
+
+        public async Task<bool> UpdateBatchAsync(BatchDto batchDto)
+        {
+            var batch = MapToEntity(batchDto);
+            return await _batchRepository.UpdateAsync(batch);
+        }
+
+        public async Task<bool> DeleteBatchAsync(int id)
+        {
+            return await _batchRepository.DeleteAsync(id);
+        }
     }
+
 }

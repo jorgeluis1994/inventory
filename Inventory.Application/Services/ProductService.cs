@@ -34,6 +34,20 @@ namespace Inventory.Application.Services
             }).ToList();
         }
 
+        public async Task<ProductDto> GetProductsById(int idProduct)
+        {
+            var product = await _productRepository.GetProductsById(idProduct);
+            if (product == null)
+                return null;
+
+            return new ProductDto
+            {
+                Id = product.Id,
+                Name = product.Name,
+                Description = product.Description
+            };
+        }
+
         public async Task<ProductDto> SaveProduct(ProductDto product)
         {
             
@@ -53,6 +67,25 @@ namespace Inventory.Application.Services
 
 
 
+
+        }
+
+        public async Task<ProductDto> UpdateProduct(ProductDto product)
+        {
+            var existingProduct = await _productRepository.GetProductsById(product.Id);
+            if (existingProduct == null)
+                return null;
+            existingProduct.Name = product.Name;
+            existingProduct.Description = product.Description;
+
+            await _productRepository.UpdateProduct(existingProduct);
+
+            return new ProductDto
+            {
+                Id = existingProduct.Id,
+                Name = existingProduct.Name,
+                Description = existingProduct.Description
+            };
 
         }
     }

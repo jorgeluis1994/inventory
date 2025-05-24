@@ -12,6 +12,8 @@ namespace Inventory.Domain.Interfaces
         Task<Product> SaveProduct(Product product);
 
         Task<List<Product>> GetProducts();
+        Task<Product> GetProductsById(int IdProduct);
+        Task<Product> UpdateProduct(Product product);
         Task<bool> DeleteProduct(int id);
     }
 }
