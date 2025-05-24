@@ -10,5 +10,7 @@ namespace Inventory.Application.Interfaces
     public interface IProductService
     {
         Task<ProductDto> SaveProduct(ProductDto product);
+        Task<List<ProductDto>> GetProducts();
+        Task<bool> DeleteProduct(int id);
     }
 }

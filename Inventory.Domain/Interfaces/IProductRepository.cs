@@ -10,5 +10,8 @@ namespace Inventory.Domain.Interfaces
     public interface IProductRepository
     {
         Task<Product> SaveProduct(Product product);
+
+        Task<List<Product>> GetProducts();
+        Task<bool> DeleteProduct(int id);
     }
 }

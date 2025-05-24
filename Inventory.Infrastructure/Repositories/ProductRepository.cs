@@ -1,6 +1,7 @@
 ﻿using Inventory.Domain.Interfaces;
 using Inventory.Domain.Models;
 using Inventory.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,20 @@ namespace Inventory.Infrastructure.Repositories
         public ProductRepository(InventoryDbContext context)
         {
             _context = context;
+        }
+
+        public async Task<bool> DeleteProduct(int id)
+        {
+            var product = await _context.Products.FindAsync(id);
+            if (product is null) return false;
+            _context.Products.Remove(product);
+            await _context.SaveChangesAsync();
+            return true;
+        }
+
+        public async Task<List<Product>> GetProducts()
+        {
+            return await _context.Products.ToListAsync();
         }
 
         public async Task<Product> SaveProduct(Product product)

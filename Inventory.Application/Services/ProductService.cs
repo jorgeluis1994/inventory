@@ -18,6 +18,22 @@ namespace Inventory.Application.Services
             _productRepository = productRepository;
         }
 
+        public Task<bool> DeleteProduct(int id)
+        {
+            return _productRepository.DeleteProduct(id);
+        }
+
+        public async Task<List<ProductDto>> GetProducts()
+        {
+            var products = await _productRepository.GetProducts();
+            return products.Select(p => new ProductDto
+            {
+                Id = p.Id,
+                Name = p.Name,
+                Description = p.Description
+            }).ToList();
+        }
+
         public async Task<ProductDto> SaveProduct(ProductDto product)
         {
             

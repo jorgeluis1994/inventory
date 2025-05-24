@@ -19,6 +19,14 @@ namespace Inventory.API.Controllers
 
         /// <summary>
 
+        [HttpGet]
+        public async Task<IActionResult> GetProducts()
+        {
+            var products = await _productService.GetProducts();
+            return Ok(products);
+        }
+
+
         [HttpPost]
         public async Task<IActionResult> SaveProduct([FromBody] ProductDto productDto)
         {
@@ -31,6 +39,17 @@ namespace Inventory.API.Controllers
                 return Ok(await _productService.SaveProduct(productDto));
             }
         }
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteProduct(int id)
+        {
+            var result = await _productService.DeleteProduct(id);
+
+            if (!result)
+                return NotFound(); 
+
+            return NoContent(); 
+        }
+
 
     }
 }

@@ -28,7 +28,7 @@ namespace Inventory.Application.Services
 
             if (user == null)
             {
-                return Task.FromResult<UserDto>(null);
+                return Task.FromResult<UserDto>(result: null );
             }
             var userDto = new UserDto
             {
