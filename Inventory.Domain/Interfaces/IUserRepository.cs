@@ -10,6 +10,7 @@ namespace Inventory.Domain.Interfaces
     public interface IUserRepository
     {
         Task<bool> RegisterUser(User userDto);
-        Task<bool> LoginUser(User userDto);
+
+        Task<User> GetByEmail(string email);
     }
 }

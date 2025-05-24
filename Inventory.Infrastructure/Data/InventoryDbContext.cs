@@ -19,6 +19,16 @@ namespace Inventory.Infrastructure.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // Configure the entity properties and relationships here if needed
+
+            
+            modelBuilder.Entity<User>()
+                        .HasIndex(u => u.Email)
+                        .IsUnique();
+
+            modelBuilder.Entity<User>()
+                .Property(u => u.CreatedAt)
+                .HasDefaultValueSql("SYSUTCDATETIME()");
+
             base.OnModelCreating(modelBuilder);
 
         }

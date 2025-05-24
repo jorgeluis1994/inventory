@@ -1,5 +1,6 @@
 ﻿using Inventory.Application.DTOs;
 using Inventory.Application.Interfaces;
+using Inventory.Application.Interfaces.Security;
 using Inventory.Domain.Interfaces;
 using Inventory.Domain.Models;
 using System;
@@ -13,19 +14,39 @@ namespace Inventory.Application.Services
     public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
-        public UserService(IUserRepository userRepository)
+
+        private readonly ITokenService _tokenService;
+        public UserService(IUserRepository userRepository, ITokenService tokenService)
         {
             _userRepository = userRepository;
+            _tokenService = tokenService;
         }
-        public Task<bool> LoginUser(UserDto userDto)
+
+        public Task<UserDto> GetByEmail(string email)
         {
-            var user = new User
+            var user = _userRepository.GetByEmail(email);
+
+            if (user == null)
             {
-                UserName = userDto.UserName,
-                Password = userDto.Password
+                return Task.FromResult<UserDto>(null);
+            }
+            var userDto = new UserDto
+            {
+                UserName = user.Result.UserName,
             };
-            _userRepository.RegisterUser(user);
-            return Task.FromResult(true);
+            return Task.FromResult(userDto);
+        }
+
+        public async Task<string> LoginUser(UserDto userDto)
+        {
+            var userExist = await _userRepository.GetByEmail(userDto.Email);
+
+            if (userExist == null)
+            {
+                return null;
+            }
+            var token = _tokenService.GenerateToken(userExist.Id.ToString(), userExist.UserName, userExist.Role, DateTime.UtcNow.AddHours(2));
+            return token;
         }
 
         public Task<bool> RegisterUser(UserDto userDto)
@@ -40,5 +61,6 @@ namespace Inventory.Application.Services
             _userRepository.RegisterUser(user);
             return Task.FromResult(true);
         }
+
     }
 }

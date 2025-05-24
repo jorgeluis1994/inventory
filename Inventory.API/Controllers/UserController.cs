@@ -28,5 +28,21 @@ namespace Inventory.API.Controllers
                 return Ok(await _userService.RegisterUser(userDto));
             }
         }
+
+        /// <summary>
+        /// 
+        [HttpPost]
+        [Route("login")]
+        public async Task<IActionResult> LoginUser([FromBody] UserDto userDto)
+        {
+            if (userDto == null)
+            {
+                return BadRequest("User data is null");
+            }
+            else
+            {
+                return Ok(await _userService.LoginUser(userDto));
+            }
+        }
     }
 }

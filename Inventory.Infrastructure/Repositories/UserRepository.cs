@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 
 namespace Inventory.Infrastructure.Repositories
 {
@@ -19,10 +20,12 @@ namespace Inventory.Infrastructure.Repositories
             _context = context;
             _passwordHasher = new PasswordHasher<User>();
         }
-        public Task<bool> LoginUser(User userDto)
+
+        public async Task<User> GetByEmail(string email)
         {
-            throw new NotImplementedException();
+            return await _context.Users.FirstOrDefaultAsync(x => x.Email == email);
         }
+
 
         public async Task<bool> RegisterUser(User userDto)
         {
