@@ -599,3 +599,69 @@ VALUES (@p0, @p1, @p2, @p3);
 2025-05-23 23:36:17.848 -05:00 [INF] Executed action Inventory.API.Controllers.BatchController.SaveBatch (Inventory.API) in 27194.98ms
 2025-05-23 23:36:17.856 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.BatchController.SaveBatch (Inventory.API)'
 2025-05-23 23:36:17.880 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/Batch - 200 null application/json; charset=utf-8 27358.9425ms
+2025-05-23 23:43:53.455 -05:00 [INF] Now listening on: http://localhost:5042
+2025-05-23 23:43:53.726 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-23 23:43:53.744 -05:00 [INF] Hosting environment: Development
+2025-05-23 23:43:53.750 -05:00 [INF] Content root path: C:\Users\jorge\Source\Repos\inventory\Inventory.API
+2025-05-23 23:43:54.800 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/swagger/index.html - null null
+2025-05-23 23:43:55.292 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/swagger/index.html - 200 null text/html;charset=utf-8 503.4152ms
+2025-05-23 23:43:55.391 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-23 23:43:55.395 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/_vs/browserLink - null null
+2025-05-23 23:43:55.405 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 15.5007ms
+2025-05-23 23:43:55.479 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/_vs/browserLink - 200 null text/javascript; charset=UTF-8 83.6351ms
+2025-05-23 23:43:55.623 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/swagger/v1/swagger.json - null null
+2025-05-23 23:43:55.646 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 22.4996ms
+2025-05-23 23:44:05.027 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/Product - application/json 77
+2025-05-23 23:44:05.060 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-05-23 23:44:05.071 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductController.SaveProduct (Inventory.API)'
+2025-05-23 23:44:05.166 -05:00 [INF] Route matched with {action = "SaveProduct", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveProduct(Inventory.API.DTOs.ProductDto) on controller Inventory.API.Controllers.ProductController (Inventory.API).
+2025-05-23 23:44:07.466 -05:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-05-23 23:44:10.771 -05:00 [INF] Executed DbCommand (198ms) [Parameters=[@p0='string' (Size = 4000), @p1='string' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Description], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2025-05-23 23:44:11.028 -05:00 [INF] Executing OkObjectResult, writing value of type 'Inventory.API.DTOs.ProductDto'.
+2025-05-23 23:44:11.064 -05:00 [INF] Executed action Inventory.API.Controllers.ProductController.SaveProduct (Inventory.API) in 5879.2749ms
+2025-05-23 23:44:11.077 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductController.SaveProduct (Inventory.API)'
+2025-05-23 23:44:11.127 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/Product - 200 null application/json; charset=utf-8 6099.6888ms
+2025-05-23 23:49:42.478 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Product - null null
+2025-05-23 23:49:42.512 -05:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2025-05-23 23:49:42.519 -05:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2025-05-23 23:49:42.525 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Product - 405 0 null 46.6807ms
+2025-05-23 23:53:13.364 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Product - null null
+2025-05-23 23:53:13.384 -05:00 [INF] Executing endpoint '405 HTTP Method Not Supported'
+2025-05-23 23:53:13.390 -05:00 [INF] Executed endpoint '405 HTTP Method Not Supported'
+2025-05-23 23:53:13.395 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Product - 405 0 null 32.5337ms
+2025-05-23 23:55:15.183 -05:00 [INF] Now listening on: http://localhost:5042
+2025-05-23 23:55:15.424 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-23 23:55:15.432 -05:00 [INF] Hosting environment: Development
+2025-05-23 23:55:15.437 -05:00 [INF] Content root path: C:\Users\jorge\Source\Repos\inventory\Inventory.API
+2025-05-23 23:55:16.629 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/swagger/index.html - null null
+2025-05-23 23:55:17.097 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/swagger/index.html - 200 null text/html;charset=utf-8 484.578ms
+2025-05-23 23:55:17.136 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-23 23:55:17.140 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/_vs/browserLink - null null
+2025-05-23 23:55:17.153 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 20.1025ms
+2025-05-23 23:55:17.232 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/_vs/browserLink - 200 null text/javascript; charset=UTF-8 91.2084ms
+2025-05-23 23:55:17.342 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/swagger/v1/swagger.json - null null
+2025-05-23 23:55:17.370 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 27.4876ms
+2025-05-23 23:55:32.463 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Product - null null
+2025-05-23 23:55:32.492 -05:00 [INF] CORS policy execution successful.
+2025-05-23 23:55:32.509 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Product - 204 null null 45.4723ms
+2025-05-23 23:55:32.529 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/Product - application/json 44
+2025-05-23 23:55:32.547 -05:00 [INF] CORS policy execution successful.
+2025-05-23 23:55:32.558 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-05-23 23:55:32.567 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductController.SaveProduct (Inventory.API)'
+2025-05-23 23:55:32.651 -05:00 [INF] Route matched with {action = "SaveProduct", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveProduct(Inventory.API.DTOs.ProductDto) on controller Inventory.API.Controllers.ProductController (Inventory.API).
+2025-05-23 23:55:34.126 -05:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-05-23 23:55:36.477 -05:00 [INF] Executed DbCommand (233ms) [Parameters=[@p0='Bedida ' (Size = 4000), @p1='Coca Cola' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Description], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2025-05-23 23:55:36.688 -05:00 [INF] Executing OkObjectResult, writing value of type 'Inventory.API.DTOs.ProductDto'.
+2025-05-23 23:55:36.708 -05:00 [INF] Executed action Inventory.API.Controllers.ProductController.SaveProduct (Inventory.API) in 4038.6028ms
+2025-05-23 23:55:36.715 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductController.SaveProduct (Inventory.API)'
+2025-05-23 23:55:36.746 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/Product - 200 null application/json; charset=utf-8 4217.1417ms
