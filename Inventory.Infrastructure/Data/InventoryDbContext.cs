@@ -11,6 +11,7 @@ namespace Inventory.Infrastructure.Data
     {
         public InventoryDbContext(DbContextOptions<InventoryDbContext> options): base(options){}
 
+        public DbSet<User> Users { get; set; } = null!;
         public DbSet<Product> Products { get; set; } = null!;
         public DbSet<Batch> Batches { get; set; } = null!;
         public DbSet<Transaction> Transactions { get; set; } = null!;

@@ -9,21 +9,23 @@ using System.Threading.Tasks;
 
 namespace Inventory.Infrastructure.Repositories
 {
-    public class ProductRepository:IProductRepository
+    internal class UserRepository : IUserRepository
     {
         private readonly InventoryDbContext _context;
-        public ProductRepository(InventoryDbContext context)
+        public UserRepository(InventoryDbContext context)
         {
             _context = context;
         }
-
-        public async Task<Product> SaveProduct(Product product)
+        public Task<bool> LoginUser(User userDto)
         {
-            await _context.Products.AddAsync(product); // Mejor práctica
-            await _context.SaveChangesAsync();
-            return product;
+            throw new NotImplementedException();
+        }
 
+        public async Task<bool> RegisterUser(User userDto)
+        {
+            await _context.Users.AddAsync(userDto);
+            await _context.SaveChangesAsync();
+            return true;
         }
     }
-
 }

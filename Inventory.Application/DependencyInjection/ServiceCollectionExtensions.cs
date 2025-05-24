@@ -16,6 +16,8 @@ namespace Inventory.Application.DependencyInjection
             
             services.AddScoped<IBatchService, BatchService>();
             services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<IUserService,UserService>();
+
             return services;
         }
     }

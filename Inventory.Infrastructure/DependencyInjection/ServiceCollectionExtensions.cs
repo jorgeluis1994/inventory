@@ -1,5 +1,7 @@
-﻿using Inventory.Domain.Interfaces;
+﻿using Inventory.Application.Interfaces.Security;
+using Inventory.Domain.Interfaces;
 using Inventory.Infrastructure.Repositories;
+using Inventory.Infrastructure.Services.Security;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -15,6 +17,8 @@ namespace Inventory.Infrastructure.DependencyInjection
         {
             services.AddScoped<IBatchRepository, BatchRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<ITokenService, JwtTokenService>();
+            services.AddScoped<IUserRepository, UserRepository>();
 
             return services;
         }
