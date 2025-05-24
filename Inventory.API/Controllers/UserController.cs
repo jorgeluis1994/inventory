@@ -37,12 +37,18 @@ namespace Inventory.API.Controllers
         {
             if (userDto == null)
             {
-                return BadRequest("User data is null");
+                return BadRequest(new { message = "User data is null" });
             }
-            else
+
+            var token = await _userService.LoginUser(userDto);
+
+            if (string.IsNullOrEmpty(token))
             {
-                return Ok(await _userService.LoginUser(userDto));
+                return Unauthorized(new { message = "Invalid username or password" });
             }
+
+            return Ok(new { token });
         }
+
     }
 }

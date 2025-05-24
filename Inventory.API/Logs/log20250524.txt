@@ -103,3 +103,338 @@ WHERE [u].[Email] = @__email_0
 2025-05-24 08:17:55.986 -05:00 [INF] Executed action Inventory.API.Controllers.UserController.LoginUser (Inventory.API) in 16102.4382ms
 2025-05-24 08:17:55.991 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
 2025-05-24 08:17:56.002 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/User/login - 200 null text/plain; charset=utf-8 16186.43ms
+2025-05-24 08:20:56.975 -05:00 [INF] Now listening on: http://localhost:5042
+2025-05-24 08:20:57.396 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/swagger/index.html - null null
+2025-05-24 08:20:57.415 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-24 08:20:57.418 -05:00 [INF] Hosting environment: Development
+2025-05-24 08:20:57.427 -05:00 [INF] Content root path: C:\Users\jorge\Source\Repos\inventory\Inventory.API
+2025-05-24 08:20:57.686 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/swagger/index.html - 200 null text/html;charset=utf-8 304.1174ms
+2025-05-24 08:20:57.741 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-24 08:20:57.741 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/_vs/browserLink - null null
+2025-05-24 08:20:57.752 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 11.5131ms
+2025-05-24 08:20:57.824 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/_vs/browserLink - 200 null text/javascript; charset=UTF-8 82.605ms
+2025-05-24 08:20:57.887 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/swagger/v1/swagger.json - null null
+2025-05-24 08:20:57.900 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 13.4204ms
+2025-05-24 08:21:22.244 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/User/login - application/json 61
+2025-05-24 08:21:22.261 -05:00 [INF] CORS policy execution failed.
+2025-05-24 08:21:22.264 -05:00 [INF] Request origin http://localhost:5042 does not have permission to access the resource.
+2025-05-24 08:21:22.268 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-05-24 08:21:22.273 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
+2025-05-24 08:21:22.298 -05:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(Inventory.Application.DTOs.UserDto) on controller Inventory.API.Controllers.UserController (Inventory.API).
+2025-05-24 08:21:26.655 -05:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-05-24 08:21:27.493 -05:00 [INF] Executed DbCommand (43ms) [Parameters=[@__email_0='admin@example.com' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[Password], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2025-05-24 08:21:27.647 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-05-24 08:21:27.655 -05:00 [INF] Executed action Inventory.API.Controllers.UserController.LoginUser (Inventory.API) in 5349.1995ms
+2025-05-24 08:21:27.660 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
+2025-05-24 08:21:27.670 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/User/login - 200 null text/plain; charset=utf-8 5425.4038ms
+2025-05-24 08:23:43.977 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/User/login - application/json 77
+2025-05-24 08:23:43.986 -05:00 [INF] CORS policy execution failed.
+2025-05-24 08:23:43.988 -05:00 [INF] Request origin http://localhost:5042 does not have permission to access the resource.
+2025-05-24 08:23:43.991 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
+2025-05-24 08:23:43.995 -05:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(Inventory.Application.DTOs.UserDto) on controller Inventory.API.Controllers.UserController (Inventory.API).
+2025-05-24 08:23:44.055 -05:00 [INF] Executed DbCommand (12ms) [Parameters=[@__email_0='jorgeluis199454@gmail.com' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[Password], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2025-05-24 08:23:44.066 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-05-24 08:23:44.069 -05:00 [INF] Executed action Inventory.API.Controllers.UserController.LoginUser (Inventory.API) in 69.1987ms
+2025-05-24 08:23:44.073 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
+2025-05-24 08:23:44.076 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/User/login - 200 null text/plain; charset=utf-8 101.0815ms
+2025-05-24 08:32:35.425 -05:00 [INF] Now listening on: http://localhost:5042
+2025-05-24 08:32:35.559 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-24 08:32:35.565 -05:00 [INF] Hosting environment: Development
+2025-05-24 08:32:35.568 -05:00 [INF] Content root path: C:\Users\jorge\Source\Repos\inventory\Inventory.API
+2025-05-24 08:32:35.754 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/swagger/index.html - null null
+2025-05-24 08:32:35.957 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/swagger/index.html - 200 null text/html;charset=utf-8 211.0442ms
+2025-05-24 08:32:36.461 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/_vs/browserLink - null null
+2025-05-24 08:32:36.461 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-24 08:32:36.482 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 22.1852ms
+2025-05-24 08:32:36.509 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/_vs/browserLink - 200 null text/javascript; charset=UTF-8 49.1908ms
+2025-05-24 08:32:36.599 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/swagger/v1/swagger.json - null null
+2025-05-24 08:32:36.612 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 13.5815ms
+2025-05-24 08:32:41.897 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/User/login - application/json 91
+2025-05-24 08:32:41.914 -05:00 [INF] CORS policy execution failed.
+2025-05-24 08:32:41.916 -05:00 [INF] Request origin http://localhost:5042 does not have permission to access the resource.
+2025-05-24 08:32:41.922 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-05-24 08:32:41.927 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
+2025-05-24 08:32:41.962 -05:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(Inventory.Application.DTOs.UserDto) on controller Inventory.API.Controllers.UserController (Inventory.API).
+2025-05-24 08:32:42.655 -05:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-05-24 08:32:43.458 -05:00 [INF] Executed DbCommand (43ms) [Parameters=[@__email_0='string' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[Password], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2025-05-24 08:32:43.503 -05:00 [INF] Executing OkObjectResult, writing value of type 'null'.
+2025-05-24 08:32:43.511 -05:00 [INF] Executed action Inventory.API.Controllers.UserController.LoginUser (Inventory.API) in 1540.8438ms
+2025-05-24 08:32:43.515 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
+2025-05-24 08:32:43.526 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/User/login - 204 null null 1629.8867ms
+2025-05-24 08:34:15.009 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/User/login - null null
+2025-05-24 08:34:15.018 -05:00 [INF] CORS policy execution successful.
+2025-05-24 08:34:15.022 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/User/login - 204 null null 13.4303ms
+2025-05-24 08:34:15.038 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/User/login - application/json 67
+2025-05-24 08:34:15.046 -05:00 [INF] CORS policy execution successful.
+2025-05-24 08:34:15.048 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
+2025-05-24 08:34:15.050 -05:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(Inventory.Application.DTOs.UserDto) on controller Inventory.API.Controllers.UserController (Inventory.API).
+2025-05-24 08:34:33.046 -05:00 [INF] Executed DbCommand (16ms) [Parameters=[@__email_0='jorgeluis199454@gmail.com' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[Password], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2025-05-24 08:34:33.164 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-05-24 08:34:33.167 -05:00 [INF] Executed action Inventory.API.Controllers.UserController.LoginUser (Inventory.API) in 18112.4644ms
+2025-05-24 08:34:33.170 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
+2025-05-24 08:34:33.172 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/User/login - 200 null text/plain; charset=utf-8 18133.7345ms
+2025-05-24 08:35:44.497 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/User/login - null null
+2025-05-24 08:35:44.542 -05:00 [INF] CORS policy execution successful.
+2025-05-24 08:35:44.545 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/User/login - 204 null null 47.6493ms
+2025-05-24 08:35:44.559 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/User/login - application/json 67
+2025-05-24 08:35:44.576 -05:00 [INF] CORS policy execution successful.
+2025-05-24 08:35:44.578 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
+2025-05-24 08:35:44.581 -05:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(Inventory.Application.DTOs.UserDto) on controller Inventory.API.Controllers.UserController (Inventory.API).
+2025-05-24 08:35:44.607 -05:00 [INF] Executed action Inventory.API.Controllers.UserController.LoginUser (Inventory.API) in 21.4259ms
+2025-05-24 08:35:44.611 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
+2025-05-24 08:35:44.616 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/User/login - 499 null null 57.0999ms
+2025-05-24 08:36:21.128 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/User/login - null null
+2025-05-24 08:36:21.144 -05:00 [INF] CORS policy execution successful.
+2025-05-24 08:36:21.145 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/User/login - 204 null null 17.5303ms
+2025-05-24 08:36:21.165 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/User/login - application/json 67
+2025-05-24 08:36:21.171 -05:00 [INF] CORS policy execution successful.
+2025-05-24 08:36:21.173 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
+2025-05-24 08:36:21.175 -05:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(Inventory.Application.DTOs.UserDto) on controller Inventory.API.Controllers.UserController (Inventory.API).
+2025-05-24 08:37:14.905 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/User/login - application/json 77
+2025-05-24 08:37:14.919 -05:00 [INF] CORS policy execution failed.
+2025-05-24 08:37:14.921 -05:00 [INF] Request origin http://localhost:5042 does not have permission to access the resource.
+2025-05-24 08:37:14.924 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
+2025-05-24 08:37:14.927 -05:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(Inventory.Application.DTOs.UserDto) on controller Inventory.API.Controllers.UserController (Inventory.API).
+2025-05-24 08:37:15.009 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__email_0='jorgeluis199454@gmail.com' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[Password], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2025-05-24 08:37:15.024 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__email_0='jorgeluis199454@gmail.com' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[Password], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2025-05-24 08:37:15.025 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-05-24 08:37:15.029 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-05-24 08:37:15.031 -05:00 [INF] Executed action Inventory.API.Controllers.UserController.LoginUser (Inventory.API) in 99.6692ms
+2025-05-24 08:37:15.034 -05:00 [INF] Executed action Inventory.API.Controllers.UserController.LoginUser (Inventory.API) in 53854.8309ms
+2025-05-24 08:37:15.036 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
+2025-05-24 08:37:15.039 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
+2025-05-24 08:37:15.042 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/User/login - 200 null text/plain; charset=utf-8 136.3291ms
+2025-05-24 08:37:15.044 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/User/login - 200 null text/plain; charset=utf-8 53878.5138ms
+2025-05-24 08:37:53.867 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/User/login - null null
+2025-05-24 08:37:53.877 -05:00 [INF] CORS policy execution successful.
+2025-05-24 08:37:53.882 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/User/login - 204 null null 14.4349ms
+2025-05-24 08:37:53.904 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/User/login - application/json 67
+2025-05-24 08:37:53.912 -05:00 [INF] CORS policy execution successful.
+2025-05-24 08:37:53.915 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
+2025-05-24 08:37:53.917 -05:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(Inventory.Application.DTOs.UserDto) on controller Inventory.API.Controllers.UserController (Inventory.API).
+2025-05-24 08:38:05.600 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__email_0='jorgeluis199454@gmail.com' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[Password], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2025-05-24 08:38:05.653 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-05-24 08:38:05.656 -05:00 [INF] Executed action Inventory.API.Controllers.UserController.LoginUser (Inventory.API) in 11734.594ms
+2025-05-24 08:38:05.660 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
+2025-05-24 08:38:05.665 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/User/login - 200 null text/plain; charset=utf-8 11760.299ms
+2025-05-24 08:38:29.873 -05:00 [INF] Now listening on: http://localhost:5042
+2025-05-24 08:38:30.047 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-24 08:38:30.051 -05:00 [INF] Hosting environment: Development
+2025-05-24 08:38:30.054 -05:00 [INF] Content root path: C:\Users\jorge\Source\Repos\inventory\Inventory.API
+2025-05-24 08:38:30.382 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/swagger/index.html - null null
+2025-05-24 08:38:30.616 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/swagger/index.html - 200 null text/html;charset=utf-8 240.2625ms
+2025-05-24 08:38:30.653 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-24 08:38:30.653 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/_vs/browserLink - null null
+2025-05-24 08:38:30.663 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 12.4099ms
+2025-05-24 08:38:30.707 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/_vs/browserLink - 200 null text/javascript; charset=UTF-8 54.0048ms
+2025-05-24 08:38:30.781 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/swagger/v1/swagger.json - null null
+2025-05-24 08:38:30.792 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 11.4473ms
+2025-05-24 08:38:39.170 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/User/login - null null
+2025-05-24 08:38:39.189 -05:00 [INF] CORS policy execution successful.
+2025-05-24 08:38:39.193 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/User/login - 204 null null 23.2662ms
+2025-05-24 08:38:39.201 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/User/login - application/json 67
+2025-05-24 08:38:39.212 -05:00 [INF] CORS policy execution successful.
+2025-05-24 08:38:39.217 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-05-24 08:38:39.222 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
+2025-05-24 08:38:39.254 -05:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(Inventory.Application.DTOs.UserDto) on controller Inventory.API.Controllers.UserController (Inventory.API).
+2025-05-24 08:38:45.543 -05:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-05-24 08:38:46.323 -05:00 [INF] Executed DbCommand (46ms) [Parameters=[@__email_0='jorgeluis199454@gmail.com' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[Password], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2025-05-24 08:39:20.615 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-05-24 08:39:20.625 -05:00 [INF] Executed action Inventory.API.Controllers.UserController.LoginUser (Inventory.API) in 41361.5043ms
+2025-05-24 08:39:20.628 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
+2025-05-24 08:39:20.637 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/User/login - 200 null text/plain; charset=utf-8 41435.3923ms
+2025-05-24 08:40:20.805 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/User/login - null null
+2025-05-24 08:40:20.815 -05:00 [INF] CORS policy execution successful.
+2025-05-24 08:40:20.817 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/User/login - 204 null null 12.5346ms
+2025-05-24 08:40:20.832 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/User/login - application/json 67
+2025-05-24 08:40:20.838 -05:00 [INF] CORS policy execution successful.
+2025-05-24 08:40:20.839 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
+2025-05-24 08:40:20.841 -05:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(Inventory.Application.DTOs.UserDto) on controller Inventory.API.Controllers.UserController (Inventory.API).
+2025-05-24 08:40:28.729 -05:00 [INF] Executed DbCommand (11ms) [Parameters=[@__email_0='jorgeluis199454@gmail.com' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[Password], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2025-05-24 08:40:29.736 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-05-24 08:40:29.739 -05:00 [INF] Executed action Inventory.API.Controllers.UserController.LoginUser (Inventory.API) in 8895.1641ms
+2025-05-24 08:40:29.743 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
+2025-05-24 08:40:29.747 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/User/login - 200 null text/plain; charset=utf-8 8914.4497ms
+2025-05-24 08:40:48.660 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/User/login - null null
+2025-05-24 08:40:48.671 -05:00 [INF] CORS policy execution successful.
+2025-05-24 08:40:48.673 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/User/login - 204 null null 13.9ms
+2025-05-24 08:40:48.680 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/User/login - application/json 67
+2025-05-24 08:40:48.687 -05:00 [INF] CORS policy execution successful.
+2025-05-24 08:40:48.689 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
+2025-05-24 08:40:48.692 -05:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(Inventory.Application.DTOs.UserDto) on controller Inventory.API.Controllers.UserController (Inventory.API).
+2025-05-24 08:40:48.768 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__email_0='jorgeluis199454@gmail.com' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[Password], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2025-05-24 08:40:52.506 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2025-05-24 08:40:52.509 -05:00 [INF] Executed action Inventory.API.Controllers.UserController.LoginUser (Inventory.API) in 3813.0169ms
+2025-05-24 08:40:52.513 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
+2025-05-24 08:40:52.515 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/User/login - 200 null text/plain; charset=utf-8 3835.278ms
+2025-05-24 08:43:32.405 -05:00 [INF] Now listening on: http://localhost:5042
+2025-05-24 08:43:32.582 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-24 08:43:32.585 -05:00 [INF] Hosting environment: Development
+2025-05-24 08:43:32.587 -05:00 [INF] Content root path: C:\Users\jorge\Source\Repos\inventory\Inventory.API
+2025-05-24 08:43:33.002 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/swagger/index.html - null null
+2025-05-24 08:43:33.304 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/swagger/index.html - 200 null text/html;charset=utf-8 312.3153ms
+2025-05-24 08:43:33.340 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-24 08:43:33.345 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/_vs/browserLink - null null
+2025-05-24 08:43:33.356 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 18.2486ms
+2025-05-24 08:43:33.404 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/_vs/browserLink - 200 null text/javascript; charset=UTF-8 59.082ms
+2025-05-24 08:43:33.494 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/swagger/v1/swagger.json - null null
+2025-05-24 08:43:33.510 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.3631ms
+2025-05-24 08:44:01.315 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/User/login - application/json 77
+2025-05-24 08:44:01.331 -05:00 [INF] CORS policy execution failed.
+2025-05-24 08:44:01.333 -05:00 [INF] Request origin http://localhost:5042 does not have permission to access the resource.
+2025-05-24 08:44:01.338 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-05-24 08:44:01.341 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
+2025-05-24 08:44:01.386 -05:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(Inventory.Application.DTOs.UserDto) on controller Inventory.API.Controllers.UserController (Inventory.API).
+2025-05-24 08:44:02.170 -05:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-05-24 08:44:03.173 -05:00 [INF] Executed DbCommand (62ms) [Parameters=[@__email_0='jorgeluis199454@gmail.com' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[Password], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2025-05-24 08:44:03.364 -05:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-24 08:44:03.381 -05:00 [INF] Executed action Inventory.API.Controllers.UserController.LoginUser (Inventory.API) in 1985.8287ms
+2025-05-24 08:44:03.386 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
+2025-05-24 08:44:03.401 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/User/login - 200 null application/json; charset=utf-8 2085.9739ms
+2025-05-24 08:44:11.493 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/User/login - null null
+2025-05-24 08:44:11.503 -05:00 [INF] CORS policy execution successful.
+2025-05-24 08:44:11.507 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/User/login - 204 null null 13.2014ms
+2025-05-24 08:44:11.525 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/User/login - application/json 67
+2025-05-24 08:44:11.531 -05:00 [INF] CORS policy execution successful.
+2025-05-24 08:44:11.534 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
+2025-05-24 08:44:11.537 -05:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(Inventory.Application.DTOs.UserDto) on controller Inventory.API.Controllers.UserController (Inventory.API).
+2025-05-24 08:44:11.572 -05:00 [INF] Executed DbCommand (11ms) [Parameters=[@__email_0='jorgeluis199454@gmail.com' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[Password], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2025-05-24 08:44:11.579 -05:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-24 08:44:11.583 -05:00 [INF] Executed action Inventory.API.Controllers.UserController.LoginUser (Inventory.API) in 42.3722ms
+2025-05-24 08:44:11.588 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
+2025-05-24 08:44:11.590 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/User/login - 200 null application/json; charset=utf-8 65.4794ms
+2025-05-24 08:44:16.338 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/User/login - application/json 67
+2025-05-24 08:44:16.350 -05:00 [INF] CORS policy execution successful.
+2025-05-24 08:44:16.354 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
+2025-05-24 08:44:16.360 -05:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(Inventory.Application.DTOs.UserDto) on controller Inventory.API.Controllers.UserController (Inventory.API).
+2025-05-24 08:44:16.456 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__email_0='jorgeluis199454@gmail.com' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[Password], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2025-05-24 08:44:16.474 -05:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-24 08:44:16.477 -05:00 [INF] Executed action Inventory.API.Controllers.UserController.LoginUser (Inventory.API) in 109.9244ms
+2025-05-24 08:44:16.480 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
+2025-05-24 08:44:16.483 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/User/login - 200 null application/json; charset=utf-8 144.4799ms
+2025-05-24 08:50:02.323 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/User/login - null null
+2025-05-24 08:50:02.336 -05:00 [INF] CORS policy execution successful.
+2025-05-24 08:50:02.338 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/User/login - 204 null null 15.5473ms
+2025-05-24 08:50:02.355 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/User/login - application/json 67
+2025-05-24 08:50:02.361 -05:00 [INF] CORS policy execution successful.
+2025-05-24 08:50:02.364 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
+2025-05-24 08:50:02.368 -05:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(Inventory.Application.DTOs.UserDto) on controller Inventory.API.Controllers.UserController (Inventory.API).
+2025-05-24 08:50:02.382 -05:00 [INF] Executed DbCommand (6ms) [Parameters=[@__email_0='jorgeluis199454@gmail.com' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[Password], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2025-05-24 08:50:02.393 -05:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-24 08:50:02.396 -05:00 [INF] Executed action Inventory.API.Controllers.UserController.LoginUser (Inventory.API) in 24.5027ms
+2025-05-24 08:50:02.400 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
+2025-05-24 08:50:02.403 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/User/login - 200 null application/json; charset=utf-8 48.463ms
+2025-05-24 08:54:07.928 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/User/login - null null
+2025-05-24 08:54:07.941 -05:00 [INF] CORS policy execution successful.
+2025-05-24 08:54:07.944 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/User/login - 204 null null 15.929ms
+2025-05-24 08:54:07.958 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/User/login - application/json 67
+2025-05-24 08:54:07.965 -05:00 [INF] CORS policy execution successful.
+2025-05-24 08:54:07.967 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
+2025-05-24 08:54:07.969 -05:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(Inventory.Application.DTOs.UserDto) on controller Inventory.API.Controllers.UserController (Inventory.API).
+2025-05-24 08:54:07.994 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__email_0='jorgeluis199454@gmail.com' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[Password], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2025-05-24 08:54:08.000 -05:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-24 08:54:08.003 -05:00 [INF] Executed action Inventory.API.Controllers.UserController.LoginUser (Inventory.API) in 31.009ms
+2025-05-24 08:54:08.007 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
+2025-05-24 08:54:08.012 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/User/login - 200 null application/json; charset=utf-8 53.5184ms
+2025-05-24 08:54:39.831 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/User/login - null null
+2025-05-24 08:54:39.843 -05:00 [INF] CORS policy execution successful.
+2025-05-24 08:54:39.845 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/User/login - 204 null null 14.1051ms
+2025-05-24 08:54:39.860 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/User/login - application/json 67
+2025-05-24 08:54:39.864 -05:00 [INF] CORS policy execution successful.
+2025-05-24 08:54:39.866 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
+2025-05-24 08:54:39.868 -05:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(Inventory.Application.DTOs.UserDto) on controller Inventory.API.Controllers.UserController (Inventory.API).
+2025-05-24 08:54:39.879 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__email_0='jorgeluis199454@gmail.com' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[Password], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2025-05-24 08:54:39.886 -05:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-24 08:54:39.890 -05:00 [INF] Executed action Inventory.API.Controllers.UserController.LoginUser (Inventory.API) in 17.9035ms
+2025-05-24 08:54:39.893 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
+2025-05-24 08:54:39.895 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/User/login - 200 null application/json; charset=utf-8 35.5106ms
+2025-05-24 08:54:42.196 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/User/login - application/json 67
+2025-05-24 08:54:42.203 -05:00 [INF] CORS policy execution successful.
+2025-05-24 08:54:42.206 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
+2025-05-24 08:54:42.209 -05:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(Inventory.Application.DTOs.UserDto) on controller Inventory.API.Controllers.UserController (Inventory.API).
+2025-05-24 08:54:42.218 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__email_0='jorgeluis199454@gmail.com' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[Password], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2025-05-24 08:54:42.227 -05:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-24 08:54:42.230 -05:00 [INF] Executed action Inventory.API.Controllers.UserController.LoginUser (Inventory.API) in 16.7545ms
+2025-05-24 08:54:42.233 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
+2025-05-24 08:54:42.236 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/User/login - 200 null application/json; charset=utf-8 39.8813ms
+2025-05-24 08:54:47.687 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/User/login - null null
+2025-05-24 08:54:47.693 -05:00 [INF] CORS policy execution successful.
+2025-05-24 08:54:47.694 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/User/login - 204 null null 7.8341ms
+2025-05-24 08:54:47.701 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/User/login - application/json 67
+2025-05-24 08:54:47.707 -05:00 [INF] CORS policy execution successful.
+2025-05-24 08:54:47.710 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
+2025-05-24 08:54:47.712 -05:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(Inventory.Application.DTOs.UserDto) on controller Inventory.API.Controllers.UserController (Inventory.API).
+2025-05-24 08:54:47.723 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[@__email_0='jorgeluis199454@gmail.com' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[Password], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2025-05-24 08:54:47.736 -05:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-24 08:54:47.739 -05:00 [INF] Executed action Inventory.API.Controllers.UserController.LoginUser (Inventory.API) in 22.2443ms
+2025-05-24 08:54:47.742 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
+2025-05-24 08:54:47.744 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/User/login - 200 null application/json; charset=utf-8 43.2375ms
+2025-05-24 08:55:05.894 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/User/login - null null
+2025-05-24 08:55:05.901 -05:00 [INF] CORS policy execution successful.
+2025-05-24 08:55:05.903 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/User/login - 204 null null 9.1329ms
+2025-05-24 08:55:05.910 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/User/login - application/json 67
+2025-05-24 08:55:05.917 -05:00 [INF] CORS policy execution successful.
+2025-05-24 08:55:05.920 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
+2025-05-24 08:55:05.922 -05:00 [INF] Route matched with {action = "LoginUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUser(Inventory.Application.DTOs.UserDto) on controller Inventory.API.Controllers.UserController (Inventory.API).
+2025-05-24 08:55:05.936 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[@__email_0='jorgeluis199454@gmail.com' (Size = 255)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[Email], [u].[Password], [u].[Role], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2025-05-24 08:55:05.942 -05:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-05-24 08:55:05.947 -05:00 [INF] Executed action Inventory.API.Controllers.UserController.LoginUser (Inventory.API) in 19.6973ms
+2025-05-24 08:55:05.950 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.UserController.LoginUser (Inventory.API)'
+2025-05-24 08:55:05.953 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/User/login - 200 null application/json; charset=utf-8 43.2723ms
