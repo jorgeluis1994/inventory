@@ -325,3 +325,277 @@ VALUES (@p0, @p1, @p2, @p3, @p4);
 2025-05-23 23:04:14.212 -05:00 [INF] Executed action Inventory.API.Controllers.UserController.SaveUser (Inventory.API) in 578.9657ms
 2025-05-23 23:04:14.227 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.UserController.SaveUser (Inventory.API)'
 2025-05-23 23:04:14.237 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/User - 200 null application/json; charset=utf-8 659.7508ms
+2025-05-23 23:06:57.026 -05:00 [INF] Now listening on: http://localhost:5042
+2025-05-23 23:06:57.227 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/swagger/index.html - null null
+2025-05-23 23:06:57.354 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-23 23:06:57.356 -05:00 [INF] Hosting environment: Development
+2025-05-23 23:06:57.359 -05:00 [INF] Content root path: C:\Users\jorge\Source\Repos\inventory\Inventory.API
+2025-05-23 23:06:57.477 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/swagger/index.html - null null
+2025-05-23 23:06:57.490 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/swagger/index.html - 200 null text/html;charset=utf-8 268.926ms
+2025-05-23 23:06:57.490 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/swagger/index.html - 200 null text/html;charset=utf-8 11.222ms
+2025-05-23 23:06:57.536 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-23 23:06:57.546 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/_vs/browserLink - null null
+2025-05-23 23:06:57.558 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 21.0616ms
+2025-05-23 23:06:57.566 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-23 23:06:57.580 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 14.1633ms
+2025-05-23 23:06:57.607 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/_vs/browserLink - null null
+2025-05-23 23:06:57.608 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/_vs/browserLink - 200 null text/javascript; charset=UTF-8 61.7118ms
+2025-05-23 23:06:57.642 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/_vs/browserLink - 200 null text/javascript; charset=UTF-8 35.2983ms
+2025-05-23 23:06:57.695 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/swagger/v1/swagger.json - null null
+2025-05-23 23:06:57.711 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 16.3075ms
+2025-05-23 23:06:57.769 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/swagger/v1/swagger.json - null null
+2025-05-23 23:06:57.779 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.2567ms
+2025-05-23 23:16:03.762 -05:00 [INF] Now listening on: http://localhost:5042
+2025-05-23 23:16:03.976 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/swagger/index.html - null null
+2025-05-23 23:16:04.203 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-23 23:16:04.205 -05:00 [INF] Hosting environment: Development
+2025-05-23 23:16:04.207 -05:00 [INF] Content root path: C:\Users\jorge\Source\Repos\inventory\Inventory.API
+2025-05-23 23:16:04.239 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/swagger/index.html - 200 null text/html;charset=utf-8 279.4668ms
+2025-05-23 23:16:04.256 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-23 23:16:04.264 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 8.8467ms
+2025-05-23 23:16:04.273 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/_vs/browserLink - null null
+2025-05-23 23:16:04.306 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/_vs/browserLink - 200 null text/javascript; charset=UTF-8 33.7124ms
+2025-05-23 23:16:04.405 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/swagger/v1/swagger.json - null null
+2025-05-23 23:16:04.418 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 12.8631ms
+2025-05-23 23:16:58.967 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/User - application/json 107
+2025-05-23 23:16:58.980 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-05-23 23:16:58.985 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.UserController.SaveUser (Inventory.API)'
+2025-05-23 23:16:59.015 -05:00 [INF] Route matched with {action = "SaveUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveUser(Inventory.Application.DTOs.UserDto) on controller Inventory.API.Controllers.UserController (Inventory.API).
+2025-05-23 23:16:59.715 -05:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-05-23 23:17:00.268 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Boolean'.
+2025-05-23 23:17:00.293 -05:00 [INF] Executed action Inventory.API.Controllers.UserController.SaveUser (Inventory.API) in 1267.5543ms
+2025-05-23 23:17:00.298 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.UserController.SaveUser (Inventory.API)'
+2025-05-23 23:17:00.311 -05:00 [ERR] An error occurred using the connection to database 'bix' on server 'localhost\SQLEXPRESS'.
+2025-05-23 23:17:00.327 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/User - 200 null application/json; charset=utf-8 1360.0366ms
+2025-05-23 23:18:39.728 -05:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-05-23 23:18:47.477 -05:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-05-23 23:18:47.827 -05:00 [INF] Executed DbCommand (11ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-05-23 23:18:47.837 -05:00 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2025-05-23 23:18:47.849 -05:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2025-05-23 23:18:47.910 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2025-05-23 23:18:47.921 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2025-05-23 23:18:47.922 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2025-05-23 23:18:47.926 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2025-05-23 23:18:47.935 -05:00 [INF] Applying migration '20250524041840_CreateUsersTable'.
+2025-05-23 23:18:47.954 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Products] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(max) NULL,
+    [Description] nvarchar(max) NULL,
+    CONSTRAINT [PK_Products] PRIMARY KEY ([Id])
+);
+2025-05-23 23:18:47.956 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Users] (
+    [Id] int NOT NULL IDENTITY,
+    [UserName] nvarchar(max) NULL,
+    [Password] nvarchar(max) NULL,
+    [Email] nvarchar(max) NULL,
+    [Role] nvarchar(max) NULL,
+    [CreatedAt] datetime2 NOT NULL,
+    CONSTRAINT [PK_Users] PRIMARY KEY ([Id])
+);
+2025-05-23 23:18:47.958 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Batches] (
+    [Id] int NOT NULL IDENTITY,
+    [ProductId] int NOT NULL,
+    [BatchNumber] nvarchar(max) NULL,
+    [EntryDate] datetime2 NOT NULL,
+    [Quantity] int NOT NULL,
+    CONSTRAINT [PK_Batches] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Batches_Products_ProductId] FOREIGN KEY ([ProductId]) REFERENCES [Products] ([Id]) ON DELETE CASCADE
+);
+2025-05-23 23:18:48.392 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [Transactions] (
+    [Id] int NOT NULL IDENTITY,
+    [BatchId] int NOT NULL,
+    [TransactionType] nvarchar(max) NOT NULL,
+    [Quantity] int NOT NULL,
+    [TransactionDate] datetime2 NOT NULL,
+    [Notes] nvarchar(max) NULL,
+    CONSTRAINT [PK_Transactions] PRIMARY KEY ([Id]),
+    CONSTRAINT [FK_Transactions_Batches_BatchId] FOREIGN KEY ([BatchId]) REFERENCES [Batches] ([Id]) ON DELETE CASCADE
+);
+2025-05-23 23:18:48.393 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Batches_ProductId] ON [Batches] ([ProductId]);
+2025-05-23 23:18:48.394 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX [IX_Transactions_BatchId] ON [Transactions] ([BatchId]);
+2025-05-23 23:18:48.396 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO [__EFMigrationsHistory] ([MigrationId], [ProductVersion])
+VALUES (N'20250524041840_CreateUsersTable', N'9.0.5');
+2025-05-23 23:18:48.398 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_releaseapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session';
+SELECT @result
+2025-05-23 23:18:58.841 -05:00 [INF] Now listening on: http://localhost:5042
+2025-05-23 23:18:59.101 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-23 23:18:59.101 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/swagger/index.html - null null
+2025-05-23 23:18:59.104 -05:00 [INF] Hosting environment: Development
+2025-05-23 23:18:59.114 -05:00 [INF] Content root path: C:\Users\jorge\Source\Repos\inventory\Inventory.API
+2025-05-23 23:18:59.338 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/swagger/index.html - 200 null text/html;charset=utf-8 257.2208ms
+2025-05-23 23:18:59.356 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-23 23:18:59.365 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 9.9604ms
+2025-05-23 23:18:59.372 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/_vs/browserLink - null null
+2025-05-23 23:18:59.412 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/_vs/browserLink - 200 null text/javascript; charset=UTF-8 39.9968ms
+2025-05-23 23:18:59.493 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/swagger/v1/swagger.json - null null
+2025-05-23 23:18:59.506 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 12.7306ms
+2025-05-23 23:19:22.285 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/User - application/json 107
+2025-05-23 23:19:22.299 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-05-23 23:19:22.304 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.UserController.SaveUser (Inventory.API)'
+2025-05-23 23:19:22.330 -05:00 [INF] Route matched with {action = "SaveUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveUser(Inventory.Application.DTOs.UserDto) on controller Inventory.API.Controllers.UserController (Inventory.API).
+2025-05-23 23:19:23.071 -05:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-05-23 23:19:23.576 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Boolean'.
+2025-05-23 23:19:23.598 -05:00 [INF] Executed action Inventory.API.Controllers.UserController.SaveUser (Inventory.API) in 1257.9642ms
+2025-05-23 23:19:23.602 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.UserController.SaveUser (Inventory.API)'
+2025-05-23 23:19:23.617 -05:00 [ERR] An error occurred using the connection to database 'bix' on server 'localhost\SQLEXPRESS'.
+2025-05-23 23:19:23.629 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/User - 200 null application/json; charset=utf-8 1344.6129ms
+2025-05-23 23:19:59.824 -05:00 [INF] Now listening on: http://localhost:5042
+2025-05-23 23:19:59.898 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/swagger/index.html - null null
+2025-05-23 23:20:00.325 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/swagger/index.html - 200 null text/html;charset=utf-8 438.6585ms
+2025-05-23 23:20:00.361 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-23 23:20:00.361 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/_vs/browserLink - null null
+2025-05-23 23:20:00.374 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 14.5979ms
+2025-05-23 23:20:00.424 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-23 23:20:00.432 -05:00 [INF] Hosting environment: Development
+2025-05-23 23:20:00.435 -05:00 [INF] Content root path: C:\Users\jorge\Source\Repos\inventory\Inventory.API
+2025-05-23 23:20:00.469 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/_vs/browserLink - 200 null text/javascript; charset=UTF-8 109.5122ms
+2025-05-23 23:20:00.643 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/swagger/index.html - null null
+2025-05-23 23:20:00.666 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/swagger/index.html - 200 null text/html;charset=utf-8 23.5764ms
+2025-05-23 23:20:00.728 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-23 23:20:00.734 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/swagger/v1/swagger.json - null null
+2025-05-23 23:20:00.736 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/_vs/browserLink - null null
+2025-05-23 23:20:00.744 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 16.3436ms
+2025-05-23 23:20:00.783 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 48.86ms
+2025-05-23 23:20:00.840 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/_vs/browserLink - 200 null text/javascript; charset=UTF-8 104.0938ms
+2025-05-23 23:20:00.973 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/swagger/v1/swagger.json - null null
+2025-05-23 23:20:00.989 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.6797ms
+2025-05-23 23:20:07.800 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/User - application/json 108
+2025-05-23 23:20:07.829 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-05-23 23:20:07.843 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.UserController.SaveUser (Inventory.API)'
+2025-05-23 23:20:07.963 -05:00 [INF] Route matched with {action = "SaveUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveUser(Inventory.Application.DTOs.UserDto) on controller Inventory.API.Controllers.UserController (Inventory.API).
+2025-05-23 23:20:08.729 -05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-05-23 23:20:08.800 -05:00 [INF] Executed action Inventory.API.Controllers.UserController.SaveUser (Inventory.API) in 818.8041ms
+2025-05-23 23:20:08.806 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.UserController.SaveUser (Inventory.API)'
+2025-05-23 23:20:08.819 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/User - 400 null application/problem+json; charset=utf-8 1018.9287ms
+2025-05-23 23:20:18.809 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/User - application/json 108
+2025-05-23 23:20:18.827 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.UserController.SaveUser (Inventory.API)'
+2025-05-23 23:20:18.835 -05:00 [INF] Route matched with {action = "SaveUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveUser(Inventory.Application.DTOs.UserDto) on controller Inventory.API.Controllers.UserController (Inventory.API).
+2025-05-23 23:20:18.879 -05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-05-23 23:20:18.891 -05:00 [INF] Executed action Inventory.API.Controllers.UserController.SaveUser (Inventory.API) in 44.5795ms
+2025-05-23 23:20:18.900 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.UserController.SaveUser (Inventory.API)'
+2025-05-23 23:20:18.910 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/User - 400 null application/problem+json; charset=utf-8 99.2153ms
+2025-05-23 23:20:40.290 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/User - application/json 107
+2025-05-23 23:20:40.366 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.UserController.SaveUser (Inventory.API)'
+2025-05-23 23:20:40.376 -05:00 [INF] Route matched with {action = "SaveUser", controller = "User"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveUser(Inventory.Application.DTOs.UserDto) on controller Inventory.API.Controllers.UserController (Inventory.API).
+2025-05-23 23:20:42.553 -05:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-05-23 23:20:45.555 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Boolean'.
+2025-05-23 23:20:45.596 -05:00 [INF] Executed action Inventory.API.Controllers.UserController.SaveUser (Inventory.API) in 5203.2941ms
+2025-05-23 23:20:45.614 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.UserController.SaveUser (Inventory.API)'
+2025-05-23 23:20:45.718 -05:00 [ERR] An error occurred using the connection to database 'bix' on server 'localhost\SQLEXPRESS'.
+2025-05-23 23:20:45.733 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/User - 200 null application/json; charset=utf-8 5442.4654ms
+2025-05-23 23:21:44.370 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/Product - application/json 153
+2025-05-23 23:21:44.407 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductController.SaveProduct (Inventory.API)'
+2025-05-23 23:21:44.422 -05:00 [INF] Route matched with {action = "SaveProduct", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveProduct(Inventory.API.DTOs.ProductDto) on controller Inventory.API.Controllers.ProductController (Inventory.API).
+2025-05-23 23:21:45.044 -05:00 [INF] Executed DbCommand (179ms) [Parameters=[@p0='Ultrabook de 13 pulgadas con procesador Intel Core i7 y 16GB de RAM.' (Size = 4000), @p1='Laptop Dell XPS 13' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Description], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2025-05-23 23:21:45.340 -05:00 [INF] Executing OkObjectResult, writing value of type 'Inventory.API.DTOs.ProductDto'.
+2025-05-23 23:21:45.362 -05:00 [INF] Executed action Inventory.API.Controllers.ProductController.SaveProduct (Inventory.API) in 928.8586ms
+2025-05-23 23:21:45.379 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductController.SaveProduct (Inventory.API)'
+2025-05-23 23:21:45.400 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/Product - 200 null application/json; charset=utf-8 1030.0302ms
+2025-05-23 23:21:47.509 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/Product - application/json 153
+2025-05-23 23:21:47.521 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductController.SaveProduct (Inventory.API)'
+2025-05-23 23:21:47.527 -05:00 [INF] Route matched with {action = "SaveProduct", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveProduct(Inventory.API.DTOs.ProductDto) on controller Inventory.API.Controllers.ProductController (Inventory.API).
+2025-05-23 23:21:47.612 -05:00 [INF] Executed DbCommand (40ms) [Parameters=[@p0='Ultrabook de 13 pulgadas con procesador Intel Core i7 y 16GB de RAM.' (Size = 4000), @p1='Laptop Dell XPS 13' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Description], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2025-05-23 23:21:47.636 -05:00 [INF] Executing OkObjectResult, writing value of type 'Inventory.API.DTOs.ProductDto'.
+2025-05-23 23:21:47.651 -05:00 [INF] Executed action Inventory.API.Controllers.ProductController.SaveProduct (Inventory.API) in 115.7958ms
+2025-05-23 23:21:47.666 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductController.SaveProduct (Inventory.API)'
+2025-05-23 23:21:47.677 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/Product - 200 null application/json; charset=utf-8 167.8855ms
+2025-05-23 23:21:52.056 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/Product - application/json 153
+2025-05-23 23:21:52.067 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductController.SaveProduct (Inventory.API)'
+2025-05-23 23:21:52.071 -05:00 [INF] Route matched with {action = "SaveProduct", controller = "Product"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveProduct(Inventory.API.DTOs.ProductDto) on controller Inventory.API.Controllers.ProductController (Inventory.API).
+2025-05-23 23:21:52.092 -05:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='Ultrabook de 13 pulgadas con procesador Intel Core i7 y 16GB de RAM.' (Size = 4000), @p1='Laptop Dell XPS 13' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Description], [Name])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1);
+2025-05-23 23:21:52.105 -05:00 [INF] Executing OkObjectResult, writing value of type 'Inventory.API.DTOs.ProductDto'.
+2025-05-23 23:21:52.111 -05:00 [INF] Executed action Inventory.API.Controllers.ProductController.SaveProduct (Inventory.API) in 32.8383ms
+2025-05-23 23:21:52.118 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductController.SaveProduct (Inventory.API)'
+2025-05-23 23:21:52.124 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/Product - 200 null application/json; charset=utf-8 67.7425ms
+2025-05-23 23:25:49.310 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/swagger/index.html - null null
+2025-05-23 23:25:49.364 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/swagger/index.html - 200 null text/html;charset=utf-8 54.0525ms
+2025-05-23 23:25:49.430 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-23 23:25:49.430 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/_vs/browserLink - null null
+2025-05-23 23:25:49.453 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 26.3884ms
+2025-05-23 23:25:49.488 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/_vs/browserLink - 200 null text/javascript; charset=UTF-8 57.6109ms
+2025-05-23 23:25:49.810 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/swagger/v1/swagger.json - null null
+2025-05-23 23:25:49.849 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 38.5893ms
+2025-05-23 23:27:44.138 -05:00 [INF] Now listening on: http://localhost:5042
+2025-05-23 23:27:44.419 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-23 23:27:44.425 -05:00 [INF] Hosting environment: Development
+2025-05-23 23:27:44.430 -05:00 [INF] Content root path: C:\Users\jorge\Source\Repos\inventory\Inventory.API
+2025-05-23 23:27:45.312 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/swagger/index.html - null null
+2025-05-23 23:27:45.797 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/swagger/index.html - 200 null text/html;charset=utf-8 503.2086ms
+2025-05-23 23:27:45.865 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-23 23:27:45.865 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/_vs/browserLink - null null
+2025-05-23 23:27:45.887 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 32.0886ms
+2025-05-23 23:27:45.949 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/_vs/browserLink - 200 null text/javascript; charset=UTF-8 84.424ms
+2025-05-23 23:27:46.328 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/swagger/v1/swagger.json - null null
+2025-05-23 23:27:46.359 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 31.4349ms
+2025-05-23 23:27:58.526 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/Batch - application/json 129
+2025-05-23 23:27:58.553 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-05-23 23:27:58.562 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.BatchController.SaveBatch (Inventory.API)'
+2025-05-23 23:27:58.649 -05:00 [INF] Route matched with {action = "SaveBatch", controller = "Batch"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveBatch(Inventory.Application.DTOs.BatchDto) on controller Inventory.API.Controllers.BatchController (Inventory.API).
+2025-05-23 23:34:24.129 -05:00 [INF] Now listening on: http://localhost:5042
+2025-05-23 23:34:24.514 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/swagger/index.html - null null
+2025-05-23 23:34:24.528 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-23 23:34:24.543 -05:00 [INF] Hosting environment: Development
+2025-05-23 23:34:24.548 -05:00 [INF] Content root path: C:\Users\jorge\Source\Repos\inventory\Inventory.API
+2025-05-23 23:34:24.911 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/swagger/index.html - 200 null text/html;charset=utf-8 422.1144ms
+2025-05-23 23:34:24.952 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/_framework/aspnetcore-browser-refresh.js - null null
+2025-05-23 23:34:24.952 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/_vs/browserLink - null null
+2025-05-23 23:34:24.965 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 14.5108ms
+2025-05-23 23:34:25.022 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/_vs/browserLink - 200 null text/javascript; charset=UTF-8 70.3081ms
+2025-05-23 23:34:25.147 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/swagger/v1/swagger.json - null null
+2025-05-23 23:34:25.166 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.4254ms
+2025-05-23 23:35:50.521 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/Batch - application/json 120
+2025-05-23 23:35:50.551 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-05-23 23:35:50.561 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.BatchController.SaveBatch (Inventory.API)'
+2025-05-23 23:35:50.637 -05:00 [INF] Route matched with {action = "SaveBatch", controller = "Batch"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] SaveBatch(Inventory.Application.DTOs.BatchDto) on controller Inventory.API.Controllers.BatchController (Inventory.API).
+2025-05-23 23:36:10.780 -05:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-05-23 23:36:14.738 -05:00 [INF] Executed DbCommand (207ms) [Parameters=[@p0='Lote-12345' (Size = 4000), @p1='2025-05-24T10:00:00.0000000', @p2='1', @p3='100'], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Batches] ([BatchNumber], [EntryDate], [ProductId], [Quantity])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2025-05-23 23:36:17.825 -05:00 [INF] Executing OkObjectResult, writing value of type 'Inventory.Application.DTOs.BatchDto'.
+2025-05-23 23:36:17.848 -05:00 [INF] Executed action Inventory.API.Controllers.BatchController.SaveBatch (Inventory.API) in 27194.98ms
+2025-05-23 23:36:17.856 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.BatchController.SaveBatch (Inventory.API)'
+2025-05-23 23:36:17.880 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/Batch - 200 null application/json; charset=utf-8 27358.9425ms
