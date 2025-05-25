@@ -1,56 +1,83 @@
 ﻿using Inventory.Domain.Interfaces;
 using Inventory.Domain.Models;
-using Inventory.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Inventory.Infrastructure.Repositories
 {
-    public class ProductRepository:IProductRepository
+    /// <summary>
+    /// Implementación del repositorio de productos con Entity Framework Core.
+    /// </summary>
+    public class ProductRepository : IProductRepository
     {
         private readonly InventoryDbContext _context;
+
         public ProductRepository(InventoryDbContext context)
         {
-            _context = context;
+            _context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
-        public async Task<bool> DeleteProduct(int id)
+        /// <summary>
+        /// Obtiene un producto por su ID incluyendo los lotes relacionados.
+        /// </summary>
+        public async Task<Product?> GetByIdAsync(Guid id)
         {
-            var product = await _context.Products.FindAsync(id);
-            if (product is null) return false;
-            _context.Products.Remove(product);
-            await _context.SaveChangesAsync();
-            return true;
+            return await _context.Products
+                .Include("_batches")
+                .AsNoTracking()
+                .FirstOrDefaultAsync(p => p.Id == id);
         }
 
-        public async Task<List<Product>> GetProducts()
+        /// <summary>
+        /// Obtiene todos los productos incluyendo sus lotes.
+        /// </summary>
+        public async Task<IEnumerable<Product>> GetAllAsync()
         {
-            return await _context.Products.ToListAsync();
-        }
-
-        public async Task<Product> GetProductsById(int idProduct)
-        {
-            return await _context.Products.FirstOrDefaultAsync(p => p.Id == idProduct);
-        }
-
-        public async Task<Product> SaveProduct(Product product)
-        {
-            await _context.Products.AddAsync(product); 
-            await _context.SaveChangesAsync();
-            return product;
+            return await _context.Products
+                        .Include("_batches")      // Incluye la propiedad privada por nombre string
+                        .AsNoTracking()
+                        .ToListAsync();
 
         }
 
-        public async Task<Product> UpdateProduct(Product product)
+        /// <summary>
+        /// Agrega un nuevo producto (NO persiste los cambios, eso lo hará UnitOfWork).
+        /// </summary>
+        public async Task AddAsync(Product product)
         {
+            if (product == null) throw new ArgumentNullException(nameof(product));
+
+            await _context.Products.AddAsync(product);
+
+            // Eliminar esta línea para que UnitOfWork controle el guardado
+            // await _context.SaveChangesAsync();
+        }
+
+        /// <summary>
+        /// Actualiza un producto existente (NO persiste los cambios, eso lo hará UnitOfWork).
+        /// </summary>
+        public async Task UpdateAsync(Product product)
+        {
+            if (product == null) throw new ArgumentNullException(nameof(product));
+
             _context.Products.Update(product);
-            await _context.SaveChangesAsync();
-            return product;
+
+            // Eliminar esta línea para que UnitOfWork controle el guardado
+            // await _context.SaveChangesAsync();
+        }
+
+        /// <summary>
+        /// Elimina un producto (NO persiste los cambios, eso lo hará UnitOfWork).
+        /// </summary>
+        public async Task DeleteAsync(Product product)
+        {
+            if (product == null) throw new ArgumentNullException(nameof(product));
+
+            _context.Products.Remove(product);
+
+            // Eliminar esta línea para que UnitOfWork controle el guardado
+            // await _context.SaveChangesAsync();
         }
     }
-
 }

@@ -1,3 +1,4 @@
+using Inventory.Domain.ValueObjects;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,11 +8,49 @@ namespace Inventory.Domain.Models
 {
     public class Batch
     {
-        public int Id { get; set; }
-        public int ProductId { get; set; }
-        public Product? Product { get; set; }
-        public string? BatchNumber { get; set; }
-        public DateTime EntryDate { get; set; }
-        public int Quantity { get; set; }
+        public Guid Id { get; private set; }
+
+        private Guid _productId;
+        public Guid ProductId => _productId;
+
+        private DateTime _entryDateUtc;
+        public DateTime EntryDate => _entryDateUtc;
+
+        private int _quantity;
+        public int Quantity => _quantity;
+
+        private decimal _priceAmount;
+        public decimal PriceAmount => _priceAmount;
+
+        private string _priceCurrency;
+        public string PriceCurrency => _priceCurrency;
+
+        private Product _product;
+        public Product Product => _product;
+
+        private Batch() { }  // Constructor para EF Core
+
+        public Batch(Product product, DateTime entryDateUtc, int quantity, decimal priceAmount, string priceCurrency)
+        {
+            if (product == null) throw new ArgumentNullException(nameof(product));
+            if (entryDateUtc.Kind != DateTimeKind.Utc)
+                throw new ArgumentException("Entry date must be in UTC.", nameof(entryDateUtc));
+            if (quantity <= 0)
+                throw new ArgumentOutOfRangeException(nameof(quantity), "Quantity must be positive.");
+            if (string.IsNullOrWhiteSpace(priceCurrency))
+                throw new ArgumentException("Currency is required.", nameof(priceCurrency));
+
+            Id = Guid.NewGuid();
+            _product = product;
+            _productId = product.Id;
+            _entryDateUtc = entryDateUtc;
+            _quantity = quantity;
+            _priceAmount = priceAmount;
+            _priceCurrency = priceCurrency;
+        }
     }
+
+
+
+
 }

@@ -1,8 +1,8 @@
-using Inventory.Infrastructure.Data;
 using Inventory.Infrastructure.DependencyInjection;
 using Inventory.Application.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
+using Inventory.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,7 +27,8 @@ builder.Services.AddCors(options =>
 });
 
 
-
+//agregar beartoken authentication
+//agregar nidelware de autenticación JWT
 // Configura DbContext con SQL Server y la cadena de conexión
 builder.Services.AddDbContext<InventoryDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))

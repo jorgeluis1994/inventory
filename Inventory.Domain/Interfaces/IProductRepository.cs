@@ -7,13 +7,40 @@ using System.Threading.Tasks;
 
 namespace Inventory.Domain.Interfaces
 {
+    /// <summary>
+    /// Repositorio para gestionar las operaciones CRUD sobre productos.
+    /// </summary>
     public interface IProductRepository
     {
-        Task<Product> SaveProduct(Product product);
+        /// <summary>
+        /// Obtiene un producto por su identificador, incluyendo sus lotes.
+        /// </summary>
+        /// <param name="id">Identificador único del producto.</param>
+        /// <returns>Producto si existe, o null si no se encuentra.</returns>
+        Task<Product?> GetByIdAsync(Guid id);
 
-        Task<List<Product>> GetProducts();
-        Task<Product> GetProductsById(int IdProduct);
-        Task<Product> UpdateProduct(Product product);
-        Task<bool> DeleteProduct(int id);
+        /// <summary>
+        /// Obtiene todos los productos disponibles.
+        /// </summary>
+        /// <returns>Lista de productos.</returns>
+        Task<IEnumerable<Product>> GetAllAsync();
+
+        /// <summary>
+        /// Agrega un nuevo producto.
+        /// </summary>
+        /// <param name="product">Producto a agregar.</param>
+        Task AddAsync(Product product);
+
+        /// <summary>
+        /// Actualiza un producto existente.
+        /// </summary>
+        /// <param name="product">Producto con los cambios a actualizar.</param>
+        Task UpdateAsync(Product product);
+
+        /// <summary>
+        /// Elimina un producto.
+        /// </summary>
+        /// <param name="product">Producto a eliminar.</param>
+        Task DeleteAsync(Product product);
     }
 }

@@ -1,7 +1,7 @@
-﻿using Inventory.Application.Interfaces.Security;
+﻿using Inventory.Application.Security;
 using Inventory.Domain.Interfaces;
 using Inventory.Infrastructure.Repositories;
-using Inventory.Infrastructure.Services.Security;
+using Inventory.Infrastructure.Security;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -15,10 +15,13 @@ namespace Inventory.Infrastructure.DependencyInjection
     {
         public static IServiceCollection AddInfrastructureServices(this IServiceCollection services)
         {
-            services.AddScoped<IBatchRepository, BatchRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
-            services.AddScoped<ITokenService, JwtTokenService>();
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IAuthenticationService, AuthenticationService>();
+
+            // Registra UnitOfWork
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+
 
             return services;
         }

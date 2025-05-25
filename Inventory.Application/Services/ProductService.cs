@@ -1,92 +1,104 @@
-﻿using Inventory.API.DTOs;
+﻿using Inventory.Application.DTOs;
 using Inventory.Application.Interfaces;
 using Inventory.Domain.Interfaces;
 using Inventory.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Inventory.Application.Services
 {
+    /// <summary>
+    /// Implementación del servicio para productos.
+    /// </summary>
     public class ProductService : IProductService
     {
         private readonly IProductRepository _productRepository;
-        public ProductService(IProductRepository productRepository)
+        private readonly IUnitOfWork _unitOfWork;  // <-- Inyección de UnitOfWork
+
+        public ProductService(IProductRepository productRepository, IUnitOfWork unitOfWork)
         {
             _productRepository = productRepository;
+            _unitOfWork = unitOfWork;
         }
 
-        public Task<bool> DeleteProduct(int id)
+        public async Task<ProductDto?> GetByIdAsync(Guid id)
         {
-            return _productRepository.DeleteProduct(id);
+            var product = await _productRepository.GetByIdAsync(id);
+            return product == null ? null : ProductDto.FromDomain(product);
         }
 
-        public async Task<List<ProductDto>> GetProducts()
+        public async Task<IEnumerable<ProductDto>> GetAllAsync()
         {
-            var products = await _productRepository.GetProducts();
-            return products.Select(p => new ProductDto
-            {
-                Id = p.Id,
-                Name = p.Name,
-                Description = p.Description
-            }).ToList();
+            var products = await _productRepository.GetAllAsync();
+            return products.Select(ProductDto.FromDomain);
         }
 
-        public async Task<ProductDto> GetProductsById(int idProduct)
+        public async Task AddAsync(ProductDto productDto)
         {
-            var product = await _productRepository.GetProductsById(idProduct);
-            if (product == null)
-                return null;
+            var product = new Product(productDto.Name);
 
-            return new ProductDto
+            // Agregar los batches al producto
+            if (productDto.Batches != null)
             {
-                Id = product.Id,
-                Name = product.Name,
-                Description = product.Description
-            };
+                foreach (var batchDto in productDto.Batches)
+                {
+                    product.AddBatch(
+                        batchDto.EntryDate.ToUniversalTime(),
+                        batchDto.Quantity,
+                        batchDto.PriceAmount,
+                        batchDto.PriceCurrency
+                    );
+                }
+            }
+
+            await _productRepository.AddAsync(product);
+
+            await _unitOfWork.CommitAsync();  // Guarda cambios en la BD
         }
 
-        public async Task<ProductDto> SaveProduct(ProductDto product)
+
+        public async Task UpdateAsync(ProductDto productDto)
         {
-            
-            var  productModel = new Product
+            var product = await _productRepository.GetByIdAsync(productDto.Id);
+            if (product == null) throw new KeyNotFoundException("Product not found");
+
+            if (!string.IsNullOrWhiteSpace(productDto.Name) && productDto.Name != product.Name)
             {
-                Name = product.Name,
-                Description = product.Description
-            };
+                product.UpdateName(productDto.Name);
+            }
 
-            var savedProduct = await _productRepository.SaveProduct(productModel);
-            return new ProductDto
-            {
-                Id = savedProduct.Id,
-                Name = savedProduct.Name,
-                Description = savedProduct.Description
-            };
+            await _productRepository.UpdateAsync(product);
 
-
-
-
+            await _unitOfWork.CommitAsync();  // <-- Guarda cambios
         }
 
-        public async Task<ProductDto> UpdateProduct(ProductDto product)
+        public async Task DeleteAsync(Guid id)
         {
-            var existingProduct = await _productRepository.GetProductsById(product.Id);
-            if (existingProduct == null)
-                return null;
-            existingProduct.Name = product.Name;
-            existingProduct.Description = product.Description;
+            var product = await _productRepository.GetByIdAsync(id);
+            if (product == null) throw new KeyNotFoundException("Product not found");
 
-            await _productRepository.UpdateProduct(existingProduct);
+            await _productRepository.DeleteAsync(product);
 
-            return new ProductDto
-            {
-                Id = existingProduct.Id,
-                Name = existingProduct.Name,
-                Description = existingProduct.Description
-            };
+            await _unitOfWork.CommitAsync();  // <-- Guarda cambios
+        }
 
+        public async Task AddBatchAsync(Guid productId, BatchDto batchDto)
+        {
+            var product = await _productRepository.GetByIdAsync(productId);
+            if (product == null) throw new KeyNotFoundException("Product not found");
+
+            product.AddBatch(
+                batchDto.EntryDate.ToUniversalTime(),
+                batchDto.Quantity,
+                batchDto.PriceAmount,
+                batchDto.PriceCurrency
+            );
+
+            await _productRepository.UpdateAsync(product);
+
+            await _unitOfWork.CommitAsync();  // <-- Guarda cambios
         }
     }
 }

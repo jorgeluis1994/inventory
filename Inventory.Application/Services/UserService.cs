@@ -1,66 +1,74 @@
 ﻿using Inventory.Application.DTOs;
 using Inventory.Application.Interfaces;
-using Inventory.Application.Interfaces.Security;
+using Inventory.Application.Security;
 using Inventory.Domain.Interfaces;
 using Inventory.Domain.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Inventory.Application.Services
 {
+    /// <summary>
+    /// Servicio de aplicación para gestionar usuarios.
+    /// </summary>
     public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
+        private readonly IAuthenticationService _authService;
 
-        private readonly ITokenService _tokenService;
-        public UserService(IUserRepository userRepository, ITokenService tokenService)
+        public UserService(IUserRepository userRepository, IAuthenticationService authService)
         {
             _userRepository = userRepository;
-            _tokenService = tokenService;
+            _authService = authService;
         }
 
-        public Task<UserDto> GetByEmail(string email)
+        /// <inheritdoc />
+        public async Task<LoginResponse?> ValidateLoginAsync(string email, string password)
         {
-            var user = _userRepository.GetByEmail(email);
+            var user = await _userRepository.ValidateLoginAsync(email, password);
+            if (user == null) return null;
 
-            if (user == null)
+            bool validPassword = _authService.VerifyPassword(user.Password, password);
+            if (!validPassword) return null;
+
+            var expirationDate = DateTime.UtcNow.AddHours(1);
+            var token = _authService.GenerateToken(user.Id.ToString(), user.UserName, expirationDate);
+
+            return new LoginResponse
             {
-                return Task.FromResult<UserDto>(result: null );
-            }
-            var userDto = new UserDto
-            {
-                UserName = user.Result.UserName,
+                Email = user.Email,
+                Token = token
             };
-            return Task.FromResult(userDto);
         }
 
-        public async Task<string> LoginUser(UserDto userDto)
+
+        /// <inheritdoc />
+        public async Task RegisterUserAsync(UserDto userDto, string password)
         {
-            var userExist = await _userRepository.GetByEmail(userDto.Email);
+            var existingUser = await _userRepository.GetByEmailAsync(userDto.Email);
+            if (existingUser != null)
+                throw new InvalidOperationException("El correo ya está registrado.");
 
-            if (userExist == null)
-            {
-                return null;
-            }
-            var token = _tokenService.GenerateToken(userExist.Id.ToString(), userExist.UserName, userExist.Role, DateTime.UtcNow.AddHours(2));
-            return token;
+            var hashedPassword = _authService.HashPassword(password);
+
+            var user = new User(userDto.UserName, hashedPassword, userDto.Email);
+
+            await _userRepository.AddAsync(user);
         }
 
-        public Task<bool> RegisterUser(UserDto userDto)
+        public async Task<UserDto?> GetByEmailAsync(string email)
         {
-            var user = new User
-            {
-                UserName = userDto.UserName,
-                Password = userDto.Password,
-                Role=userDto.Role,
-                Email=userDto.Email
-            };
-            _userRepository.RegisterUser(user);
-            return Task.FromResult(true);
+            var user = await _userRepository.GetByEmailAsync(email);
+            if (user == null) return null;
+
+            return UserDto.FromDomain(user);
         }
 
+        public Task<UserDto?> GetUserByIdAsync(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
+     
     }
 }

@@ -1,16 +1,17 @@
 ﻿using Inventory.Domain.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Inventory.Domain.Interfaces
 {
+    /// <summary>
+    /// Repositorio para la entidad User.
+    /// </summary>
     public interface IUserRepository
     {
-        Task<bool> RegisterUser(User userDto);
-
-        Task<User> GetByEmail(string email);
+        Task<User?> ValidateLoginAsync(string email, string passwordHash);
+        Task<User?> GetByEmailAsync(string email);
+        Task<User?> GetByIdAsync(Guid id);
+        Task AddAsync(User user);
     }
 }

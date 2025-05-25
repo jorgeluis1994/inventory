@@ -1,35 +1,29 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Inventory.Domain.Models;
+using Inventory.Infrastructure.Configurations;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
-namespace Inventory.Infrastructure.Data
+namespace Inventory.Infrastructure
 {
     public class InventoryDbContext : DbContext
     {
-        public InventoryDbContext(DbContextOptions<InventoryDbContext> options): base(options){}
+        public InventoryDbContext(DbContextOptions<InventoryDbContext> options)
+            : base(options) { }
 
-        public DbSet<User> Users { get; set; } = null!;
-        public DbSet<Product> Products { get; set; } = null!;
-        public DbSet<Batch> Batches { get; set; } = null!;
-        public DbSet<Transaction> Transactions { get; set; } = null!;
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Batch> Batches { get; set; }
+        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Configure the entity properties and relationships here if needed
-
-            
-            modelBuilder.Entity<User>()
-                        .HasIndex(u => u.Email)
-                        .IsUnique();
-
-            modelBuilder.Entity<User>()
-                .Property(u => u.CreatedAt)
-                .HasDefaultValueSql("SYSUTCDATETIME()");
 
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.ApplyConfiguration(new ProductConfiguration());
+            modelBuilder.ApplyConfiguration(new BatchConfiguration());
+            modelBuilder.ApplyConfiguration(new UserConfiguration());
+
+
 
         }
     }
