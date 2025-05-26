@@ -1,26 +1,33 @@
 ﻿using Inventory.Application.DTOs;
 using Inventory.Application.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Inventory.API.Controllers
 {
+    [Authorize]
     [ApiController]
     [Route("api/[controller]")]
     public class ProductsController : ControllerBase
     {
         private readonly IProductService _productService;
+        private readonly ILogger<ProductsController> _logger;
 
-        public ProductsController(IProductService productService)
+        public ProductsController(IProductService productService, ILogger<ProductsController> logger)
         {
             _productService = productService;
+            _logger = logger;
         }
 
         // GET api/products
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ProductDto>>> GetAll()
         {
+
+            var authHeader = Request.Headers["Authorization"].ToString();
+            _logger.LogInformation("Authorization header: {AuthHeader}", authHeader);
             var products = await _productService.GetAllAsync();
             return Ok(products);
         }
