@@ -1058,3 +1058,1197 @@ Swashbuckle.AspNetCore.SwaggerGen.SwaggerGeneratorException: Conflicting method/
 2025-05-26 10:02:22.226 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/swagger/index.html - 200 null text/html;charset=utf-8 267.2327ms
 2025-05-26 10:02:22.321 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/swagger/v1/swagger.json - null null
 2025-05-26 10:02:22.444 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 122.9596ms
+2025-05-26 10:14:41.959 -05:00 [INF] User profile is available. Using 'C:\Users\sopor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-26 10:14:42.152 -05:00 [INF] Now listening on: http://localhost:5042
+2025-05-26 10:14:42.156 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-26 10:14:42.157 -05:00 [INF] Hosting environment: Development
+2025-05-26 10:14:42.157 -05:00 [INF] Content root path: C:\Users\sopor\OneDrive\Escritorio\inventory\Inventory.API
+2025-05-26 10:14:42.373 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/swagger/index.html - null null
+2025-05-26 10:14:42.650 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/swagger/index.html - 200 null text/html;charset=utf-8 278.9921ms
+2025-05-26 10:14:42.767 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/swagger/v1/swagger.json - null null
+2025-05-26 10:14:42.925 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 158.1811ms
+2025-05-26 10:14:57.876 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Auth/login - null null
+2025-05-26 10:14:57.887 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:14:57.891 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Auth/login - 204 null null 14.5959ms
+2025-05-26 10:14:57.893 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/Auth/login - application/json 56
+2025-05-26 10:14:57.896 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:14:57.898 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-05-26 10:14:57.900 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.AuthController.Login (Inventory.API)'
+2025-05-26 10:14:57.927 -05:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Inventory.Application.DTOs.UserDto]] Login(Inventory.Application.DTOs.LoginRequest) on controller Inventory.API.Controllers.AuthController (Inventory.API).
+2025-05-26 10:14:58.585 -05:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2025-05-26 10:14:58.643 -05:00 [WRN] No store type was specified for the decimal property '_priceAmount' on entity type 'Batch'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2025-05-26 10:14:59.475 -05:00 [INF] Executed DbCommand (60ms) [Parameters=[@__email_0='luisortiz211994@gmail.com' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[UpdatedAt], [u].[Email], [u].[Password], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2025-05-26 10:14:59.627 -05:00 [INF] Executing OkObjectResult, writing value of type 'Inventory.Application.DTOs.LoginResponse'.
+2025-05-26 10:14:59.640 -05:00 [INF] Executed action Inventory.API.Controllers.AuthController.Login (Inventory.API) in 1710.2291ms
+2025-05-26 10:14:59.641 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.AuthController.Login (Inventory.API)'
+2025-05-26 10:14:59.650 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/Auth/login - 200 null application/json; charset=utf-8 1757.2282ms
+2025-05-26 10:14:59.675 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products - null null
+2025-05-26 10:14:59.676 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:14:59.692 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products - 204 null null 0.9917ms
+2025-05-26 10:14:59.704 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/api/Products - null null
+2025-05-26 10:14:59.762 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:14:59.762 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 10:14:59.769 -05:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Inventory.Application.DTOs.ProductDto]]] GetAll() on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 10:14:59.772 -05:00 [INF] Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMzNhOTFlNi1iMDU2LTQxMjktMGQzZi0wOGRkOWM1YTUxYTIiLCJ1bmlxdWVfbmFtZSI6IkpvcmdlIEx1aXMiLCJqdGkiOiIwNzgyNDdjNC00MWU1LTQwNzYtYjNiOS1mZTg1MTIyNjcyMmUiLCJleHAiOjE3NDgyNzYwOTksImlzcyI6IkludmVudG9yeUFQSSIsImF1ZCI6IkludmVudG9yeUNsaWVudCJ9.8HeIXtQEal4ssULhfpQ_0Nz32XHJ7PRGk30obCVeA24
+2025-05-26 10:14:59.895 -05:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Batches] AS [b] ON [p].[Id] = [b].[ProductId]
+ORDER BY [p].[Id]
+2025-05-26 10:14:59.906 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Inventory.Domain.Models.Product, Inventory.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Inventory.Application.DTOs.ProductDto, Inventory.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-26 10:14:59.927 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.GetAll (Inventory.API) in 157.6277ms
+2025-05-26 10:14:59.927 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 10:14:59.927 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/api/Products - 200 null application/json; charset=utf-8 223.4484ms
+2025-05-26 10:15:36.289 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/swagger/index.html - null null
+2025-05-26 10:15:36.319 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/swagger/index.html - 200 null text/html;charset=utf-8 29.9528ms
+2025-05-26 10:15:36.380 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/swagger/v1/swagger.json - null null
+2025-05-26 10:15:36.392 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 11.9708ms
+2025-05-26 10:16:40.013 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/Products/addProduct - application/json 326
+2025-05-26 10:16:40.053 -05:00 [INF] CORS policy execution failed.
+2025-05-26 10:16:40.054 -05:00 [INF] Request origin http://localhost:5042 does not have permission to access the resource.
+2025-05-26 10:16:40.055 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.addProduct (Inventory.API)'
+2025-05-26 10:16:40.060 -05:00 [INF] Route matched with {action = "addProduct", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] addProduct(Inventory.Application.DTOs.ProductCreateDto) on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 10:16:40.085 -05:00 [INF] Creating product with batches
+2025-05-26 10:17:00.661 -05:00 [INF] Product created with ID: "e3b0a857-a47c-4e7f-60c8-08dd9c6850c0"
+2025-05-26 10:17:08.880 -05:00 [INF] Executed DbCommand (32ms) [Parameters=[@p0='e3b0a857-a47c-4e7f-60c8-08dd9c6850c0', @p1='Camisa Azul' (Nullable = false) (Size = 100), @p2='b3a9ec2b-9cc6-4b1b-8e0f-0c7fb2fc527b', @p3='2025-05-26T15:15:50.2920000Z', @p4='15.50' (Precision = 18) (Scale = 2), @p5='USD' (Nullable = false) (Size = 3), @p6='e3b0a857-a47c-4e7f-60c8-08dd9c6850c0', @p7='100', @p8='ca667327-ff52-4797-b446-6063be64e41d', @p9='2025-05-27T10:00:00.0000000Z', @p10='14.00' (Precision = 18) (Scale = 2), @p11='USD' (Nullable = false) (Size = 3), @p12='e3b0a857-a47c-4e7f-60c8-08dd9c6850c0', @p13='50'], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Id], [Name])
+VALUES (@p0, @p1);
+INSERT INTO [Batches] ([Id], [EntryDate], [PriceAmount], [PriceCurrency], [ProductId], [Quantity])
+VALUES (@p2, @p3, @p4, @p5, @p6, @p7),
+(@p8, @p9, @p10, @p11, @p12, @p13);
+2025-05-26 10:17:08.902 -05:00 [INF] Changes committed to the database
+2025-05-26 10:17:08.904 -05:00 [INF] Executing CreatedAtActionResult, writing value of type 'Inventory.Application.DTOs.ProductCreateDto'.
+2025-05-26 10:17:08.929 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.addProduct (Inventory.API) in 28868.5265ms
+2025-05-26 10:17:08.929 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.addProduct (Inventory.API)'
+2025-05-26 10:17:08.929 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/Products/addProduct - 201 null application/json; charset=utf-8 28916.068ms
+2025-05-26 10:17:16.569 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products - null null
+2025-05-26 10:17:16.570 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:17:16.572 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products - 204 null null 1.5326ms
+2025-05-26 10:17:16.575 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/api/Products - null null
+2025-05-26 10:17:16.579 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:17:16.579 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 10:17:16.580 -05:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Inventory.Application.DTOs.ProductDto]]] GetAll() on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 10:17:16.604 -05:00 [INF] Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMzNhOTFlNi1iMDU2LTQxMjktMGQzZi0wOGRkOWM1YTUxYTIiLCJ1bmlxdWVfbmFtZSI6IkpvcmdlIEx1aXMiLCJqdGkiOiIwNzgyNDdjNC00MWU1LTQwNzYtYjNiOS1mZTg1MTIyNjcyMmUiLCJleHAiOjE3NDgyNzYwOTksImlzcyI6IkludmVudG9yeUFQSSIsImF1ZCI6IkludmVudG9yeUNsaWVudCJ9.8HeIXtQEal4ssULhfpQ_0Nz32XHJ7PRGk30obCVeA24
+2025-05-26 10:17:16.615 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Batches] AS [b] ON [p].[Id] = [b].[ProductId]
+ORDER BY [p].[Id]
+2025-05-26 10:17:16.617 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Inventory.Domain.Models.Product, Inventory.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Inventory.Application.DTOs.ProductDto, Inventory.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-26 10:17:16.618 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.GetAll (Inventory.API) in 38.2259ms
+2025-05-26 10:17:16.619 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 10:17:16.620 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/api/Products - 200 null application/json; charset=utf-8 44.6078ms
+2025-05-26 10:18:35.486 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products - null null
+2025-05-26 10:18:35.492 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:18:35.496 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products - 204 null null 10.3011ms
+2025-05-26 10:18:35.503 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/api/Products - null null
+2025-05-26 10:18:35.509 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:18:35.509 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 10:18:35.510 -05:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Inventory.Application.DTOs.ProductDto]]] GetAll() on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 10:18:35.510 -05:00 [INF] Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMzNhOTFlNi1iMDU2LTQxMjktMGQzZi0wOGRkOWM1YTUxYTIiLCJ1bmlxdWVfbmFtZSI6IkpvcmdlIEx1aXMiLCJqdGkiOiIwNzgyNDdjNC00MWU1LTQwNzYtYjNiOS1mZTg1MTIyNjcyMmUiLCJleHAiOjE3NDgyNzYwOTksImlzcyI6IkludmVudG9yeUFQSSIsImF1ZCI6IkludmVudG9yeUNsaWVudCJ9.8HeIXtQEal4ssULhfpQ_0Nz32XHJ7PRGk30obCVeA24
+2025-05-26 10:18:35.531 -05:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Batches] AS [b] ON [p].[Id] = [b].[ProductId]
+ORDER BY [p].[Id]
+2025-05-26 10:18:35.532 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Inventory.Domain.Models.Product, Inventory.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Inventory.Application.DTOs.ProductDto, Inventory.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-26 10:18:35.533 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.GetAll (Inventory.API) in 23.4829ms
+2025-05-26 10:18:35.535 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 10:18:35.535 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/api/Products - 200 null application/json; charset=utf-8 35.2685ms
+2025-05-26 10:18:39.958 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/api/Products - null null
+2025-05-26 10:18:39.959 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:18:39.959 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 10:18:39.959 -05:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Inventory.Application.DTOs.ProductDto]]] GetAll() on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 10:18:39.960 -05:00 [INF] Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMzNhOTFlNi1iMDU2LTQxMjktMGQzZi0wOGRkOWM1YTUxYTIiLCJ1bmlxdWVfbmFtZSI6IkpvcmdlIEx1aXMiLCJqdGkiOiIwNzgyNDdjNC00MWU1LTQwNzYtYjNiOS1mZTg1MTIyNjcyMmUiLCJleHAiOjE3NDgyNzYwOTksImlzcyI6IkludmVudG9yeUFQSSIsImF1ZCI6IkludmVudG9yeUNsaWVudCJ9.8HeIXtQEal4ssULhfpQ_0Nz32XHJ7PRGk30obCVeA24
+2025-05-26 10:18:39.965 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Batches] AS [b] ON [p].[Id] = [b].[ProductId]
+ORDER BY [p].[Id]
+2025-05-26 10:18:39.967 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Inventory.Domain.Models.Product, Inventory.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Inventory.Application.DTOs.ProductDto, Inventory.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-26 10:18:39.967 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.GetAll (Inventory.API) in 8.1449ms
+2025-05-26 10:18:39.968 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 10:18:39.968 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/api/Products - 200 null application/json; charset=utf-8 9.8188ms
+2025-05-26 10:19:12.819 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products - null null
+2025-05-26 10:19:12.821 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:19:12.824 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products - 204 null null 4.3316ms
+2025-05-26 10:19:12.826 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/Products - application/json 131
+2025-05-26 10:19:12.828 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:19:12.831 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.Create (Inventory.API)'
+2025-05-26 10:19:12.840 -05:00 [INF] Route matched with {action = "Create", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Create(Inventory.Application.DTOs.ProductDto) on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 10:19:12.854 -05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-05-26 10:19:12.876 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.Create (Inventory.API) in 36.138ms
+2025-05-26 10:19:12.876 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.Create (Inventory.API)'
+2025-05-26 10:19:12.876 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/Products - 400 null application/problem+json; charset=utf-8 50.08ms
+2025-05-26 10:19:41.210 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products - null null
+2025-05-26 10:19:41.211 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:19:41.213 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products - 204 null null 2.5544ms
+2025-05-26 10:19:41.226 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/api/Products - null null
+2025-05-26 10:19:41.227 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:19:41.227 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 10:19:41.227 -05:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Inventory.Application.DTOs.ProductDto]]] GetAll() on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 10:19:41.228 -05:00 [INF] Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMzNhOTFlNi1iMDU2LTQxMjktMGQzZi0wOGRkOWM1YTUxYTIiLCJ1bmlxdWVfbmFtZSI6IkpvcmdlIEx1aXMiLCJqdGkiOiIwNzgyNDdjNC00MWU1LTQwNzYtYjNiOS1mZTg1MTIyNjcyMmUiLCJleHAiOjE3NDgyNzYwOTksImlzcyI6IkludmVudG9yeUFQSSIsImF1ZCI6IkludmVudG9yeUNsaWVudCJ9.8HeIXtQEal4ssULhfpQ_0Nz32XHJ7PRGk30obCVeA24
+2025-05-26 10:19:41.246 -05:00 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Batches] AS [b] ON [p].[Id] = [b].[ProductId]
+ORDER BY [p].[Id]
+2025-05-26 10:19:41.247 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Inventory.Domain.Models.Product, Inventory.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Inventory.Application.DTOs.ProductDto, Inventory.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-26 10:19:41.247 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.GetAll (Inventory.API) in 19.8123ms
+2025-05-26 10:19:41.247 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 10:19:41.248 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/api/Products - 200 null application/json; charset=utf-8 21.0996ms
+2025-05-26 10:24:15.277 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products - null null
+2025-05-26 10:24:15.280 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:24:15.282 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products - 204 null null 5.2163ms
+2025-05-26 10:24:15.285 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/Products - application/json 124
+2025-05-26 10:24:15.285 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:24:15.286 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.Create (Inventory.API)'
+2025-05-26 10:24:15.286 -05:00 [INF] Route matched with {action = "Create", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Create(Inventory.Application.DTOs.ProductDto) on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 10:24:15.291 -05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-05-26 10:24:15.292 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.Create (Inventory.API) in 5.3598ms
+2025-05-26 10:24:15.292 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.Create (Inventory.API)'
+2025-05-26 10:24:15.292 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/Products - 400 null application/problem+json; charset=utf-8 7.4279ms
+2025-05-26 10:24:42.264 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products - null null
+2025-05-26 10:24:42.265 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:24:42.270 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products - 204 null null 5.5508ms
+2025-05-26 10:24:42.272 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/api/Products - null null
+2025-05-26 10:24:42.273 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:24:42.274 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 10:24:42.274 -05:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Inventory.Application.DTOs.ProductDto]]] GetAll() on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 10:24:42.281 -05:00 [INF] Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMzNhOTFlNi1iMDU2LTQxMjktMGQzZi0wOGRkOWM1YTUxYTIiLCJ1bmlxdWVfbmFtZSI6IkpvcmdlIEx1aXMiLCJqdGkiOiIwNzgyNDdjNC00MWU1LTQwNzYtYjNiOS1mZTg1MTIyNjcyMmUiLCJleHAiOjE3NDgyNzYwOTksImlzcyI6IkludmVudG9yeUFQSSIsImF1ZCI6IkludmVudG9yeUNsaWVudCJ9.8HeIXtQEal4ssULhfpQ_0Nz32XHJ7PRGk30obCVeA24
+2025-05-26 10:24:42.310 -05:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Batches] AS [b] ON [p].[Id] = [b].[ProductId]
+ORDER BY [p].[Id]
+2025-05-26 10:24:42.312 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Inventory.Domain.Models.Product, Inventory.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Inventory.Application.DTOs.ProductDto, Inventory.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-26 10:24:42.312 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.GetAll (Inventory.API) in 37.9833ms
+2025-05-26 10:24:42.313 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 10:24:42.313 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/api/Products - 200 null application/json; charset=utf-8 40.3501ms
+2025-05-26 10:25:03.679 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products - null null
+2025-05-26 10:25:03.682 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:25:03.683 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products - 204 null null 3.4119ms
+2025-05-26 10:25:03.687 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/Products - application/json 117
+2025-05-26 10:25:03.690 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:25:03.690 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.Create (Inventory.API)'
+2025-05-26 10:25:03.690 -05:00 [INF] Route matched with {action = "Create", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Create(Inventory.Application.DTOs.ProductDto) on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 10:25:03.716 -05:00 [INF] Executed DbCommand (10ms) [Parameters=[@p0='0ae58b3d-cab3-477e-60c9-08dd9c6850c0', @p1='Camisa Negra' (Nullable = false) (Size = 100), @p2='11358e88-c8dc-40b1-b834-598a434855b4', @p3='2025-01-05T05:00:00.0000000Z', @p4='123' (Precision = 18) (Scale = 2), @p5='Usd' (Nullable = false) (Size = 3), @p6='0ae58b3d-cab3-477e-60c9-08dd9c6850c0', @p7='120'], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Id], [Name])
+VALUES (@p0, @p1);
+INSERT INTO [Batches] ([Id], [EntryDate], [PriceAmount], [PriceCurrency], [ProductId], [Quantity])
+VALUES (@p2, @p3, @p4, @p5, @p6, @p7);
+2025-05-26 10:25:11.613 -05:00 [INF] Executing CreatedAtActionResult, writing value of type 'Inventory.Application.DTOs.ProductDto'.
+2025-05-26 10:25:11.615 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.Create (Inventory.API) in 7924.8283ms
+2025-05-26 10:25:11.615 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.Create (Inventory.API)'
+2025-05-26 10:25:11.615 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/Products - 201 null application/json; charset=utf-8 7928.1925ms
+2025-05-26 10:25:11.878 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products - null null
+2025-05-26 10:25:11.879 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:25:11.879 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products - 204 null null 0.5236ms
+2025-05-26 10:25:11.881 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/api/Products - null null
+2025-05-26 10:25:11.881 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:25:11.882 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 10:25:11.882 -05:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Inventory.Application.DTOs.ProductDto]]] GetAll() on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 10:25:11.882 -05:00 [INF] Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMzNhOTFlNi1iMDU2LTQxMjktMGQzZi0wOGRkOWM1YTUxYTIiLCJ1bmlxdWVfbmFtZSI6IkpvcmdlIEx1aXMiLCJqdGkiOiIwNzgyNDdjNC00MWU1LTQwNzYtYjNiOS1mZTg1MTIyNjcyMmUiLCJleHAiOjE3NDgyNzYwOTksImlzcyI6IkludmVudG9yeUFQSSIsImF1ZCI6IkludmVudG9yeUNsaWVudCJ9.8HeIXtQEal4ssULhfpQ_0Nz32XHJ7PRGk30obCVeA24
+2025-05-26 10:25:11.900 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Batches] AS [b] ON [p].[Id] = [b].[ProductId]
+ORDER BY [p].[Id]
+2025-05-26 10:25:11.901 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Inventory.Domain.Models.Product, Inventory.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Inventory.Application.DTOs.ProductDto, Inventory.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-26 10:25:11.901 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.GetAll (Inventory.API) in 19.5865ms
+2025-05-26 10:25:11.902 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 10:25:11.902 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/api/Products - 200 null application/json; charset=utf-8 21.061ms
+2025-05-26 10:37:36.576 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products - null null
+2025-05-26 10:37:36.578 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:37:36.578 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products - 204 null null 3.4868ms
+2025-05-26 10:37:36.579 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/Products - application/json 121
+2025-05-26 10:37:36.580 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:37:36.580 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.Create (Inventory.API)'
+2025-05-26 10:37:36.580 -05:00 [INF] Route matched with {action = "Create", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Create(Inventory.Application.DTOs.ProductDto) on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 10:37:36.613 -05:00 [INF] Executed DbCommand (15ms) [Parameters=[@p0='7b67f0f3-c419-41ee-60ca-08dd9c6850c0', @p1='Prueba producto' (Nullable = false) (Size = 100), @p2='b28fd22d-b2d3-4720-a937-5f93c45b1d0d', @p3='2025-01-05T05:00:00.0000000Z', @p4='1032' (Precision = 18) (Scale = 2), @p5='USD' (Nullable = false) (Size = 3), @p6='7b67f0f3-c419-41ee-60ca-08dd9c6850c0', @p7='123'], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Id], [Name])
+VALUES (@p0, @p1);
+INSERT INTO [Batches] ([Id], [EntryDate], [PriceAmount], [PriceCurrency], [ProductId], [Quantity])
+VALUES (@p2, @p3, @p4, @p5, @p6, @p7);
+2025-05-26 10:37:36.614 -05:00 [INF] Executing CreatedAtActionResult, writing value of type 'Inventory.Application.DTOs.ProductDto'.
+2025-05-26 10:37:36.614 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.Create (Inventory.API) in 33.7775ms
+2025-05-26 10:37:36.615 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.Create (Inventory.API)'
+2025-05-26 10:37:36.615 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/Products - 201 null application/json; charset=utf-8 35.7084ms
+2025-05-26 10:37:36.709 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/api/Products - null null
+2025-05-26 10:37:36.710 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:37:36.710 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 10:37:36.710 -05:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Inventory.Application.DTOs.ProductDto]]] GetAll() on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 10:37:36.710 -05:00 [INF] Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMzNhOTFlNi1iMDU2LTQxMjktMGQzZi0wOGRkOWM1YTUxYTIiLCJ1bmlxdWVfbmFtZSI6IkpvcmdlIEx1aXMiLCJqdGkiOiIwNzgyNDdjNC00MWU1LTQwNzYtYjNiOS1mZTg1MTIyNjcyMmUiLCJleHAiOjE3NDgyNzYwOTksImlzcyI6IkludmVudG9yeUFQSSIsImF1ZCI6IkludmVudG9yeUNsaWVudCJ9.8HeIXtQEal4ssULhfpQ_0Nz32XHJ7PRGk30obCVeA24
+2025-05-26 10:37:36.719 -05:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Batches] AS [b] ON [p].[Id] = [b].[ProductId]
+ORDER BY [p].[Id]
+2025-05-26 10:37:36.720 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Inventory.Domain.Models.Product, Inventory.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Inventory.Application.DTOs.ProductDto, Inventory.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-26 10:37:36.720 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.GetAll (Inventory.API) in 10.0775ms
+2025-05-26 10:37:36.720 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 10:37:36.720 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/api/Products - 200 null application/json; charset=utf-8 11.1505ms
+2025-05-26 10:37:45.313 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products/7b67f0f3-c419-41ee-60ca-08dd9c6850c0 - null null
+2025-05-26 10:37:45.313 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:37:45.313 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products/7b67f0f3-c419-41ee-60ca-08dd9c6850c0 - 204 null null 0.4519ms
+2025-05-26 10:37:45.314 -05:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5042/api/Products/7b67f0f3-c419-41ee-60ca-08dd9c6850c0 - application/json 138
+2025-05-26 10:37:45.315 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:37:45.315 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.Update (Inventory.API)'
+2025-05-26 10:37:45.320 -05:00 [INF] Route matched with {action = "Update", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Update(System.Guid, Inventory.Application.DTOs.ProductDto) on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 10:37:45.324 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-05-26 10:37:45.327 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.Update (Inventory.API) in 7.1442ms
+2025-05-26 10:37:45.327 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.Update (Inventory.API)'
+2025-05-26 10:37:45.328 -05:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5042/api/Products/7b67f0f3-c419-41ee-60ca-08dd9c6850c0 - 400 null application/problem+json; charset=utf-8 13.1903ms
+2025-05-26 10:37:55.604 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products/7b67f0f3-c419-41ee-60ca-08dd9c6850c0 - null null
+2025-05-26 10:37:55.605 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:37:55.605 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products/7b67f0f3-c419-41ee-60ca-08dd9c6850c0 - 204 null null 0.5797ms
+2025-05-26 10:37:55.607 -05:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5042/api/Products/7b67f0f3-c419-41ee-60ca-08dd9c6850c0 - application/json 138
+2025-05-26 10:37:55.608 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:37:55.608 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.Update (Inventory.API)'
+2025-05-26 10:37:55.608 -05:00 [INF] Route matched with {action = "Update", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Update(System.Guid, Inventory.Application.DTOs.ProductDto) on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 10:37:55.611 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-05-26 10:37:55.611 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.Update (Inventory.API) in 2.5529ms
+2025-05-26 10:37:55.612 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.Update (Inventory.API)'
+2025-05-26 10:37:55.612 -05:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5042/api/Products/7b67f0f3-c419-41ee-60ca-08dd9c6850c0 - 400 null application/problem+json; charset=utf-8 5.358ms
+2025-05-26 10:43:27.230 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products - null null
+2025-05-26 10:43:27.233 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:43:27.233 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products - 204 null null 3.1457ms
+2025-05-26 10:43:27.243 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/api/Products - null null
+2025-05-26 10:43:27.246 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:43:27.247 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 10:43:27.247 -05:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Inventory.Application.DTOs.ProductDto]]] GetAll() on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 10:43:27.247 -05:00 [INF] Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMzNhOTFlNi1iMDU2LTQxMjktMGQzZi0wOGRkOWM1YTUxYTIiLCJ1bmlxdWVfbmFtZSI6IkpvcmdlIEx1aXMiLCJqdGkiOiIwNzgyNDdjNC00MWU1LTQwNzYtYjNiOS1mZTg1MTIyNjcyMmUiLCJleHAiOjE3NDgyNzYwOTksImlzcyI6IkludmVudG9yeUFQSSIsImF1ZCI6IkludmVudG9yeUNsaWVudCJ9.8HeIXtQEal4ssULhfpQ_0Nz32XHJ7PRGk30obCVeA24
+2025-05-26 10:43:27.275 -05:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Batches] AS [b] ON [p].[Id] = [b].[ProductId]
+ORDER BY [p].[Id]
+2025-05-26 10:43:27.276 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Inventory.Domain.Models.Product, Inventory.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Inventory.Application.DTOs.ProductDto, Inventory.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-26 10:43:27.277 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.GetAll (Inventory.API) in 29.7244ms
+2025-05-26 10:43:27.277 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 10:43:27.277 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/api/Products - 200 null application/json; charset=utf-8 35.1881ms
+2025-05-26 10:43:42.630 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products - null null
+2025-05-26 10:43:42.630 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:43:42.631 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products - 204 null null 0.71ms
+2025-05-26 10:43:42.632 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/Products - application/json 107
+2025-05-26 10:43:42.633 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:43:42.633 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.Create (Inventory.API)'
+2025-05-26 10:43:42.633 -05:00 [INF] Route matched with {action = "Create", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Create(Inventory.Application.DTOs.ProductDto) on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 10:43:42.642 -05:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='5531eba2-d367-4cd3-60cb-08dd9c6850c0', @p1='Pro' (Nullable = false) (Size = 100), @p2='76f3cb57-7675-454f-b1e1-7cc4ffd9964b', @p3='0202-01-05T05:00:00.0000000Z', @p4='14' (Precision = 18) (Scale = 2), @p5='USD' (Nullable = false) (Size = 3), @p6='5531eba2-d367-4cd3-60cb-08dd9c6850c0', @p7='120'], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Id], [Name])
+VALUES (@p0, @p1);
+INSERT INTO [Batches] ([Id], [EntryDate], [PriceAmount], [PriceCurrency], [ProductId], [Quantity])
+VALUES (@p2, @p3, @p4, @p5, @p6, @p7);
+2025-05-26 10:43:42.645 -05:00 [INF] Executing CreatedAtActionResult, writing value of type 'Inventory.Application.DTOs.ProductDto'.
+2025-05-26 10:43:42.645 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.Create (Inventory.API) in 11.4369ms
+2025-05-26 10:43:42.645 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.Create (Inventory.API)'
+2025-05-26 10:43:42.645 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/Products - 201 null application/json; charset=utf-8 12.8535ms
+2025-05-26 10:43:42.754 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/api/Products - null null
+2025-05-26 10:43:42.755 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:43:42.755 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 10:43:42.755 -05:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Inventory.Application.DTOs.ProductDto]]] GetAll() on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 10:43:42.756 -05:00 [INF] Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMzNhOTFlNi1iMDU2LTQxMjktMGQzZi0wOGRkOWM1YTUxYTIiLCJ1bmlxdWVfbmFtZSI6IkpvcmdlIEx1aXMiLCJqdGkiOiIwNzgyNDdjNC00MWU1LTQwNzYtYjNiOS1mZTg1MTIyNjcyMmUiLCJleHAiOjE3NDgyNzYwOTksImlzcyI6IkludmVudG9yeUFQSSIsImF1ZCI6IkludmVudG9yeUNsaWVudCJ9.8HeIXtQEal4ssULhfpQ_0Nz32XHJ7PRGk30obCVeA24
+2025-05-26 10:43:42.760 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Batches] AS [b] ON [p].[Id] = [b].[ProductId]
+ORDER BY [p].[Id]
+2025-05-26 10:43:42.765 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Inventory.Domain.Models.Product, Inventory.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Inventory.Application.DTOs.ProductDto, Inventory.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-26 10:43:42.768 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.GetAll (Inventory.API) in 12.3474ms
+2025-05-26 10:43:42.768 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 10:43:42.768 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/api/Products - 200 null application/json; charset=utf-8 13.7279ms
+2025-05-26 10:43:51.053 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products/5531eba2-d367-4cd3-60cb-08dd9c6850c0 - null null
+2025-05-26 10:43:51.054 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:43:51.054 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products/5531eba2-d367-4cd3-60cb-08dd9c6850c0 - 204 null null 0.7658ms
+2025-05-26 10:43:51.056 -05:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5042/api/Products/5531eba2-d367-4cd3-60cb-08dd9c6850c0 - application/json 122
+2025-05-26 10:43:51.056 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:43:51.056 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.Update (Inventory.API)'
+2025-05-26 10:43:51.056 -05:00 [INF] Route matched with {action = "Update", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Update(System.Guid, Inventory.Application.DTOs.ProductDto) on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 10:43:51.057 -05:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ProblemDetails'.
+2025-05-26 10:43:51.058 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.Update (Inventory.API) in 1.754ms
+2025-05-26 10:43:51.058 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.Update (Inventory.API)'
+2025-05-26 10:43:51.058 -05:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5042/api/Products/5531eba2-d367-4cd3-60cb-08dd9c6850c0 - 400 null application/problem+json; charset=utf-8 2.8928ms
+2025-05-26 10:44:36.366 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products - null null
+2025-05-26 10:44:36.367 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:44:36.367 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products - 204 null null 0.7561ms
+2025-05-26 10:44:36.370 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/api/Products - null null
+2025-05-26 10:44:36.373 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:44:36.375 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 10:44:36.375 -05:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Inventory.Application.DTOs.ProductDto]]] GetAll() on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 10:44:36.376 -05:00 [INF] Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMzNhOTFlNi1iMDU2LTQxMjktMGQzZi0wOGRkOWM1YTUxYTIiLCJ1bmlxdWVfbmFtZSI6IkpvcmdlIEx1aXMiLCJqdGkiOiIwNzgyNDdjNC00MWU1LTQwNzYtYjNiOS1mZTg1MTIyNjcyMmUiLCJleHAiOjE3NDgyNzYwOTksImlzcyI6IkludmVudG9yeUFQSSIsImF1ZCI6IkludmVudG9yeUNsaWVudCJ9.8HeIXtQEal4ssULhfpQ_0Nz32XHJ7PRGk30obCVeA24
+2025-05-26 10:44:36.395 -05:00 [INF] Executed DbCommand (17ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Batches] AS [b] ON [p].[Id] = [b].[ProductId]
+ORDER BY [p].[Id]
+2025-05-26 10:44:36.395 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Inventory.Domain.Models.Product, Inventory.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Inventory.Application.DTOs.ProductDto, Inventory.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-26 10:44:36.396 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.GetAll (Inventory.API) in 20.0795ms
+2025-05-26 10:44:36.396 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 10:44:36.396 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/api/Products - 200 null application/json; charset=utf-8 26.6886ms
+2025-05-26 10:45:02.464 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products - null null
+2025-05-26 10:45:02.464 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:45:02.465 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products - 204 null null 0.4749ms
+2025-05-26 10:45:02.467 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/api/Products - null null
+2025-05-26 10:45:02.468 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:45:02.468 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 10:45:02.468 -05:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Inventory.Application.DTOs.ProductDto]]] GetAll() on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 10:45:02.469 -05:00 [INF] Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMzNhOTFlNi1iMDU2LTQxMjktMGQzZi0wOGRkOWM1YTUxYTIiLCJ1bmlxdWVfbmFtZSI6IkpvcmdlIEx1aXMiLCJqdGkiOiIwNzgyNDdjNC00MWU1LTQwNzYtYjNiOS1mZTg1MTIyNjcyMmUiLCJleHAiOjE3NDgyNzYwOTksImlzcyI6IkludmVudG9yeUFQSSIsImF1ZCI6IkludmVudG9yeUNsaWVudCJ9.8HeIXtQEal4ssULhfpQ_0Nz32XHJ7PRGk30obCVeA24
+2025-05-26 10:45:02.474 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Batches] AS [b] ON [p].[Id] = [b].[ProductId]
+ORDER BY [p].[Id]
+2025-05-26 10:45:02.479 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Inventory.Domain.Models.Product, Inventory.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Inventory.Application.DTOs.ProductDto, Inventory.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-26 10:45:02.479 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.GetAll (Inventory.API) in 10.9039ms
+2025-05-26 10:45:02.479 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 10:45:02.480 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/api/Products - 200 null application/json; charset=utf-8 12.1371ms
+2025-05-26 10:45:07.219 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/api/Products - null null
+2025-05-26 10:45:07.220 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:45:07.220 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 10:45:07.221 -05:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Inventory.Application.DTOs.ProductDto]]] GetAll() on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 10:45:07.227 -05:00 [INF] Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMzNhOTFlNi1iMDU2LTQxMjktMGQzZi0wOGRkOWM1YTUxYTIiLCJ1bmlxdWVfbmFtZSI6IkpvcmdlIEx1aXMiLCJqdGkiOiIwNzgyNDdjNC00MWU1LTQwNzYtYjNiOS1mZTg1MTIyNjcyMmUiLCJleHAiOjE3NDgyNzYwOTksImlzcyI6IkludmVudG9yeUFQSSIsImF1ZCI6IkludmVudG9yeUNsaWVudCJ9.8HeIXtQEal4ssULhfpQ_0Nz32XHJ7PRGk30obCVeA24
+2025-05-26 10:45:07.232 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Batches] AS [b] ON [p].[Id] = [b].[ProductId]
+ORDER BY [p].[Id]
+2025-05-26 10:45:07.233 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Inventory.Domain.Models.Product, Inventory.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Inventory.Application.DTOs.ProductDto, Inventory.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-26 10:45:07.235 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.GetAll (Inventory.API) in 10.6229ms
+2025-05-26 10:45:07.235 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 10:45:07.235 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/api/Products - 200 null application/json; charset=utf-8 15.9751ms
+2025-05-26 10:46:43.102 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products - null null
+2025-05-26 10:46:43.103 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:46:43.103 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products - 204 null null 0.6011ms
+2025-05-26 10:46:43.108 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/Products - application/json 125
+2025-05-26 10:46:43.112 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:46:43.112 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.Create (Inventory.API)'
+2025-05-26 10:46:43.112 -05:00 [INF] Route matched with {action = "Create", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Create(Inventory.Application.DTOs.ProductDto) on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 10:46:43.115 -05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2025-05-26 10:46:43.117 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.Create (Inventory.API) in 4.1181ms
+2025-05-26 10:46:43.117 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.Create (Inventory.API)'
+2025-05-26 10:46:43.117 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/Products - 400 null application/problem+json; charset=utf-8 8.7303ms
+2025-05-26 10:46:43.541 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/api/Products - null null
+2025-05-26 10:46:43.541 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:46:43.542 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 10:46:43.542 -05:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Inventory.Application.DTOs.ProductDto]]] GetAll() on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 10:46:43.543 -05:00 [INF] Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMzNhOTFlNi1iMDU2LTQxMjktMGQzZi0wOGRkOWM1YTUxYTIiLCJ1bmlxdWVfbmFtZSI6IkpvcmdlIEx1aXMiLCJqdGkiOiIwNzgyNDdjNC00MWU1LTQwNzYtYjNiOS1mZTg1MTIyNjcyMmUiLCJleHAiOjE3NDgyNzYwOTksImlzcyI6IkludmVudG9yeUFQSSIsImF1ZCI6IkludmVudG9yeUNsaWVudCJ9.8HeIXtQEal4ssULhfpQ_0Nz32XHJ7PRGk30obCVeA24
+2025-05-26 10:46:43.559 -05:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Batches] AS [b] ON [p].[Id] = [b].[ProductId]
+ORDER BY [p].[Id]
+2025-05-26 10:46:43.559 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Inventory.Domain.Models.Product, Inventory.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Inventory.Application.DTOs.ProductDto, Inventory.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-26 10:46:43.559 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.GetAll (Inventory.API) in 16.951ms
+2025-05-26 10:46:43.560 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 10:46:43.560 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/api/Products - 200 null application/json; charset=utf-8 18.9933ms
+2025-05-26 10:47:26.246 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products - null null
+2025-05-26 10:47:26.247 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:47:26.248 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products - 204 null null 1.9047ms
+2025-05-26 10:47:26.253 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/Products - application/json 117
+2025-05-26 10:47:26.256 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:47:26.256 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.Create (Inventory.API)'
+2025-05-26 10:47:26.256 -05:00 [INF] Route matched with {action = "Create", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Create(Inventory.Application.DTOs.ProductDto) on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 10:47:26.266 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='24e18d98-7278-48a5-60cc-08dd9c6850c0', @p1='Producto jds ' (Nullable = false) (Size = 100), @p2='410882b7-2d05-4e2e-9866-aa8ca7d8d214', @p3='2025-01-02T05:00:00.0000000Z', @p4='12' (Precision = 18) (Scale = 2), @p5='Usd' (Nullable = false) (Size = 3), @p6='24e18d98-7278-48a5-60cc-08dd9c6850c0', @p7='120'], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Id], [Name])
+VALUES (@p0, @p1);
+INSERT INTO [Batches] ([Id], [EntryDate], [PriceAmount], [PriceCurrency], [ProductId], [Quantity])
+VALUES (@p2, @p3, @p4, @p5, @p6, @p7);
+2025-05-26 10:47:26.267 -05:00 [INF] Executing CreatedAtActionResult, writing value of type 'Inventory.Application.DTOs.ProductDto'.
+2025-05-26 10:47:26.268 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.Create (Inventory.API) in 11.195ms
+2025-05-26 10:47:26.268 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.Create (Inventory.API)'
+2025-05-26 10:47:26.268 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/Products - 201 null application/json; charset=utf-8 15.1038ms
+2025-05-26 10:47:26.376 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/api/Products - null null
+2025-05-26 10:47:26.377 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:47:26.377 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 10:47:26.378 -05:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Inventory.Application.DTOs.ProductDto]]] GetAll() on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 10:47:26.378 -05:00 [INF] Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMzNhOTFlNi1iMDU2LTQxMjktMGQzZi0wOGRkOWM1YTUxYTIiLCJ1bmlxdWVfbmFtZSI6IkpvcmdlIEx1aXMiLCJqdGkiOiIwNzgyNDdjNC00MWU1LTQwNzYtYjNiOS1mZTg1MTIyNjcyMmUiLCJleHAiOjE3NDgyNzYwOTksImlzcyI6IkludmVudG9yeUFQSSIsImF1ZCI6IkludmVudG9yeUNsaWVudCJ9.8HeIXtQEal4ssULhfpQ_0Nz32XHJ7PRGk30obCVeA24
+2025-05-26 10:47:26.395 -05:00 [INF] Executed DbCommand (14ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Batches] AS [b] ON [p].[Id] = [b].[ProductId]
+ORDER BY [p].[Id]
+2025-05-26 10:47:26.395 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Inventory.Domain.Models.Product, Inventory.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Inventory.Application.DTOs.ProductDto, Inventory.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-26 10:47:26.396 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.GetAll (Inventory.API) in 17.9657ms
+2025-05-26 10:47:26.396 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 10:47:26.396 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/api/Products - 200 null application/json; charset=utf-8 19.5302ms
+2025-05-26 10:47:40.916 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products/24e18d98-7278-48a5-60cc-08dd9c6850c0 - null null
+2025-05-26 10:47:40.916 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:47:40.920 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products/24e18d98-7278-48a5-60cc-08dd9c6850c0 - 204 null null 4.7118ms
+2025-05-26 10:47:40.924 -05:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5042/api/Products/24e18d98-7278-48a5-60cc-08dd9c6850c0 - application/json 219
+2025-05-26 10:47:40.924 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:47:40.924 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.Update (Inventory.API)'
+2025-05-26 10:47:40.924 -05:00 [INF] Route matched with {action = "Update", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Update(System.Guid, Inventory.Application.DTOs.ProductDto) on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 10:47:41.037 -05:00 [INF] Executed DbCommand (19ms) [Parameters=[@__id_0='24e18d98-7278-48a5-60cc-08dd9c6850c0'], CommandType='"Text"', CommandTimeout='30']
+SELECT [p0].[Id], [p0].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM (
+    SELECT TOP(1) [p].[Id], [p].[Name]
+    FROM [Products] AS [p]
+    WHERE [p].[Id] = @__id_0
+) AS [p0]
+LEFT JOIN [Batches] AS [b] ON [p0].[Id] = [b].[ProductId]
+ORDER BY [p0].[Id]
+2025-05-26 10:47:41.069 -05:00 [INF] Executed DbCommand (6ms) [Parameters=[@p5='410882b7-2d05-4e2e-9866-aa8ca7d8d214', @p0='2025-05-25T21:39:25.1030000Z', @p1='13' (Precision = 18) (Scale = 2), @p2='Usd' (Nullable = false) (Size = 3), @p3='24e18d98-7278-48a5-60cc-08dd9c6850c0', @p4='124', @p7='24e18d98-7278-48a5-60cc-08dd9c6850c0', @p6='Producto jds ' (Nullable = false) (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Batches] SET [EntryDate] = @p0, [PriceAmount] = @p1, [PriceCurrency] = @p2, [ProductId] = @p3, [Quantity] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+UPDATE [Products] SET [Name] = @p6
+OUTPUT 1
+WHERE [Id] = @p7;
+2025-05-26 10:47:41.080 -05:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-05-26 10:47:41.080 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.Update (Inventory.API) in 155.6304ms
+2025-05-26 10:47:41.080 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.Update (Inventory.API)'
+2025-05-26 10:47:41.080 -05:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5042/api/Products/24e18d98-7278-48a5-60cc-08dd9c6850c0 - 204 null null 156.712ms
+2025-05-26 10:47:44.155 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products - null null
+2025-05-26 10:47:44.156 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:47:44.156 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products - 204 null null 0.7524ms
+2025-05-26 10:47:44.159 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/api/Products - null null
+2025-05-26 10:47:44.160 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:47:44.160 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 10:47:44.161 -05:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Inventory.Application.DTOs.ProductDto]]] GetAll() on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 10:47:44.161 -05:00 [INF] Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMzNhOTFlNi1iMDU2LTQxMjktMGQzZi0wOGRkOWM1YTUxYTIiLCJ1bmlxdWVfbmFtZSI6IkpvcmdlIEx1aXMiLCJqdGkiOiIwNzgyNDdjNC00MWU1LTQwNzYtYjNiOS1mZTg1MTIyNjcyMmUiLCJleHAiOjE3NDgyNzYwOTksImlzcyI6IkludmVudG9yeUFQSSIsImF1ZCI6IkludmVudG9yeUNsaWVudCJ9.8HeIXtQEal4ssULhfpQ_0Nz32XHJ7PRGk30obCVeA24
+2025-05-26 10:47:44.167 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Batches] AS [b] ON [p].[Id] = [b].[ProductId]
+ORDER BY [p].[Id]
+2025-05-26 10:47:44.167 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Inventory.Domain.Models.Product, Inventory.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Inventory.Application.DTOs.ProductDto, Inventory.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-26 10:47:44.169 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.GetAll (Inventory.API) in 7.5424ms
+2025-05-26 10:47:44.171 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 10:47:44.171 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/api/Products - 200 null application/json; charset=utf-8 12.2386ms
+2025-05-26 10:49:36.302 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products/24e18d98-7278-48a5-60cc-08dd9c6850c0 - null null
+2025-05-26 10:49:36.303 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:49:36.303 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products/24e18d98-7278-48a5-60cc-08dd9c6850c0 - 204 null null 1.0574ms
+2025-05-26 10:49:36.305 -05:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5042/api/Products/24e18d98-7278-48a5-60cc-08dd9c6850c0 - application/json 220
+2025-05-26 10:49:36.306 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:49:36.306 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.Update (Inventory.API)'
+2025-05-26 10:49:36.307 -05:00 [INF] Route matched with {action = "Update", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Update(System.Guid, Inventory.Application.DTOs.ProductDto) on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 10:49:36.358 -05:00 [INF] Executed DbCommand (39ms) [Parameters=[@__id_0='24e18d98-7278-48a5-60cc-08dd9c6850c0'], CommandType='"Text"', CommandTimeout='30']
+SELECT [p0].[Id], [p0].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM (
+    SELECT TOP(1) [p].[Id], [p].[Name]
+    FROM [Products] AS [p]
+    WHERE [p].[Id] = @__id_0
+) AS [p0]
+LEFT JOIN [Batches] AS [b] ON [p0].[Id] = [b].[ProductId]
+ORDER BY [p0].[Id]
+2025-05-26 10:49:36.371 -05:00 [INF] Executed DbCommand (10ms) [Parameters=[@p5='410882b7-2d05-4e2e-9866-aa8ca7d8d214', @p0='2025-05-25T21:39:25.1030000Z', @p1='133' (Precision = 18) (Scale = 2), @p2='Usd' (Nullable = false) (Size = 3), @p3='24e18d98-7278-48a5-60cc-08dd9c6850c0', @p4='124', @p7='24e18d98-7278-48a5-60cc-08dd9c6850c0', @p6='Producto jds ' (Nullable = false) (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Batches] SET [EntryDate] = @p0, [PriceAmount] = @p1, [PriceCurrency] = @p2, [ProductId] = @p3, [Quantity] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+UPDATE [Products] SET [Name] = @p6
+OUTPUT 1
+WHERE [Id] = @p7;
+2025-05-26 10:49:36.372 -05:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-05-26 10:49:36.373 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.Update (Inventory.API) in 65.4128ms
+2025-05-26 10:49:36.373 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.Update (Inventory.API)'
+2025-05-26 10:49:36.373 -05:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5042/api/Products/24e18d98-7278-48a5-60cc-08dd9c6850c0 - 204 null null 67.919ms
+2025-05-26 10:49:36.785 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products - null null
+2025-05-26 10:49:36.795 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:49:36.796 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products - 204 null null 10.4802ms
+2025-05-26 10:49:36.803 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/api/Products - null null
+2025-05-26 10:49:36.804 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:49:36.804 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 10:49:36.804 -05:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Inventory.Application.DTOs.ProductDto]]] GetAll() on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 10:49:36.805 -05:00 [INF] Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMzNhOTFlNi1iMDU2LTQxMjktMGQzZi0wOGRkOWM1YTUxYTIiLCJ1bmlxdWVfbmFtZSI6IkpvcmdlIEx1aXMiLCJqdGkiOiIwNzgyNDdjNC00MWU1LTQwNzYtYjNiOS1mZTg1MTIyNjcyMmUiLCJleHAiOjE3NDgyNzYwOTksImlzcyI6IkludmVudG9yeUFQSSIsImF1ZCI6IkludmVudG9yeUNsaWVudCJ9.8HeIXtQEal4ssULhfpQ_0Nz32XHJ7PRGk30obCVeA24
+2025-05-26 10:49:36.821 -05:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Batches] AS [b] ON [p].[Id] = [b].[ProductId]
+ORDER BY [p].[Id]
+2025-05-26 10:49:36.822 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Inventory.Domain.Models.Product, Inventory.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Inventory.Application.DTOs.ProductDto, Inventory.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-26 10:49:36.822 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.GetAll (Inventory.API) in 17.8232ms
+2025-05-26 10:49:36.822 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 10:49:36.823 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/api/Products - 200 null application/json; charset=utf-8 19.5175ms
+2025-05-26 10:49:45.337 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products/24e18d98-7278-48a5-60cc-08dd9c6850c0 - null null
+2025-05-26 10:49:45.337 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:49:45.337 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products/24e18d98-7278-48a5-60cc-08dd9c6850c0 - 204 null null 0.3927ms
+2025-05-26 10:49:45.339 -05:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5042/api/Products/24e18d98-7278-48a5-60cc-08dd9c6850c0 - application/json 221
+2025-05-26 10:49:45.340 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:49:45.340 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.Update (Inventory.API)'
+2025-05-26 10:49:45.340 -05:00 [INF] Route matched with {action = "Update", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Update(System.Guid, Inventory.Application.DTOs.ProductDto) on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 10:49:45.357 -05:00 [INF] Executed DbCommand (15ms) [Parameters=[@__id_0='24e18d98-7278-48a5-60cc-08dd9c6850c0'], CommandType='"Text"', CommandTimeout='30']
+SELECT [p0].[Id], [p0].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM (
+    SELECT TOP(1) [p].[Id], [p].[Name]
+    FROM [Products] AS [p]
+    WHERE [p].[Id] = @__id_0
+) AS [p0]
+LEFT JOIN [Batches] AS [b] ON [p0].[Id] = [b].[ProductId]
+ORDER BY [p0].[Id]
+2025-05-26 10:49:45.367 -05:00 [INF] Executed DbCommand (6ms) [Parameters=[@p5='410882b7-2d05-4e2e-9866-aa8ca7d8d214', @p0='2025-05-25T21:39:25.1030000Z', @p1='133' (Precision = 18) (Scale = 2), @p2='Usd' (Nullable = false) (Size = 3), @p3='24e18d98-7278-48a5-60cc-08dd9c6850c0', @p4='1244', @p7='24e18d98-7278-48a5-60cc-08dd9c6850c0', @p6='Producto jds ' (Nullable = false) (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Batches] SET [EntryDate] = @p0, [PriceAmount] = @p1, [PriceCurrency] = @p2, [ProductId] = @p3, [Quantity] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+UPDATE [Products] SET [Name] = @p6
+OUTPUT 1
+WHERE [Id] = @p7;
+2025-05-26 10:49:45.368 -05:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-05-26 10:49:45.368 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.Update (Inventory.API) in 28.0725ms
+2025-05-26 10:49:45.368 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.Update (Inventory.API)'
+2025-05-26 10:49:45.368 -05:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5042/api/Products/24e18d98-7278-48a5-60cc-08dd9c6850c0 - 204 null null 29.6068ms
+2025-05-26 10:50:26.230 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products - null null
+2025-05-26 10:50:26.231 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:50:26.231 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products - 204 null null 0.8132ms
+2025-05-26 10:50:26.236 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/Products - application/json 109
+2025-05-26 10:50:26.268 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:50:26.268 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.Create (Inventory.API)'
+2025-05-26 10:50:26.268 -05:00 [INF] Route matched with {action = "Create", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Create(Inventory.Application.DTOs.ProductDto) on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 10:50:26.276 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='db5fde7e-00ef-4e0b-60cd-08dd9c6850c0', @p1='camis' (Nullable = false) (Size = 100), @p2='62519c12-63d8-4f83-bf5a-ce56857b53ae', @p3='2025-01-01T05:00:00.0000000Z', @p4='10' (Precision = 18) (Scale = 2), @p5='USD' (Nullable = false) (Size = 3), @p6='db5fde7e-00ef-4e0b-60cd-08dd9c6850c0', @p7='123'], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Id], [Name])
+VALUES (@p0, @p1);
+INSERT INTO [Batches] ([Id], [EntryDate], [PriceAmount], [PriceCurrency], [ProductId], [Quantity])
+VALUES (@p2, @p3, @p4, @p5, @p6, @p7);
+2025-05-26 10:50:26.278 -05:00 [INF] Executing CreatedAtActionResult, writing value of type 'Inventory.Application.DTOs.ProductDto'.
+2025-05-26 10:50:26.278 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.Create (Inventory.API) in 9.9894ms
+2025-05-26 10:50:26.278 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.Create (Inventory.API)'
+2025-05-26 10:50:26.278 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/Products - 201 null application/json; charset=utf-8 42.4344ms
+2025-05-26 10:50:34.481 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products - null null
+2025-05-26 10:50:34.481 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:50:34.481 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products - 204 null null 0.4486ms
+2025-05-26 10:50:34.483 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/api/Products - null null
+2025-05-26 10:50:34.484 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:50:34.484 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 10:50:34.484 -05:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Inventory.Application.DTOs.ProductDto]]] GetAll() on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 10:50:34.484 -05:00 [INF] Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMzNhOTFlNi1iMDU2LTQxMjktMGQzZi0wOGRkOWM1YTUxYTIiLCJ1bmlxdWVfbmFtZSI6IkpvcmdlIEx1aXMiLCJqdGkiOiIwNzgyNDdjNC00MWU1LTQwNzYtYjNiOS1mZTg1MTIyNjcyMmUiLCJleHAiOjE3NDgyNzYwOTksImlzcyI6IkludmVudG9yeUFQSSIsImF1ZCI6IkludmVudG9yeUNsaWVudCJ9.8HeIXtQEal4ssULhfpQ_0Nz32XHJ7PRGk30obCVeA24
+2025-05-26 10:50:34.489 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Batches] AS [b] ON [p].[Id] = [b].[ProductId]
+ORDER BY [p].[Id]
+2025-05-26 10:50:34.489 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Inventory.Domain.Models.Product, Inventory.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Inventory.Application.DTOs.ProductDto, Inventory.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-26 10:50:34.490 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.GetAll (Inventory.API) in 5.836ms
+2025-05-26 10:50:34.490 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 10:50:34.490 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/api/Products - 200 null application/json; charset=utf-8 7.0967ms
+2025-05-26 10:50:47.928 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Auth/login - null null
+2025-05-26 10:50:47.928 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:50:47.928 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Auth/login - 204 null null 0.2905ms
+2025-05-26 10:50:47.929 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/Auth/login - application/json 55
+2025-05-26 10:50:47.930 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:50:47.930 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.AuthController.Login (Inventory.API)'
+2025-05-26 10:50:47.930 -05:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Inventory.Application.DTOs.UserDto]] Login(Inventory.Application.DTOs.LoginRequest) on controller Inventory.API.Controllers.AuthController (Inventory.API).
+2025-05-26 10:50:47.937 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__email_0='luisortiz211994@gmail.com' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[UpdatedAt], [u].[Email], [u].[Password], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2025-05-26 10:50:48.004 -05:00 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-05-26 10:50:48.004 -05:00 [INF] Executed action Inventory.API.Controllers.AuthController.Login (Inventory.API) in 73.6231ms
+2025-05-26 10:50:48.004 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.AuthController.Login (Inventory.API)'
+2025-05-26 10:50:48.004 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/Auth/login - 401 null text/plain; charset=utf-8 74.6397ms
+2025-05-26 10:50:53.099 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Auth/login - null null
+2025-05-26 10:50:53.100 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:50:53.100 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Auth/login - 204 null null 0.6797ms
+2025-05-26 10:50:53.102 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/Auth/login - application/json 56
+2025-05-26 10:50:53.102 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:50:53.102 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.AuthController.Login (Inventory.API)'
+2025-05-26 10:50:53.102 -05:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Inventory.Application.DTOs.UserDto]] Login(Inventory.Application.DTOs.LoginRequest) on controller Inventory.API.Controllers.AuthController (Inventory.API).
+2025-05-26 10:50:53.109 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[@__email_0='luisortiz211994@gmail.com' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[UpdatedAt], [u].[Email], [u].[Password], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2025-05-26 10:50:53.178 -05:00 [INF] Executing OkObjectResult, writing value of type 'Inventory.Application.DTOs.LoginResponse'.
+2025-05-26 10:50:53.179 -05:00 [INF] Executed action Inventory.API.Controllers.AuthController.Login (Inventory.API) in 76.4786ms
+2025-05-26 10:50:53.179 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.AuthController.Login (Inventory.API)'
+2025-05-26 10:50:53.179 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/Auth/login - 200 null application/json; charset=utf-8 77.6567ms
+2025-05-26 10:50:53.207 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products - null null
+2025-05-26 10:50:53.207 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:50:53.208 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products - 204 null null 0.394ms
+2025-05-26 10:50:53.210 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/api/Products - null null
+2025-05-26 10:50:53.210 -05:00 [INF] CORS policy execution successful.
+2025-05-26 10:50:53.211 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 10:50:53.211 -05:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Inventory.Application.DTOs.ProductDto]]] GetAll() on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 10:50:53.211 -05:00 [INF] Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMzNhOTFlNi1iMDU2LTQxMjktMGQzZi0wOGRkOWM1YTUxYTIiLCJ1bmlxdWVfbmFtZSI6IkpvcmdlIEx1aXMiLCJqdGkiOiI3YmMxZDZhZC0wNmQ3LTRhMzQtYjc2YS02NTVmMzU2MWRlZDUiLCJleHAiOjE3NDgyNzgyNTMsImlzcyI6IkludmVudG9yeUFQSSIsImF1ZCI6IkludmVudG9yeUNsaWVudCJ9.Zk9GxiuHe5_-E89vJZenN6Ab1xC-0X9tIk6aR88IwJY
+2025-05-26 10:50:53.219 -05:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Batches] AS [b] ON [p].[Id] = [b].[ProductId]
+ORDER BY [p].[Id]
+2025-05-26 10:50:53.219 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Inventory.Domain.Models.Product, Inventory.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Inventory.Application.DTOs.ProductDto, Inventory.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-26 10:50:53.219 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.GetAll (Inventory.API) in 8.1586ms
+2025-05-26 10:50:53.219 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 10:50:53.219 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/api/Products - 200 null application/json; charset=utf-8 9.5003ms
+2025-05-26 11:01:32.282 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products - null null
+2025-05-26 11:01:32.282 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:01:32.282 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products - 204 null null 0.3603ms
+2025-05-26 11:01:32.286 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/api/Products - null null
+2025-05-26 11:01:32.291 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:01:32.295 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 11:01:32.295 -05:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Inventory.Application.DTOs.ProductDto]]] GetAll() on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 11:01:32.295 -05:00 [INF] Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMzNhOTFlNi1iMDU2LTQxMjktMGQzZi0wOGRkOWM1YTUxYTIiLCJ1bmlxdWVfbmFtZSI6IkpvcmdlIEx1aXMiLCJqdGkiOiI3YmMxZDZhZC0wNmQ3LTRhMzQtYjc2YS02NTVmMzU2MWRlZDUiLCJleHAiOjE3NDgyNzgyNTMsImlzcyI6IkludmVudG9yeUFQSSIsImF1ZCI6IkludmVudG9yeUNsaWVudCJ9.Zk9GxiuHe5_-E89vJZenN6Ab1xC-0X9tIk6aR88IwJY
+2025-05-26 11:01:32.335 -05:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Batches] AS [b] ON [p].[Id] = [b].[ProductId]
+ORDER BY [p].[Id]
+2025-05-26 11:01:32.336 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Inventory.Domain.Models.Product, Inventory.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Inventory.Application.DTOs.ProductDto, Inventory.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-26 11:01:32.337 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.GetAll (Inventory.API) in 41.7131ms
+2025-05-26 11:01:32.337 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 11:01:32.337 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/api/Products - 200 null application/json; charset=utf-8 51.2486ms
+2025-05-26 11:01:42.329 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products - null null
+2025-05-26 11:01:42.329 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:01:42.329 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products - 204 null null 0.5055ms
+2025-05-26 11:01:42.334 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/api/Products - null null
+2025-05-26 11:01:42.334 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:01:42.334 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 11:01:42.335 -05:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Inventory.Application.DTOs.ProductDto]]] GetAll() on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 11:01:42.335 -05:00 [INF] Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMzNhOTFlNi1iMDU2LTQxMjktMGQzZi0wOGRkOWM1YTUxYTIiLCJ1bmlxdWVfbmFtZSI6IkpvcmdlIEx1aXMiLCJqdGkiOiI3YmMxZDZhZC0wNmQ3LTRhMzQtYjc2YS02NTVmMzU2MWRlZDUiLCJleHAiOjE3NDgyNzgyNTMsImlzcyI6IkludmVudG9yeUFQSSIsImF1ZCI6IkludmVudG9yeUNsaWVudCJ9.Zk9GxiuHe5_-E89vJZenN6Ab1xC-0X9tIk6aR88IwJY
+2025-05-26 11:01:42.339 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Batches] AS [b] ON [p].[Id] = [b].[ProductId]
+ORDER BY [p].[Id]
+2025-05-26 11:01:42.340 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Inventory.Domain.Models.Product, Inventory.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Inventory.Application.DTOs.ProductDto, Inventory.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-26 11:01:42.340 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.GetAll (Inventory.API) in 5.7952ms
+2025-05-26 11:01:42.341 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 11:01:42.341 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/api/Products - 200 null application/json; charset=utf-8 7.1076ms
+2025-05-26 11:01:54.259 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Auth/login - null null
+2025-05-26 11:01:54.260 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:01:54.260 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Auth/login - 204 null null 0.2742ms
+2025-05-26 11:01:54.261 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/Auth/login - application/json 56
+2025-05-26 11:01:54.261 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:01:54.262 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.AuthController.Login (Inventory.API)'
+2025-05-26 11:01:54.262 -05:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Inventory.Application.DTOs.UserDto]] Login(Inventory.Application.DTOs.LoginRequest) on controller Inventory.API.Controllers.AuthController (Inventory.API).
+2025-05-26 11:01:54.274 -05:00 [INF] Executed DbCommand (9ms) [Parameters=[@__email_0='luisortiz211994@gmail.com' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[UpdatedAt], [u].[Email], [u].[Password], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2025-05-26 11:01:54.336 -05:00 [INF] Executing OkObjectResult, writing value of type 'Inventory.Application.DTOs.LoginResponse'.
+2025-05-26 11:01:54.336 -05:00 [INF] Executed action Inventory.API.Controllers.AuthController.Login (Inventory.API) in 74.2622ms
+2025-05-26 11:01:54.336 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.AuthController.Login (Inventory.API)'
+2025-05-26 11:01:54.336 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/Auth/login - 200 null application/json; charset=utf-8 75.2756ms
+2025-05-26 11:01:54.370 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products - null null
+2025-05-26 11:01:54.370 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:01:54.370 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products - 204 null null 0.3259ms
+2025-05-26 11:01:54.372 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/api/Products - null null
+2025-05-26 11:01:54.372 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:01:54.373 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 11:01:54.373 -05:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Inventory.Application.DTOs.ProductDto]]] GetAll() on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 11:01:54.374 -05:00 [INF] Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMzNhOTFlNi1iMDU2LTQxMjktMGQzZi0wOGRkOWM1YTUxYTIiLCJ1bmlxdWVfbmFtZSI6IkpvcmdlIEx1aXMiLCJqdGkiOiI0OGFlNjUxMi00NDkzLTRjYWEtODE0OS04ZTk0MGViMjBiZTMiLCJleHAiOjE3NDgyNzg5MTQsImlzcyI6IkludmVudG9yeUFQSSIsImF1ZCI6IkludmVudG9yeUNsaWVudCJ9.KAwZqxkKhAGL8PZ0IyVbWyHdrxVLYt-4QuppOvv-XNw
+2025-05-26 11:01:54.382 -05:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Batches] AS [b] ON [p].[Id] = [b].[ProductId]
+ORDER BY [p].[Id]
+2025-05-26 11:01:54.383 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Inventory.Domain.Models.Product, Inventory.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Inventory.Application.DTOs.ProductDto, Inventory.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-26 11:01:54.383 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.GetAll (Inventory.API) in 10.4733ms
+2025-05-26 11:01:54.383 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 11:01:54.383 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/api/Products - 200 null application/json; charset=utf-8 11.9552ms
+2025-05-26 11:04:11.645 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Auth/login - null null
+2025-05-26 11:04:11.646 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:04:11.646 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Auth/login - 204 null null 0.4349ms
+2025-05-26 11:04:11.650 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/Auth/login - application/json 56
+2025-05-26 11:04:11.652 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:04:11.652 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.AuthController.Login (Inventory.API)'
+2025-05-26 11:04:11.652 -05:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Inventory.Application.DTOs.UserDto]] Login(Inventory.Application.DTOs.LoginRequest) on controller Inventory.API.Controllers.AuthController (Inventory.API).
+2025-05-26 11:04:11.664 -05:00 [INF] Executed DbCommand (10ms) [Parameters=[@__email_0='luisortiz211994@gmail.com' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[UpdatedAt], [u].[Email], [u].[Password], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2025-05-26 11:04:11.734 -05:00 [INF] Executing OkObjectResult, writing value of type 'Inventory.Application.DTOs.LoginResponse'.
+2025-05-26 11:04:11.734 -05:00 [INF] Executed action Inventory.API.Controllers.AuthController.Login (Inventory.API) in 81.8935ms
+2025-05-26 11:04:11.734 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.AuthController.Login (Inventory.API)'
+2025-05-26 11:04:11.734 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/Auth/login - 200 null application/json; charset=utf-8 84.876ms
+2025-05-26 11:04:21.332 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products - null null
+2025-05-26 11:04:21.332 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:04:21.332 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products - 204 null null 0.4582ms
+2025-05-26 11:04:21.336 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/api/Products - null null
+2025-05-26 11:04:21.337 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:04:21.337 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 11:04:21.337 -05:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Inventory.Application.DTOs.ProductDto]]] GetAll() on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 11:04:21.337 -05:00 [INF] Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMzNhOTFlNi1iMDU2LTQxMjktMGQzZi0wOGRkOWM1YTUxYTIiLCJ1bmlxdWVfbmFtZSI6IkpvcmdlIEx1aXMiLCJqdGkiOiJiY2U3NzhiOC1mZGI3LTQxOWItYjdkZS0xYzU3ZWNjMmI3NjMiLCJleHAiOjE3NDgyNzkwNTEsImlzcyI6IkludmVudG9yeUFQSSIsImF1ZCI6IkludmVudG9yeUNsaWVudCJ9.dzdGFZB_634DoBWz-zC2MByNX01aWktKQDN23B0kPxg
+2025-05-26 11:04:21.359 -05:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Batches] AS [b] ON [p].[Id] = [b].[ProductId]
+ORDER BY [p].[Id]
+2025-05-26 11:04:21.359 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Inventory.Domain.Models.Product, Inventory.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Inventory.Application.DTOs.ProductDto, Inventory.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-26 11:04:21.360 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.GetAll (Inventory.API) in 23.3976ms
+2025-05-26 11:04:21.361 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 11:04:21.361 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/api/Products - 200 null application/json; charset=utf-8 25.4534ms
+2025-05-26 11:05:34.350 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Auth/login - null null
+2025-05-26 11:05:34.351 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:05:34.351 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Auth/login - 204 null null 0.5721ms
+2025-05-26 11:05:34.356 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/Auth/login - application/json 54
+2025-05-26 11:05:34.359 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:05:34.359 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.AuthController.Login (Inventory.API)'
+2025-05-26 11:05:34.359 -05:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Inventory.Application.DTOs.UserDto]] Login(Inventory.Application.DTOs.LoginRequest) on controller Inventory.API.Controllers.AuthController (Inventory.API).
+2025-05-26 11:05:34.372 -05:00 [INF] Executed DbCommand (11ms) [Parameters=[@__email_0='luisortiz211994@gmail.com' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[UpdatedAt], [u].[Email], [u].[Password], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2025-05-26 11:05:34.461 -05:00 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-05-26 11:05:34.461 -05:00 [INF] Executed action Inventory.API.Controllers.AuthController.Login (Inventory.API) in 102.3683ms
+2025-05-26 11:05:34.461 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.AuthController.Login (Inventory.API)'
+2025-05-26 11:05:34.462 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/Auth/login - 401 null text/plain; charset=utf-8 105.4789ms
+2025-05-26 11:05:39.083 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/Auth/login - application/json 56
+2025-05-26 11:05:39.083 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:05:39.083 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.AuthController.Login (Inventory.API)'
+2025-05-26 11:05:39.083 -05:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Inventory.Application.DTOs.UserDto]] Login(Inventory.Application.DTOs.LoginRequest) on controller Inventory.API.Controllers.AuthController (Inventory.API).
+2025-05-26 11:05:39.087 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__email_0='luisortiz211994@gmail.com' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[UpdatedAt], [u].[Email], [u].[Password], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2025-05-26 11:05:39.153 -05:00 [INF] Executing OkObjectResult, writing value of type 'Inventory.Application.DTOs.LoginResponse'.
+2025-05-26 11:05:39.153 -05:00 [INF] Executed action Inventory.API.Controllers.AuthController.Login (Inventory.API) in 69.1643ms
+2025-05-26 11:05:39.153 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.AuthController.Login (Inventory.API)'
+2025-05-26 11:05:39.153 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/Auth/login - 200 null application/json; charset=utf-8 70.1118ms
+2025-05-26 11:08:08.200 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Auth/login - null null
+2025-05-26 11:08:08.200 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:08:08.200 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Auth/login - 204 null null 0.3102ms
+2025-05-26 11:08:08.203 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/Auth/login - application/json 56
+2025-05-26 11:08:08.208 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:08:08.208 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.AuthController.Login (Inventory.API)'
+2025-05-26 11:08:08.208 -05:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Inventory.Application.DTOs.UserDto]] Login(Inventory.Application.DTOs.LoginRequest) on controller Inventory.API.Controllers.AuthController (Inventory.API).
+2025-05-26 11:08:08.223 -05:00 [INF] Executed DbCommand (13ms) [Parameters=[@__email_0='luisortiz211994@gmail.com' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[UpdatedAt], [u].[Email], [u].[Password], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2025-05-26 11:08:08.297 -05:00 [INF] Executing OkObjectResult, writing value of type 'Inventory.Application.DTOs.LoginResponse'.
+2025-05-26 11:08:08.297 -05:00 [INF] Executed action Inventory.API.Controllers.AuthController.Login (Inventory.API) in 88.8317ms
+2025-05-26 11:08:08.297 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.AuthController.Login (Inventory.API)'
+2025-05-26 11:08:08.297 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/Auth/login - 200 null application/json; charset=utf-8 94.8773ms
+2025-05-26 11:08:24.390 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products - null null
+2025-05-26 11:08:24.391 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:08:24.391 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products - 204 null null 0.3837ms
+2025-05-26 11:08:24.393 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/api/Products - null null
+2025-05-26 11:08:24.394 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:08:24.394 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 11:08:24.394 -05:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Inventory.Application.DTOs.ProductDto]]] GetAll() on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 11:08:24.395 -05:00 [INF] Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMzNhOTFlNi1iMDU2LTQxMjktMGQzZi0wOGRkOWM1YTUxYTIiLCJ1bmlxdWVfbmFtZSI6IkpvcmdlIEx1aXMiLCJqdGkiOiIyMmQ1YWYyYy04NzllLTRiNTgtYjBmYi0xMzlhZmVhYTUwYmEiLCJleHAiOjE3NDgyNzkyODgsImlzcyI6IkludmVudG9yeUFQSSIsImF1ZCI6IkludmVudG9yeUNsaWVudCJ9.htBNUr5eYKE1_T254R0h7MBq8OkFvWMPNYkFvfNrfDY
+2025-05-26 11:08:24.430 -05:00 [INF] Executed DbCommand (31ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Batches] AS [b] ON [p].[Id] = [b].[ProductId]
+ORDER BY [p].[Id]
+2025-05-26 11:08:24.430 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Inventory.Domain.Models.Product, Inventory.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Inventory.Application.DTOs.ProductDto, Inventory.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-26 11:08:24.431 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.GetAll (Inventory.API) in 36.3585ms
+2025-05-26 11:08:24.431 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 11:08:24.431 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/api/Products - 200 null application/json; charset=utf-8 37.7649ms
+2025-05-26 11:14:19.428 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products - null null
+2025-05-26 11:14:19.429 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:14:19.430 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products - 204 null null 1.2094ms
+2025-05-26 11:14:19.438 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/api/Products - null null
+2025-05-26 11:14:19.442 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:14:19.442 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 11:14:19.443 -05:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Inventory.Application.DTOs.ProductDto]]] GetAll() on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 11:14:19.443 -05:00 [INF] Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMzNhOTFlNi1iMDU2LTQxMjktMGQzZi0wOGRkOWM1YTUxYTIiLCJ1bmlxdWVfbmFtZSI6IkpvcmdlIEx1aXMiLCJqdGkiOiIyMmQ1YWYyYy04NzllLTRiNTgtYjBmYi0xMzlhZmVhYTUwYmEiLCJleHAiOjE3NDgyNzkyODgsImlzcyI6IkludmVudG9yeUFQSSIsImF1ZCI6IkludmVudG9yeUNsaWVudCJ9.htBNUr5eYKE1_T254R0h7MBq8OkFvWMPNYkFvfNrfDY
+2025-05-26 11:14:19.475 -05:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Batches] AS [b] ON [p].[Id] = [b].[ProductId]
+ORDER BY [p].[Id]
+2025-05-26 11:14:19.476 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Inventory.Domain.Models.Product, Inventory.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Inventory.Application.DTOs.ProductDto, Inventory.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-26 11:14:19.476 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.GetAll (Inventory.API) in 33.279ms
+2025-05-26 11:14:19.476 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 11:14:19.476 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/api/Products - 200 null application/json; charset=utf-8 38.5366ms
+2025-05-26 11:14:19.940 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/api/Products - null null
+2025-05-26 11:14:19.941 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:14:19.941 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 11:14:19.941 -05:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Inventory.Application.DTOs.ProductDto]]] GetAll() on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 11:14:19.941 -05:00 [INF] Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMzNhOTFlNi1iMDU2LTQxMjktMGQzZi0wOGRkOWM1YTUxYTIiLCJ1bmlxdWVfbmFtZSI6IkpvcmdlIEx1aXMiLCJqdGkiOiIyMmQ1YWYyYy04NzllLTRiNTgtYjBmYi0xMzlhZmVhYTUwYmEiLCJleHAiOjE3NDgyNzkyODgsImlzcyI6IkludmVudG9yeUFQSSIsImF1ZCI6IkludmVudG9yeUNsaWVudCJ9.htBNUr5eYKE1_T254R0h7MBq8OkFvWMPNYkFvfNrfDY
+2025-05-26 11:14:19.945 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Batches] AS [b] ON [p].[Id] = [b].[ProductId]
+ORDER BY [p].[Id]
+2025-05-26 11:14:19.951 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Inventory.Domain.Models.Product, Inventory.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Inventory.Application.DTOs.ProductDto, Inventory.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-26 11:14:19.952 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.GetAll (Inventory.API) in 10.5503ms
+2025-05-26 11:14:19.952 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 11:14:19.952 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/api/Products - 200 null application/json; charset=utf-8 11.8522ms
+2025-05-26 11:14:36.787 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Auth/login - null null
+2025-05-26 11:14:36.787 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:14:36.788 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Auth/login - 204 null null 0.4441ms
+2025-05-26 11:14:36.789 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/Auth/login - application/json 56
+2025-05-26 11:14:36.789 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:14:36.789 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.AuthController.Login (Inventory.API)'
+2025-05-26 11:14:36.789 -05:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Inventory.Application.DTOs.UserDto]] Login(Inventory.Application.DTOs.LoginRequest) on controller Inventory.API.Controllers.AuthController (Inventory.API).
+2025-05-26 11:14:36.794 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__email_0='luisortiz211994@gmail.com' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[UpdatedAt], [u].[Email], [u].[Password], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2025-05-26 11:14:36.860 -05:00 [INF] Executing OkObjectResult, writing value of type 'Inventory.Application.DTOs.LoginResponse'.
+2025-05-26 11:14:36.860 -05:00 [INF] Executed action Inventory.API.Controllers.AuthController.Login (Inventory.API) in 70.7867ms
+2025-05-26 11:14:36.860 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.AuthController.Login (Inventory.API)'
+2025-05-26 11:14:36.861 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/Auth/login - 200 null application/json; charset=utf-8 71.4652ms
+2025-05-26 11:14:36.904 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products - null null
+2025-05-26 11:14:36.905 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:14:36.905 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products - 204 null null 0.4178ms
+2025-05-26 11:14:36.907 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/api/Products - null null
+2025-05-26 11:14:36.907 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:14:36.907 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 11:14:36.907 -05:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Inventory.Application.DTOs.ProductDto]]] GetAll() on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 11:14:36.908 -05:00 [INF] Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMzNhOTFlNi1iMDU2LTQxMjktMGQzZi0wOGRkOWM1YTUxYTIiLCJ1bmlxdWVfbmFtZSI6IkpvcmdlIEx1aXMiLCJqdGkiOiJjMjIxYThkMS00NDU4LTRjYTktOWRlZS1jYjhlMDQ0N2IxZWMiLCJleHAiOjE3NDgyNzk2NzYsImlzcyI6IkludmVudG9yeUFQSSIsImF1ZCI6IkludmVudG9yeUNsaWVudCJ9.sMaQ_A02Jz84KAppZ4QF-Q1gXJ5bzUy1WCku6B2poa4
+2025-05-26 11:14:36.910 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Batches] AS [b] ON [p].[Id] = [b].[ProductId]
+ORDER BY [p].[Id]
+2025-05-26 11:14:36.911 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Inventory.Domain.Models.Product, Inventory.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Inventory.Application.DTOs.ProductDto, Inventory.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-26 11:14:36.912 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.GetAll (Inventory.API) in 4.3345ms
+2025-05-26 11:14:36.912 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 11:14:36.913 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/api/Products - 200 null application/json; charset=utf-8 5.9924ms
+2025-05-26 11:15:38.577 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Auth/login - null null
+2025-05-26 11:15:38.578 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:15:38.578 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Auth/login - 204 null null 0.3422ms
+2025-05-26 11:15:38.582 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/Auth/login - application/json 53
+2025-05-26 11:15:38.585 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:15:38.585 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.AuthController.Login (Inventory.API)'
+2025-05-26 11:15:38.585 -05:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Inventory.Application.DTOs.UserDto]] Login(Inventory.Application.DTOs.LoginRequest) on controller Inventory.API.Controllers.AuthController (Inventory.API).
+2025-05-26 11:15:38.601 -05:00 [INF] Executed DbCommand (14ms) [Parameters=[@__email_0='luisortiz211994@gmail.com' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[UpdatedAt], [u].[Email], [u].[Password], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2025-05-26 11:15:38.710 -05:00 [INF] Executing UnauthorizedObjectResult, writing value of type 'System.String'.
+2025-05-26 11:15:38.710 -05:00 [INF] Executed action Inventory.API.Controllers.AuthController.Login (Inventory.API) in 125.1563ms
+2025-05-26 11:15:38.711 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.AuthController.Login (Inventory.API)'
+2025-05-26 11:15:38.711 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/Auth/login - 401 null text/plain; charset=utf-8 128.1478ms
+2025-05-26 11:15:42.146 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/Auth/login - application/json 56
+2025-05-26 11:15:42.147 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:15:42.147 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.AuthController.Login (Inventory.API)'
+2025-05-26 11:15:42.147 -05:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Inventory.Application.DTOs.UserDto]] Login(Inventory.Application.DTOs.LoginRequest) on controller Inventory.API.Controllers.AuthController (Inventory.API).
+2025-05-26 11:15:42.150 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__email_0='luisortiz211994@gmail.com' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[UpdatedAt], [u].[Email], [u].[Password], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2025-05-26 11:15:42.250 -05:00 [INF] Executing OkObjectResult, writing value of type 'Inventory.Application.DTOs.LoginResponse'.
+2025-05-26 11:15:42.250 -05:00 [INF] Executed action Inventory.API.Controllers.AuthController.Login (Inventory.API) in 103.029ms
+2025-05-26 11:15:42.250 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.AuthController.Login (Inventory.API)'
+2025-05-26 11:15:42.250 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/Auth/login - 200 null application/json; charset=utf-8 103.6086ms
+2025-05-26 11:15:42.277 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products - null null
+2025-05-26 11:15:42.277 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:15:42.277 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products - 204 null null 0.3031ms
+2025-05-26 11:15:42.279 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/api/Products - null null
+2025-05-26 11:15:42.280 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:15:42.280 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 11:15:42.280 -05:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Inventory.Application.DTOs.ProductDto]]] GetAll() on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 11:15:42.281 -05:00 [INF] Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMzNhOTFlNi1iMDU2LTQxMjktMGQzZi0wOGRkOWM1YTUxYTIiLCJ1bmlxdWVfbmFtZSI6IkpvcmdlIEx1aXMiLCJqdGkiOiIyMTllN2UzMS0zNjZhLTQ2MGYtYTZkMi1jNzhlYzI1YTI4YjMiLCJleHAiOjE3NDgyNzk3NDIsImlzcyI6IkludmVudG9yeUFQSSIsImF1ZCI6IkludmVudG9yeUNsaWVudCJ9.hi_rr9OguNKOLrb0C-kXRPoqxXYqkIseteEdFN74Q5c
+2025-05-26 11:15:42.291 -05:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Batches] AS [b] ON [p].[Id] = [b].[ProductId]
+ORDER BY [p].[Id]
+2025-05-26 11:15:42.292 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Inventory.Domain.Models.Product, Inventory.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Inventory.Application.DTOs.ProductDto, Inventory.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-26 11:15:42.292 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.GetAll (Inventory.API) in 11.9147ms
+2025-05-26 11:15:42.292 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 11:15:42.292 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/api/Products - 200 null application/json; charset=utf-8 13.0379ms
+2025-05-26 11:15:56.899 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Auth/login - null null
+2025-05-26 11:15:56.899 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:15:56.900 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Auth/login - 204 null null 1.0071ms
+2025-05-26 11:15:56.903 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/Auth/login - application/json 56
+2025-05-26 11:15:56.905 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:15:56.905 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.AuthController.Login (Inventory.API)'
+2025-05-26 11:15:56.905 -05:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Inventory.Application.DTOs.UserDto]] Login(Inventory.Application.DTOs.LoginRequest) on controller Inventory.API.Controllers.AuthController (Inventory.API).
+2025-05-26 11:15:56.908 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__email_0='luisortiz211994@gmail.com' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[UpdatedAt], [u].[Email], [u].[Password], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2025-05-26 11:15:56.975 -05:00 [INF] Executing OkObjectResult, writing value of type 'Inventory.Application.DTOs.LoginResponse'.
+2025-05-26 11:15:56.975 -05:00 [INF] Executed action Inventory.API.Controllers.AuthController.Login (Inventory.API) in 69.7117ms
+2025-05-26 11:15:56.975 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.AuthController.Login (Inventory.API)'
+2025-05-26 11:15:56.975 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/Auth/login - 200 null application/json; charset=utf-8 72.4091ms
+2025-05-26 11:15:57.080 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products - null null
+2025-05-26 11:15:57.080 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:15:57.081 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products - 204 null null 0.2637ms
+2025-05-26 11:15:57.082 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/api/Products - null null
+2025-05-26 11:15:57.083 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:15:57.083 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 11:15:57.083 -05:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Inventory.Application.DTOs.ProductDto]]] GetAll() on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 11:15:57.083 -05:00 [INF] Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMzNhOTFlNi1iMDU2LTQxMjktMGQzZi0wOGRkOWM1YTUxYTIiLCJ1bmlxdWVfbmFtZSI6IkpvcmdlIEx1aXMiLCJqdGkiOiIwNzY3YzAwNi04NzYzLTRjNjYtYjg3Yi0yZTJkOTViY2JlMTQiLCJleHAiOjE3NDgyNzk3NTYsImlzcyI6IkludmVudG9yeUFQSSIsImF1ZCI6IkludmVudG9yeUNsaWVudCJ9.cPcGGolA17ZmbFPcP9qvoD2D3h2e3fLLbup7ZyG2AOc
+2025-05-26 11:15:57.086 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Batches] AS [b] ON [p].[Id] = [b].[ProductId]
+ORDER BY [p].[Id]
+2025-05-26 11:15:57.087 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Inventory.Domain.Models.Product, Inventory.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Inventory.Application.DTOs.ProductDto, Inventory.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-26 11:15:57.087 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.GetAll (Inventory.API) in 4.2044ms
+2025-05-26 11:15:57.087 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 11:15:57.087 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/api/Products - 200 null application/json; charset=utf-8 5.1022ms
+2025-05-26 11:16:00.985 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products/db5fde7e-00ef-4e0b-60cd-08dd9c6850c0 - null null
+2025-05-26 11:16:00.985 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:16:00.986 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products/db5fde7e-00ef-4e0b-60cd-08dd9c6850c0 - 204 null null 0.4146ms
+2025-05-26 11:16:00.987 -05:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5042/api/Products/db5fde7e-00ef-4e0b-60cd-08dd9c6850c0 - null null
+2025-05-26 11:16:00.988 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:16:00.988 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.Delete (Inventory.API)'
+2025-05-26 11:16:00.993 -05:00 [INF] Route matched with {action = "Delete", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Delete(System.Guid) on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 11:16:01.000 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='db5fde7e-00ef-4e0b-60cd-08dd9c6850c0'], CommandType='"Text"', CommandTimeout='30']
+SELECT [p0].[Id], [p0].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM (
+    SELECT TOP(1) [p].[Id], [p].[Name]
+    FROM [Products] AS [p]
+    WHERE [p].[Id] = @__id_0
+) AS [p0]
+LEFT JOIN [Batches] AS [b] ON [p0].[Id] = [b].[ProductId]
+ORDER BY [p0].[Id]
+2025-05-26 11:16:01.025 -05:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='62519c12-63d8-4f83-bf5a-ce56857b53ae', @p1='db5fde7e-00ef-4e0b-60cd-08dd9c6850c0'], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+DELETE FROM [Batches]
+OUTPUT 1
+WHERE [Id] = @p0;
+DELETE FROM [Products]
+OUTPUT 1
+WHERE [Id] = @p1;
+2025-05-26 11:16:01.043 -05:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-05-26 11:16:01.043 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.Delete (Inventory.API) in 49.9295ms
+2025-05-26 11:16:01.043 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.Delete (Inventory.API)'
+2025-05-26 11:16:01.043 -05:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5042/api/Products/db5fde7e-00ef-4e0b-60cd-08dd9c6850c0 - 204 null null 56.0265ms
+2025-05-26 11:16:01.049 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/api/Products - null null
+2025-05-26 11:16:01.049 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:16:01.049 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 11:16:01.049 -05:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Inventory.Application.DTOs.ProductDto]]] GetAll() on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 11:16:01.050 -05:00 [INF] Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMzNhOTFlNi1iMDU2LTQxMjktMGQzZi0wOGRkOWM1YTUxYTIiLCJ1bmlxdWVfbmFtZSI6IkpvcmdlIEx1aXMiLCJqdGkiOiIwNzY3YzAwNi04NzYzLTRjNjYtYjg3Yi0yZTJkOTViY2JlMTQiLCJleHAiOjE3NDgyNzk3NTYsImlzcyI6IkludmVudG9yeUFQSSIsImF1ZCI6IkludmVudG9yeUNsaWVudCJ9.cPcGGolA17ZmbFPcP9qvoD2D3h2e3fLLbup7ZyG2AOc
+2025-05-26 11:16:01.052 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Batches] AS [b] ON [p].[Id] = [b].[ProductId]
+ORDER BY [p].[Id]
+2025-05-26 11:16:01.053 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Inventory.Domain.Models.Product, Inventory.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Inventory.Application.DTOs.ProductDto, Inventory.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-26 11:16:01.053 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.GetAll (Inventory.API) in 3.7056ms
+2025-05-26 11:16:01.053 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 11:16:01.053 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/api/Products - 200 null application/json; charset=utf-8 4.4839ms
+2025-05-26 11:16:16.537 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products - null null
+2025-05-26 11:16:16.537 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:16:16.537 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products - 204 null null 0.34ms
+2025-05-26 11:16:16.539 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/Products - application/json 116
+2025-05-26 11:16:16.540 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:16:16.540 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.Create (Inventory.API)'
+2025-05-26 11:16:16.540 -05:00 [INF] Route matched with {action = "Create", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Create(Inventory.Application.DTOs.ProductDto) on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 11:16:16.561 -05:00 [INF] Executed DbCommand (18ms) [Parameters=[@p0='855288d3-7986-4829-60ce-08dd9c6850c0', @p1='Camisa nueva' (Nullable = false) (Size = 100), @p2='c777abd6-aa03-4b50-8c85-b0f7b3aef8f7', @p3='2025-01-05T05:00:00.0000000Z', @p4='10' (Precision = 18) (Scale = 2), @p5='USD' (Nullable = false) (Size = 3), @p6='855288d3-7986-4829-60ce-08dd9c6850c0', @p7='120'], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Products] ([Id], [Name])
+VALUES (@p0, @p1);
+INSERT INTO [Batches] ([Id], [EntryDate], [PriceAmount], [PriceCurrency], [ProductId], [Quantity])
+VALUES (@p2, @p3, @p4, @p5, @p6, @p7);
+2025-05-26 11:16:16.562 -05:00 [INF] Executing CreatedAtActionResult, writing value of type 'Inventory.Application.DTOs.ProductDto'.
+2025-05-26 11:16:16.562 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.Create (Inventory.API) in 21.7948ms
+2025-05-26 11:16:16.562 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.Create (Inventory.API)'
+2025-05-26 11:16:16.563 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/Products - 201 null application/json; charset=utf-8 23.3466ms
+2025-05-26 11:16:16.663 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/api/Products - null null
+2025-05-26 11:16:16.664 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:16:16.664 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 11:16:16.664 -05:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Inventory.Application.DTOs.ProductDto]]] GetAll() on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 11:16:16.664 -05:00 [INF] Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMzNhOTFlNi1iMDU2LTQxMjktMGQzZi0wOGRkOWM1YTUxYTIiLCJ1bmlxdWVfbmFtZSI6IkpvcmdlIEx1aXMiLCJqdGkiOiIwNzY3YzAwNi04NzYzLTRjNjYtYjg3Yi0yZTJkOTViY2JlMTQiLCJleHAiOjE3NDgyNzk3NTYsImlzcyI6IkludmVudG9yeUFQSSIsImF1ZCI6IkludmVudG9yeUNsaWVudCJ9.cPcGGolA17ZmbFPcP9qvoD2D3h2e3fLLbup7ZyG2AOc
+2025-05-26 11:16:16.670 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Batches] AS [b] ON [p].[Id] = [b].[ProductId]
+ORDER BY [p].[Id]
+2025-05-26 11:16:16.670 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Inventory.Domain.Models.Product, Inventory.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Inventory.Application.DTOs.ProductDto, Inventory.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-26 11:16:16.670 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.GetAll (Inventory.API) in 6.4801ms
+2025-05-26 11:16:16.671 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 11:16:16.671 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/api/Products - 200 null application/json; charset=utf-8 7.4188ms
+2025-05-26 11:16:27.841 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products/855288d3-7986-4829-60ce-08dd9c6850c0 - null null
+2025-05-26 11:16:27.841 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:16:27.841 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products/855288d3-7986-4829-60ce-08dd9c6850c0 - 204 null null 0.2253ms
+2025-05-26 11:16:27.843 -05:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5042/api/Products/855288d3-7986-4829-60ce-08dd9c6850c0 - application/json 220
+2025-05-26 11:16:27.844 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:16:27.844 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.Update (Inventory.API)'
+2025-05-26 11:16:27.844 -05:00 [INF] Route matched with {action = "Update", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Update(System.Guid, Inventory.Application.DTOs.ProductDto) on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 11:16:27.849 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='855288d3-7986-4829-60ce-08dd9c6850c0'], CommandType='"Text"', CommandTimeout='30']
+SELECT [p0].[Id], [p0].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM (
+    SELECT TOP(1) [p].[Id], [p].[Name]
+    FROM [Products] AS [p]
+    WHERE [p].[Id] = @__id_0
+) AS [p0]
+LEFT JOIN [Batches] AS [b] ON [p0].[Id] = [b].[ProductId]
+ORDER BY [p0].[Id]
+2025-05-26 11:16:27.856 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[@p5='c777abd6-aa03-4b50-8c85-b0f7b3aef8f7', @p0='2025-05-25T21:39:25.1030000Z', @p1='20' (Precision = 18) (Scale = 2), @p2='USD' (Nullable = false) (Size = 3), @p3='855288d3-7986-4829-60ce-08dd9c6850c0', @p4='10', @p7='855288d3-7986-4829-60ce-08dd9c6850c0', @p6='Camisa nueva DD' (Nullable = false) (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [Batches] SET [EntryDate] = @p0, [PriceAmount] = @p1, [PriceCurrency] = @p2, [ProductId] = @p3, [Quantity] = @p4
+OUTPUT 1
+WHERE [Id] = @p5;
+UPDATE [Products] SET [Name] = @p6
+OUTPUT 1
+WHERE [Id] = @p7;
+2025-05-26 11:16:27.857 -05:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2025-05-26 11:16:27.857 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.Update (Inventory.API) in 12.6619ms
+2025-05-26 11:16:27.857 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.Update (Inventory.API)'
+2025-05-26 11:16:27.857 -05:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5042/api/Products/855288d3-7986-4829-60ce-08dd9c6850c0 - 204 null null 14.0047ms
+2025-05-26 11:19:49.785 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Auth/login - null null
+2025-05-26 11:19:49.786 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:19:49.789 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Auth/login - 204 null null 3.3067ms
+2025-05-26 11:19:49.791 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/Auth/login - application/json 56
+2025-05-26 11:19:49.791 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:19:49.791 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.AuthController.Login (Inventory.API)'
+2025-05-26 11:19:49.791 -05:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Inventory.Application.DTOs.UserDto]] Login(Inventory.Application.DTOs.LoginRequest) on controller Inventory.API.Controllers.AuthController (Inventory.API).
+2025-05-26 11:19:49.807 -05:00 [INF] Executed DbCommand (10ms) [Parameters=[@__email_0='luisortiz211994@gmail.com' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[UpdatedAt], [u].[Email], [u].[Password], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2025-05-26 11:19:49.907 -05:00 [INF] Executing OkObjectResult, writing value of type 'Inventory.Application.DTOs.LoginResponse'.
+2025-05-26 11:19:49.908 -05:00 [INF] Executed action Inventory.API.Controllers.AuthController.Login (Inventory.API) in 116.5189ms
+2025-05-26 11:19:49.908 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.AuthController.Login (Inventory.API)'
+2025-05-26 11:19:49.908 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/Auth/login - 200 null application/json; charset=utf-8 117.1498ms
+2025-05-26 11:19:49.949 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products - null null
+2025-05-26 11:19:49.949 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:19:49.949 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products - 204 null null 0.2021ms
+2025-05-26 11:19:49.950 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/api/Products - null null
+2025-05-26 11:19:49.951 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:19:49.951 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 11:19:49.951 -05:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Inventory.Application.DTOs.ProductDto]]] GetAll() on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 11:19:49.951 -05:00 [INF] Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMzNhOTFlNi1iMDU2LTQxMjktMGQzZi0wOGRkOWM1YTUxYTIiLCJ1bmlxdWVfbmFtZSI6IkpvcmdlIEx1aXMiLCJqdGkiOiI3YmI5MDI2Mi0yMzhlLTQ4YjMtYmU5MC1jN2I0YzVjZGNkMzciLCJleHAiOjE3NDgyNzk5ODksImlzcyI6IkludmVudG9yeUFQSSIsImF1ZCI6IkludmVudG9yeUNsaWVudCJ9.mXKWUixkpx277YM3Ko8RrryiSLgmz0arjwMmZNljymE
+2025-05-26 11:19:49.958 -05:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Batches] AS [b] ON [p].[Id] = [b].[ProductId]
+ORDER BY [p].[Id]
+2025-05-26 11:19:49.958 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Inventory.Domain.Models.Product, Inventory.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Inventory.Application.DTOs.ProductDto, Inventory.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-26 11:19:49.959 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.GetAll (Inventory.API) in 8.0018ms
+2025-05-26 11:19:49.959 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 11:19:49.959 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/api/Products - 200 null application/json; charset=utf-8 8.7896ms
+2025-05-26 11:20:58.387 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Auth/login - null null
+2025-05-26 11:20:58.388 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:20:58.388 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Auth/login - 204 null null 0.9287ms
+2025-05-26 11:20:58.393 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/Auth/login - application/json 56
+2025-05-26 11:20:58.393 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:20:58.393 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.AuthController.Login (Inventory.API)'
+2025-05-26 11:20:58.393 -05:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Inventory.Application.DTOs.UserDto]] Login(Inventory.Application.DTOs.LoginRequest) on controller Inventory.API.Controllers.AuthController (Inventory.API).
+2025-05-26 11:20:58.408 -05:00 [INF] Executed DbCommand (9ms) [Parameters=[@__email_0='luisortiz211994@gmail.com' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[UpdatedAt], [u].[Email], [u].[Password], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2025-05-26 11:20:58.472 -05:00 [INF] Executing OkObjectResult, writing value of type 'Inventory.Application.DTOs.LoginResponse'.
+2025-05-26 11:20:58.472 -05:00 [INF] Executed action Inventory.API.Controllers.AuthController.Login (Inventory.API) in 77.976ms
+2025-05-26 11:20:58.472 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.AuthController.Login (Inventory.API)'
+2025-05-26 11:20:58.472 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/Auth/login - 200 null application/json; charset=utf-8 79.6025ms
+2025-05-26 11:20:58.629 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products - null null
+2025-05-26 11:20:58.630 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:20:58.630 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products - 204 null null 0.5317ms
+2025-05-26 11:20:58.634 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/api/Products - null null
+2025-05-26 11:20:58.635 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:20:58.635 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 11:20:58.636 -05:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Inventory.Application.DTOs.ProductDto]]] GetAll() on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 11:20:58.640 -05:00 [INF] Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMzNhOTFlNi1iMDU2LTQxMjktMGQzZi0wOGRkOWM1YTUxYTIiLCJ1bmlxdWVfbmFtZSI6IkpvcmdlIEx1aXMiLCJqdGkiOiIzNTlmZjViYi0wMWU4LTQ2MWYtOTE0MC05NWEwNDYyOTg2YmYiLCJleHAiOjE3NDgyODAwNTgsImlzcyI6IkludmVudG9yeUFQSSIsImF1ZCI6IkludmVudG9yeUNsaWVudCJ9.U4IckaxpbbhIo-wI5MT8Kbzw79UW1dkvfhyJ_E0o50I
+2025-05-26 11:20:58.656 -05:00 [INF] Executed DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Batches] AS [b] ON [p].[Id] = [b].[ProductId]
+ORDER BY [p].[Id]
+2025-05-26 11:20:58.657 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Inventory.Domain.Models.Product, Inventory.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Inventory.Application.DTOs.ProductDto, Inventory.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-26 11:20:58.657 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.GetAll (Inventory.API) in 17.2242ms
+2025-05-26 11:20:58.657 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 11:20:58.657 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/api/Products - 200 null application/json; charset=utf-8 22.7206ms
+2025-05-26 11:21:26.841 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Auth/login - null null
+2025-05-26 11:21:26.842 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:21:26.844 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Auth/login - 204 null null 2.8089ms
+2025-05-26 11:21:26.847 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/Auth/login - application/json 56
+2025-05-26 11:21:26.847 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:21:26.847 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.AuthController.Login (Inventory.API)'
+2025-05-26 11:21:26.848 -05:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Inventory.Application.DTOs.UserDto]] Login(Inventory.Application.DTOs.LoginRequest) on controller Inventory.API.Controllers.AuthController (Inventory.API).
+2025-05-26 11:21:26.856 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__email_0='luisortiz211994@gmail.com' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[UpdatedAt], [u].[Email], [u].[Password], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2025-05-26 11:21:26.919 -05:00 [INF] Executing OkObjectResult, writing value of type 'Inventory.Application.DTOs.LoginResponse'.
+2025-05-26 11:21:26.919 -05:00 [INF] Executed action Inventory.API.Controllers.AuthController.Login (Inventory.API) in 71.084ms
+2025-05-26 11:21:26.920 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.AuthController.Login (Inventory.API)'
+2025-05-26 11:21:26.920 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/Auth/login - 200 null application/json; charset=utf-8 72.9385ms
+2025-05-26 11:21:26.965 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products - null null
+2025-05-26 11:21:26.965 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:21:26.965 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products - 204 null null 0.2391ms
+2025-05-26 11:21:26.967 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/api/Products - null null
+2025-05-26 11:21:26.967 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:21:26.967 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 11:21:26.967 -05:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Inventory.Application.DTOs.ProductDto]]] GetAll() on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 11:21:26.968 -05:00 [INF] Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMzNhOTFlNi1iMDU2LTQxMjktMGQzZi0wOGRkOWM1YTUxYTIiLCJ1bmlxdWVfbmFtZSI6IkpvcmdlIEx1aXMiLCJqdGkiOiI0ZGY1OTNiNy1kMmE1LTRlMWMtODcyMi05NGM3YWY4NDQ2OGIiLCJleHAiOjE3NDgyODAwODYsImlzcyI6IkludmVudG9yeUFQSSIsImF1ZCI6IkludmVudG9yeUNsaWVudCJ9.Jcl5djhpvQYwXsIN8smNk27h05c3uwnPluWmkvjsAz8
+2025-05-26 11:21:26.970 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Batches] AS [b] ON [p].[Id] = [b].[ProductId]
+ORDER BY [p].[Id]
+2025-05-26 11:21:26.971 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Inventory.Domain.Models.Product, Inventory.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Inventory.Application.DTOs.ProductDto, Inventory.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-26 11:21:26.971 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.GetAll (Inventory.API) in 3.7797ms
+2025-05-26 11:21:26.971 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 11:21:26.972 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/api/Products - 200 null application/json; charset=utf-8 4.6862ms
+2025-05-26 11:22:02.392 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Auth/login - null null
+2025-05-26 11:22:02.392 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:22:02.393 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Auth/login - 204 null null 0.454ms
+2025-05-26 11:22:02.396 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/Auth/login - application/json 56
+2025-05-26 11:22:02.399 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:22:02.399 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.AuthController.Login (Inventory.API)'
+2025-05-26 11:22:02.399 -05:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Inventory.Application.DTOs.UserDto]] Login(Inventory.Application.DTOs.LoginRequest) on controller Inventory.API.Controllers.AuthController (Inventory.API).
+2025-05-26 11:22:02.412 -05:00 [INF] Executed DbCommand (12ms) [Parameters=[@__email_0='luisortiz211994@gmail.com' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[UpdatedAt], [u].[Email], [u].[Password], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2025-05-26 11:22:02.484 -05:00 [INF] Executing OkObjectResult, writing value of type 'Inventory.Application.DTOs.LoginResponse'.
+2025-05-26 11:22:02.484 -05:00 [INF] Executed action Inventory.API.Controllers.AuthController.Login (Inventory.API) in 85.0814ms
+2025-05-26 11:22:02.484 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.AuthController.Login (Inventory.API)'
+2025-05-26 11:22:02.484 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/Auth/login - 200 null application/json; charset=utf-8 88.0149ms
+2025-05-26 11:22:02.640 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products - null null
+2025-05-26 11:22:02.640 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:22:02.640 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products - 204 null null 0.5373ms
+2025-05-26 11:22:02.661 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/api/Products - null null
+2025-05-26 11:22:02.661 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:22:02.661 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 11:22:02.662 -05:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Inventory.Application.DTOs.ProductDto]]] GetAll() on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 11:22:02.662 -05:00 [INF] Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMzNhOTFlNi1iMDU2LTQxMjktMGQzZi0wOGRkOWM1YTUxYTIiLCJ1bmlxdWVfbmFtZSI6IkpvcmdlIEx1aXMiLCJqdGkiOiIwZjY5YWM4ZC0wMjFkLTQ4MDctYmVjZC04OTcxYWQ1Y2E0MDYiLCJleHAiOjE3NDgyODAxMjIsImlzcyI6IkludmVudG9yeUFQSSIsImF1ZCI6IkludmVudG9yeUNsaWVudCJ9._sHBs1ybsIr4cfSwVgWd24GFE0ghbLEPsUbOHVII3KU
+2025-05-26 11:22:02.674 -05:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Batches] AS [b] ON [p].[Id] = [b].[ProductId]
+ORDER BY [p].[Id]
+2025-05-26 11:22:02.675 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Inventory.Domain.Models.Product, Inventory.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Inventory.Application.DTOs.ProductDto, Inventory.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-26 11:22:02.675 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.GetAll (Inventory.API) in 12.9327ms
+2025-05-26 11:22:02.675 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 11:22:02.675 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/api/Products - 200 null application/json; charset=utf-8 14.2103ms
+2025-05-26 11:22:10.860 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Auth/login - null null
+2025-05-26 11:22:10.861 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:22:10.872 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Auth/login - 204 null null 11.4526ms
+2025-05-26 11:22:10.874 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:5042/api/Auth/login - application/json 56
+2025-05-26 11:22:10.874 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:22:10.874 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.AuthController.Login (Inventory.API)'
+2025-05-26 11:22:10.874 -05:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Inventory.Application.DTOs.UserDto]] Login(Inventory.Application.DTOs.LoginRequest) on controller Inventory.API.Controllers.AuthController (Inventory.API).
+2025-05-26 11:22:10.877 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[@__email_0='luisortiz211994@gmail.com' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[UpdatedAt], [u].[Email], [u].[Password], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[Email] = @__email_0
+2025-05-26 11:22:10.942 -05:00 [INF] Executing OkObjectResult, writing value of type 'Inventory.Application.DTOs.LoginResponse'.
+2025-05-26 11:22:10.943 -05:00 [INF] Executed action Inventory.API.Controllers.AuthController.Login (Inventory.API) in 68.2157ms
+2025-05-26 11:22:10.943 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.AuthController.Login (Inventory.API)'
+2025-05-26 11:22:10.943 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:5042/api/Auth/login - 200 null application/json; charset=utf-8 69.0512ms
+2025-05-26 11:22:10.994 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products - null null
+2025-05-26 11:22:10.995 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:22:10.995 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products - 204 null null 0.3504ms
+2025-05-26 11:22:10.997 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/api/Products - null null
+2025-05-26 11:22:10.997 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:22:10.997 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 11:22:10.997 -05:00 [INF] Route matched with {action = "GetAll", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[Inventory.Application.DTOs.ProductDto]]] GetAll() on controller Inventory.API.Controllers.ProductsController (Inventory.API).
+2025-05-26 11:22:10.998 -05:00 [INF] Authorization header: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjMzNhOTFlNi1iMDU2LTQxMjktMGQzZi0wOGRkOWM1YTUxYTIiLCJ1bmlxdWVfbmFtZSI6IkpvcmdlIEx1aXMiLCJqdGkiOiI4MjY3NWI4Yy02MWIxLTRiNjItYjkxZC1iNjkyYTdhOTJjODMiLCJleHAiOjE3NDgyODAxMzAsImlzcyI6IkludmVudG9yeUFQSSIsImF1ZCI6IkludmVudG9yeUNsaWVudCJ9.3fty7QgIukXdcZ1XcHAGfK81CeHqPmXGjy_PzmB3QQU
+2025-05-26 11:22:11.002 -05:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[Name], [b].[Id], [b].[EntryDate], [b].[PriceAmount], [b].[PriceCurrency], [b].[ProductId], [b].[Quantity]
+FROM [Products] AS [p]
+LEFT JOIN [Batches] AS [b] ON [p].[Id] = [b].[ProductId]
+ORDER BY [p].[Id]
+2025-05-26 11:22:11.003 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Inventory.Domain.Models.Product, Inventory.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Inventory.Application.DTOs.ProductDto, Inventory.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2025-05-26 11:22:11.004 -05:00 [INF] Executed action Inventory.API.Controllers.ProductsController.GetAll (Inventory.API) in 6.4705ms
+2025-05-26 11:22:11.004 -05:00 [INF] Executed endpoint 'Inventory.API.Controllers.ProductsController.GetAll (Inventory.API)'
+2025-05-26 11:22:11.004 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/api/Products - 200 null application/json; charset=utf-8 7.5481ms
+2025-05-26 11:24:06.982 -05:00 [INF] User profile is available. Using 'C:\Users\sopor\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-05-26 11:24:07.273 -05:00 [INF] Now listening on: http://localhost:5042
+2025-05-26 11:24:07.278 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-05-26 11:24:07.279 -05:00 [INF] Hosting environment: Development
+2025-05-26 11:24:07.279 -05:00 [INF] Content root path: C:\Users\sopor\OneDrive\Escritorio\inventory\Inventory.API
+2025-05-26 11:24:07.572 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/swagger/index.html - null null
+2025-05-26 11:24:07.919 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/swagger/index.html - 200 null text/html;charset=utf-8 348.3756ms
+2025-05-26 11:24:08.116 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5042/swagger/v1/swagger.json - null null
+2025-05-26 11:24:08.290 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5042/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 175.1087ms
+2025-05-26 11:24:24.263 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5042/api/Products/855288d3-7986-4829-60ce-08dd9c6850c0 - null null
+2025-05-26 11:24:24.273 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:24:24.275 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5042/api/Products/855288d3-7986-4829-60ce-08dd9c6850c0 - 204 null null 12.133ms
+2025-05-26 11:24:24.278 -05:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5042/api/Products/855288d3-7986-4829-60ce-08dd9c6850c0 - application/json 221
+2025-05-26 11:24:24.348 -05:00 [INF] CORS policy execution successful.
+2025-05-26 11:24:24.350 -05:00 [WRN] Failed to determine the https port for redirect.
+2025-05-26 11:24:24.352 -05:00 [INF] Executing endpoint 'Inventory.API.Controllers.ProductsController.Update (Inventory.API)'
+2025-05-26 11:24:24.382 -05:00 [INF] Route matched with {action = "Update", controller = "Products"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Update(System.Guid, Inventory.Application.DTOs.ProductDto) on controller Inventory.API.Controllers.ProductsController (Inventory.API).

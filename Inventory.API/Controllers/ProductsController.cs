@@ -72,7 +72,7 @@ namespace Inventory.API.Controllers
                 return NotFound();
             }
 
-            return NoContent();
+            return Ok(true);
         }
 
         // DELETE api/products/{id}
