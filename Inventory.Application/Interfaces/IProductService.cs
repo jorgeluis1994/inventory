@@ -46,5 +46,14 @@ namespace Inventory.Application.Interfaces
         /// <param name="productId">Identificador del producto.</param>
         /// <param name="batchDto">Datos del lote a agregar.</param>
         Task AddBatchAsync(Guid productId, BatchDto batchDto);
+
+        //Nueva interface para crear 
+        /// <summary>
+        /// Crea un nuevo producto con lotes.
+        /// </summary>
+        /// <param name="productCreateDto">Datos del producto a crear, incluyendo lotes.</param>
+        /// Task CreateProductWithBatchesAsync(ProductCreateDto productCreateDto);
+        /// summary>
+        Task CreateProductWithBatchesAsync(ProductCreateDto productCreateDto);
     }
 }

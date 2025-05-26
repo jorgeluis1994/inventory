@@ -109,5 +109,19 @@ namespace Inventory.API.Controllers
 
             return NoContent();
         }
+
+        [HttpPost("addProduct")]
+        public async Task<ActionResult> addProduct([FromBody] ProductCreateDto productDto)
+        {
+            if (productDto == null)
+                return BadRequest();
+
+            await _productService.CreateProductWithBatchesAsync(productDto);
+
+            // Aquí podrías retornar el recurso creado, con su URI
+            return CreatedAtAction(nameof(GetById), new { id = productDto.Name }, productDto);
+        }
+
+
     }
 }

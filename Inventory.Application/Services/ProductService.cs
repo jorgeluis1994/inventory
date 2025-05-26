@@ -2,6 +2,7 @@
 using Inventory.Application.Interfaces;
 using Inventory.Domain.Interfaces;
 using Inventory.Domain.Models;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,12 +16,15 @@ namespace Inventory.Application.Services
     public class ProductService : IProductService
     {
         private readonly IProductRepository _productRepository;
+
+        private readonly ILogger<ProductService> _logger;
         private readonly IUnitOfWork _unitOfWork;  // <-- Inyección de UnitOfWork
 
-        public ProductService(IProductRepository productRepository, IUnitOfWork unitOfWork)
+        public ProductService(IProductRepository productRepository, IUnitOfWork unitOfWork, ILogger<ProductService> logger)
         {
             _productRepository = productRepository;
             _unitOfWork = unitOfWork;
+            _logger = logger;
         }
 
         public async Task<ProductDto?> GetByIdAsync(Guid id)
@@ -120,6 +124,23 @@ namespace Inventory.Application.Services
             await _productRepository.UpdateAsync(product);
 
             await _unitOfWork.CommitAsync();  // <-- Guarda cambios
+        }
+
+        public Task CreateProductWithBatchesAsync(ProductCreateDto productCreateDto)
+        {
+            _logger.LogInformation("Creating product with batches");
+            // 2. Convertir DTO a dominio
+            var product = ProductCreateDto.odomainModel(productCreateDto);
+            var registeredProduct = _productRepository.AddAsync(product);
+            _logger.LogInformation("Product created with ID: {ProductId}", product.Id);
+            // 3. Guardar cambios en la base de datos
+            _unitOfWork.CommitAsync().Wait();
+            _logger.LogInformation("Changes committed to the database"); 
+            
+
+            //TODO: Validar que el producto no exista antes de agregarlo
+            return Task.CompletedTask;
+
         }
     }
 }
