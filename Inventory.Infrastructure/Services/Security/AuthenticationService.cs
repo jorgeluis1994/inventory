@@ -77,5 +77,36 @@ namespace Inventory.Infrastructure.Security
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
+
+        public bool ValidateToken(string token)
+        {
+            var tokenHandler = new JwtSecurityTokenHandler();
+            var _secretKey = _configuration["Jwt:Key"];
+            var key = Encoding.UTF8.GetBytes(_secretKey);
+
+            try
+            {
+                tokenHandler.ValidateToken(token, new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
+
+                    ValidateIssuer = true,
+                    ValidIssuer = _configuration["Jwt:Issuer"],
+
+                    ValidateAudience = true,
+                    ValidAudience = _configuration["Jwt:Audience"],
+
+                    ClockSkew = TimeSpan.Zero
+                }, out SecurityToken validatedToken);
+
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
     }
 }

@@ -18,7 +18,7 @@ namespace Inventory.Infrastructure.DependencyInjection
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IAuthenticationService, AuthenticationService>();
-
+  
             // Registra UnitOfWork
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 

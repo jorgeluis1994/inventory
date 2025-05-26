@@ -31,5 +31,14 @@ namespace Inventory.Application.Security
         /// <param name="expirationDate">Fecha de expiración del token.</param>
         /// <returns>Token JWT (o similar) como string.</returns>
         string GenerateToken(string userId, string userName, DateTime expirationDate);
+
+
+        /// <summary>
+        /// Verifica y valida un token de autenticación.
+        /// </summary>
+        /// <param name="token">Token JWT a validar.</param>
+        /// <returns>Retorna true si el token es válido; false en caso contrario.</returns>
+        bool ValidateToken(string token);
+
     }
 }

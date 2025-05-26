@@ -4,10 +4,30 @@ using Microsoft.EntityFrameworkCore;
 using Serilog;
 using Inventory.Infrastructure;
 
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddInfrastructureServices();
 builder.Services.AddApplicationServices();
+
+//builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+//    .AddJwtBearer(options =>
+//    {
+//        var config = builder.Configuration;
+//        options.TokenValidationParameters = new TokenValidationParameters
+//        {
+//            ValidateIssuerSigningKey = true,
+//            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["Jwt:Key"])),
+//            ValidateIssuer = true,
+//            ValidIssuer = config["Jwt:Issuer"],
+//            ValidateAudience = true,
+//            ValidAudience = config["Jwt:Audience"],
+//            ClockSkew = TimeSpan.Zero
+//        };
+//    });
+
+
 
 
 Log.Logger = new LoggerConfiguration()
