@@ -48,6 +48,31 @@ namespace Inventory.Domain.Models
             _priceAmount = priceAmount;
             _priceCurrency = priceCurrency;
         }
+        public void UpdateEntryDate(DateTime newDateUtc)
+        {
+            if (newDateUtc.Kind != DateTimeKind.Utc)
+                throw new ArgumentException("Date must be UTC", nameof(newDateUtc));
+
+            _entryDateUtc = newDateUtc;
+        }
+
+        public void UpdateQuantity(int newQuantity)
+        {
+            if (newQuantity <= 0)
+                throw new ArgumentOutOfRangeException(nameof(newQuantity), "Quantity must be positive.");
+
+            _quantity = newQuantity;
+        }
+
+        public void UpdatePrice(decimal newAmount, string newCurrency)
+        {
+            if (newAmount <= 0) throw new ArgumentOutOfRangeException(nameof(newAmount));
+            if (string.IsNullOrWhiteSpace(newCurrency)) throw new ArgumentException("Currency required.");
+
+            _priceAmount = newAmount;
+            _priceCurrency = newCurrency;
+        }
+
     }
 
 

@@ -63,6 +63,14 @@ namespace Inventory.Infrastructure.Repositories
 
             _context.Products.Update(product);
 
+            foreach (var batch in product.Batches)
+            {
+                if (batch.Id == Guid.Empty)
+                    _context.Entry(batch).State = EntityState.Added;
+                else
+                    _context.Entry(batch).State = EntityState.Modified;
+            }
+
             // Eliminar esta línea para que UnitOfWork controle el guardado
             // await _context.SaveChangesAsync();
         }

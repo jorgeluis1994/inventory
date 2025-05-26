@@ -64,15 +64,36 @@ namespace Inventory.Application.Services
             var product = await _productRepository.GetByIdAsync(productDto.Id);
             if (product == null) throw new KeyNotFoundException("Product not found");
 
+            // Actualizar nombre si cambió
             if (!string.IsNullOrWhiteSpace(productDto.Name) && productDto.Name != product.Name)
             {
                 product.UpdateName(productDto.Name);
             }
 
+            // Actualizar lotes
+            foreach (var batchDto in productDto.Batches)
+            {
+                var batch = product.Batches.FirstOrDefault(b => b.Id == batchDto.Id);
+
+                if (batch != null)
+                {
+                    // Actualiza lote existente
+                    batch.UpdateEntryDate(batchDto.EntryDate);
+                    batch.UpdateQuantity(batchDto.Quantity);
+                    batch.UpdatePrice(batchDto.PriceAmount, batchDto.PriceCurrency);
+                }
+                else
+                {
+                    // Agrega lote nuevo
+                    product.AddBatch(batchDto.EntryDate, batchDto.Quantity, batchDto.PriceAmount, batchDto.PriceCurrency);
+                }
+            }
+
             await _productRepository.UpdateAsync(product);
 
-            await _unitOfWork.CommitAsync();  // <-- Guarda cambios
+            await _unitOfWork.CommitAsync();  // Guarda cambios
         }
+
 
         public async Task DeleteAsync(Guid id)
         {
